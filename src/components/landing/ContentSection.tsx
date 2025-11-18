@@ -1,19 +1,17 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
 
-const contentItems = [
-  "Adán y Eva",
-  "Enoc",
-  "Noé",
+const patriarcas = [
   "Abraham",
   "Isaac",
   "Jacob",
-  "José",
-  "Moisés",
-  "Los Profetas Mayores",
-  "Los Profetas Menores",
-  "Reyes y Patriarcas clave",
-  "Eventos que definieron la historia espiritual del mundo",
+];
+
+const profetas = [
+  "Isaías",
+  "Jeremías",
+  "Ezequiel",
+  "Daniel",
 ];
 
 const subItems = [
@@ -38,26 +36,52 @@ export default function ContentSection() {
           </p>
         </div>
 
-        <div className="mt-12 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {contentItems.map((item, index) => (
-            <Card key={index} className="bg-background border-border/50 flex flex-col">
-              <CardHeader>
-                <CardTitle className="font-headline text-xl text-foreground">
-                  {item}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <ul className="space-y-3">
-                  {subItems.map((subItem, subIndex) => (
-                    <li key={subIndex} className="flex items-start text-sm">
-                      <CheckCircle2 className="h-4 w-4 text-primary mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-muted-foreground">{subItem}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="mt-12 max-w-5xl mx-auto">
+          <h3 className="font-headline text-3xl font-bold text-foreground mb-6 text-center">Patriarcas</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {patriarcas.map((item, index) => (
+              <Card key={index} className="bg-background border-border/50 flex flex-col">
+                <CardHeader>
+                  <CardTitle className="font-headline text-xl text-foreground">
+                    {item}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <ul className="space-y-3">
+                    {subItems.map((subItem, subIndex) => (
+                      <li key={subIndex} className="flex items-start text-sm">
+                        <CheckCircle2 className="h-4 w-4 text-primary mr-2 mt-1 flex-shrink-0" />
+                        <span className="text-muted-foreground">{subItem}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <h3 className="font-headline text-3xl font-bold text-foreground mt-12 mb-6 text-center">Profetas</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {profetas.map((item, index) => (
+              <Card key={index} className="bg-background border-border/50 flex flex-col">
+                <CardHeader>
+                  <CardTitle className="font-headline text-xl text-foreground">
+                    {item}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <ul className="space-y-3">
+                    {subItems.map((subItem, subIndex) => (
+                      <li key={subIndex} className="flex items-start text-sm">
+                        <CheckCircle2 className="h-4 w-4 text-primary mr-2 mt-1 flex-shrink-0" />
+                        <span className="text-muted-foreground">{subItem}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>
