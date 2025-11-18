@@ -1,34 +1,65 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 
-const characters = [
-  { 
-    name: "Abraham",  
+const patriarcas = [
+  {
+    name: "Abraham",
     description: "El pacto. La promesa. La prueba.",
     imageUrl: "https://i.postimg.cc/vHKLmWxH/3.png"
   },
-  { 
-    name: "Jacob", 
+  {
+    name: "Isaac",
+    description: "El hijo de la promesa, heredero de la fe.",
+    imageUrl: ""
+  },
+  {
+    name: "Jacob",
     description: "Lucha, identidad y destino.",
     imageUrl: "https://i.postimg.cc/fyLmzLwB/4.png"
   },
-  { 
-    name: "Adán y Eva", 
+];
+
+const profetas = [
+  {
+    name: "Isaías",
+    description: "El profeta mesiánico y la visión de la redención.",
+    imageUrl: ""
+  },
+  {
+    name: "Jeremías",
+    description: "El profeta llorón y el nuevo pacto.",
+    imageUrl: ""
+  },
+  {
+    name: "Ezequiel",
+    description: "La visión de la gloria de Dios y la restauración de Israel.",
+    imageUrl: ""
+  },
+  {
+    name: "Daniel",
+    description: "Fidelidad en el exilio y las profecías del tiempo del fin.",
+    imageUrl: ""
+  },
+]
+
+const otros = [
+  {
+    name: "Adán y Eva",
     description: "El origen, la caída, la revelación que marcó toda la humanidad.",
     imageUrl: "https://i.postimg.cc/FFZThdxS/1.png"
   },
-  { 
-    name: "Noé", 
+  {
+    name: "Noé",
     description: "Fe irracional. Obediencia radical.",
     imageUrl: "https://i.postimg.cc/fLsvNDtr/2.png"
   },
-  { 
-    name: "José", 
+  {
+    name: "José",
     description: "Propósito en medio del dolor.",
     imageUrl: "https://i.postimg.cc/ZRYyHRvX/6.png"
   },
-  { 
-    name: "Moisés", 
+  {
+    name: "Moisés",
     description: "Liberación, ley y liderazgo.",
     imageUrl: "https://i.postimg.cc/c4PwW0Pd/5.png"
   },
@@ -41,30 +72,91 @@ export default function DetailsSection() {
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary">Descubre Cada Historia en Detalle</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-          {characters.map((character) => (
-            <Card key={character.name} className="bg-background border-border/50 shadow-lg flex flex-col overflow-hidden">
-              {character.imageUrl && (
-                <div className="p-8">
-                  <div className="relative aspect-square w-full">
-                    <Image
-                      src={character.imageUrl}
-                      alt={`Imagen de ${character.name}`}
-                      fill
-                      className="object-cover rounded-lg"
-                    />
+
+        <div className="mt-12">
+          <h3 className="font-headline text-3xl font-bold text-foreground mb-6 text-center">Patriarcas</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {patriarcas.map((character) => (
+              <Card key={character.name} className="bg-background border-border/50 shadow-lg flex flex-col overflow-hidden">
+                {character.imageUrl && (
+                  <div className="p-8">
+                    <div className="relative aspect-square w-full">
+                      <Image
+                        src={character.imageUrl}
+                        alt={`Imagen de ${character.name}`}
+                        fill
+                        className="object-cover rounded-lg"
+                      />
+                    </div>
                   </div>
-                </div>
-              )}
-              <CardHeader className="pt-0">
-                <CardTitle className="font-headline text-2xl text-foreground">{character.name}</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <p className="text-muted-foreground text-lg">“{character.description}”</p>
-              </CardContent>
-            </Card>
-          ))}
+                )}
+                <CardHeader className={character.imageUrl ? "pt-0" : ""}>
+                  <CardTitle className="font-headline text-2xl text-foreground">{character.name}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-muted-foreground text-lg">“{character.description}”</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
+
+        <div className="mt-16">
+          <h3 className="font-headline text-3xl font-bold text-foreground mb-6 text-center">Profetas</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {profetas.map((character) => (
+              <Card key={character.name} className="bg-background border-border/50 shadow-lg flex flex-col overflow-hidden">
+                {character.imageUrl && (
+                  <div className="p-8">
+                    <div className="relative aspect-square w-full">
+                      <Image
+                        src={character.imageUrl}
+                        alt={`Imagen de ${character.name}`}
+                        fill
+                        className="object-cover rounded-lg"
+                      />
+                    </div>
+                  </div>
+                )}
+                <CardHeader className={character.imageUrl ? "pt-0" : ""}>
+                  <CardTitle className="font-headline text-2xl text-foreground">{character.name}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-muted-foreground text-lg">“{character.description}”</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-16">
+          <h3 className="font-headline text-3xl font-bold text-foreground mb-6 text-center">Otros Personajes</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {otros.map((character) => (
+              <Card key={character.name} className="bg-background border-border/50 shadow-lg flex flex-col overflow-hidden">
+                {character.imageUrl && (
+                  <div className="p-8">
+                    <div className="relative aspect-square w-full">
+                      <Image
+                        src={character.imageUrl}
+                        alt={`Imagen de ${character.name}`}
+                        fill
+                        className="object-cover rounded-lg"
+                      />
+                    </div>
+                  </div>
+                )}
+                <CardHeader className={character.imageUrl ? "pt-0" : ""}>
+                  <CardTitle className="font-headline text-2xl text-foreground">{character.name}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-muted-foreground text-lg">“{character.description}”</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+        
       </div>
     </section>
   );
