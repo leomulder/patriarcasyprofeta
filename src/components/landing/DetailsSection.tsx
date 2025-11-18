@@ -1,7 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Image from "next/image";
 
 const characters = [
-  { name: "Adán y Eva", description: "El origen, la caída, la revelación que marcó toda la humanidad." },
+  { 
+    name: "Adán y Eva", 
+    description: "El origen, la caída, la revelación que marcó toda la humanidad.",
+    imageUrl: "https://i.ibb.co/Ld5Ts0Wy/Gemini-Generated-Image-p3egrtp3egrtp3eg.png"
+  },
   { name: "Noé", description: "Fe irracional. Obediencia radical." },
   { name: "Abraham", description: "El pacto. La promesa. La prueba." },
   { name: "Jacob", description: "Lucha, identidad y destino." },
@@ -18,7 +23,17 @@ export default function DetailsSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {characters.map((character) => (
-            <Card key={character.name} className="bg-background border-border/50 shadow-lg flex flex-col">
+            <Card key={character.name} className="bg-background border-border/50 shadow-lg flex flex-col overflow-hidden">
+              {character.imageUrl && (
+                <div className="relative h-48 w-full">
+                  <Image
+                    src={character.imageUrl}
+                    alt={`Imagen de ${character.name}`}
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+              )}
               <CardHeader>
                 <CardTitle className="font-headline text-2xl text-foreground">{character.name}</CardTitle>
               </CardHeader>
