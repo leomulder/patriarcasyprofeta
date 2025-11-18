@@ -41,6 +41,12 @@
       "description": "A young man sitting in a cafe, looking at his phone with a look of discovery.",
       "imageUrl": "https://images.unsplash.com/flagged/photo-1573740144655-bbb6e88fb18a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYW4lMjBwaG9uZXxlbnwwfHx8fDE3NjM0OTcwNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "man phone"
+    },
+    {
+      "id": "author-image",
+      "description": "Portrait of Juan Esteban, a theologian and author, smiling.",
+      "imageUrl": "https://i.ibb.co/yYyC6vV/image.png",
+      "imageHint": "man portrait"
     }
   ]
 }

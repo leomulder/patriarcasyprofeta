@@ -2,6 +2,7 @@ import HeroSection from '@/components/landing/HeroSection';
 import ContentSection from '@/components/landing/ContentSection';
 import ForYouSection from '@/components/landing/ForYouSection';
 import HowItWorksSection from '@/components/landing/HowItWorksSection';
+import AuthoritySection from '@/components/landing/AuthoritySection';
 import TransformSection from '@/components/landing/TransformSection';
 import DetailsSection from '@/components/landing/DetailsSection';
 import BonusSection from '@/components/landing/BonusSection';
@@ -18,6 +19,7 @@ export default function Home() {
         <ContentSection />
         <ForYouSection />
         <HowItWorksSection />
+        <AuthoritySection />
         <TransformSection />
         <DetailsSection />
         <BonusSection />
