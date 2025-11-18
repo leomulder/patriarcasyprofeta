@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  experimental: {
+    allowedDevOrigins: [
+      'https://6000-firebase-studio-1763495916205.cluster-hkcruqmgzbd2aqcdnktmz6k7ba.cloudworkstations.dev',
+    ],
+  },
   images: {
     remotePatterns: [
       {
