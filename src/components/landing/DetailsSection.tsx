@@ -10,7 +10,7 @@ const patriarcas = [
   {
     name: "Isaac",
     description: "El hijo de la promesa, heredero de la fe.",
-    imageUrl: ""
+    imageUrl: "https://i.postimg.cc/D0112YfR/7.png"
   },
   {
     name: "Jacob",
@@ -23,22 +23,22 @@ const profetas = [
   {
     name: "Isaías",
     description: "El profeta mesiánico y la visión de la redención.",
-    imageUrl: ""
+    imageUrl: "https://i.postimg.cc/wMhXb7fR/8.png"
   },
   {
     name: "Jeremías",
     description: "El profeta llorón y el nuevo pacto.",
-    imageUrl: ""
+    imageUrl: "https://i.postimg.cc/Y9JjLd0V/9.png"
   },
   {
     name: "Ezequiel",
     description: "La visión de la gloria de Dios y la restauración de Israel.",
-    imageUrl: ""
+    imageUrl: "https://i.postimg.cc/SNf53RhR/10.png"
   },
   {
     name: "Daniel",
     description: "Fidelidad en el exilio y las profecías del tiempo del fin.",
-    imageUrl: ""
+    imageUrl: "https://i.postimg.cc/tJn4N1yW/11.png"
   },
 ]
 
@@ -74,6 +74,34 @@ export default function DetailsSection() {
         </div>
 
         <div className="mt-12">
+          <h3 className="font-headline text-3xl font-bold text-foreground mb-6 text-center">Otros Personajes</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {otros.map((character) => (
+              <Card key={character.name} className="bg-background border-border/50 shadow-lg flex flex-col overflow-hidden text-center">
+                {character.imageUrl && (
+                  <div className="p-6 flex justify-center">
+                    <div className="relative aspect-square w-32">
+                      <Image
+                        src={character.imageUrl}
+                        alt={`Imagen de ${character.name}`}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                )}
+                <CardHeader className={character.imageUrl ? "pt-0" : ""}>
+                  <CardTitle className="font-headline text-2xl text-foreground">{character.name}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-muted-foreground text-lg">“{character.description}”</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-16">
           <h3 className="font-headline text-3xl font-bold text-foreground mb-6 text-center">Patriarcas</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {patriarcas.map((character) => (
@@ -105,34 +133,6 @@ export default function DetailsSection() {
           <h3 className="font-headline text-3xl font-bold text-foreground mb-6 text-center">Profetas</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {profetas.map((character) => (
-              <Card key={character.name} className="bg-background border-border/50 shadow-lg flex flex-col overflow-hidden text-center">
-                {character.imageUrl && (
-                  <div className="p-6 flex justify-center">
-                    <div className="relative aspect-square w-32">
-                      <Image
-                        src={character.imageUrl}
-                        alt={`Imagen de ${character.name}`}
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-                  </div>
-                )}
-                <CardHeader className={character.imageUrl ? "pt-0" : ""}>
-                  <CardTitle className="font-headline text-2xl text-foreground">{character.name}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-muted-foreground text-lg">“{character.description}”</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-16">
-          <h3 className="font-headline text-3xl font-bold text-foreground mb-6 text-center">Otros Personajes</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {otros.map((character) => (
               <Card key={character.name} className="bg-background border-border/50 shadow-lg flex flex-col overflow-hidden text-center">
                 {character.imageUrl && (
                   <div className="p-6 flex justify-center">
