@@ -13,8 +13,7 @@ const characters = [
     imageUrl: "https://i.postimg.cc/fLsvNDtr/2.png"
   },
   { 
-    name: "Abraham", 
-    description: "El pacto. La promesa. La prueba.",
+    name: "Abraham",  racked: "El pacto. La promesa. La prueba.",
     imageUrl: "https://i.postimg.cc/vHKLmWxH/3.png"
   },
   { 
@@ -45,11 +44,11 @@ export default function DetailsSection() {
           {characters.map((character) => (
             <Card key={character.name} className="bg-background border-border/50 shadow-lg flex flex-col overflow-hidden">
               {character.imageUrl && (
-                <div className="relative h-48 w-full">
+                <div className="relative aspect-square w-full">
                   <Image
                     src={character.imageUrl}
                     alt={`Imagen de ${character.name}`}
-                    layout="fill"
+                    fill
                     objectFit="cover"
                   />
                 </div>
