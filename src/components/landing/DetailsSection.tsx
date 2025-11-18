@@ -3,16 +3,6 @@ import Image from "next/image";
 
 const characters = [
   { 
-    name: "Adán y Eva", 
-    description: "El origen, la caída, la revelación que marcó toda la humanidad.",
-    imageUrl: "https://i.postimg.cc/FFZThdxS/1.png"
-  },
-  { 
-    name: "Noé", 
-    description: "Fe irracional. Obediencia radical.",
-    imageUrl: "https://i.postimg.cc/fLsvNDtr/2.png"
-  },
-  { 
     name: "Abraham",  
     description: "El pacto. La promesa. La prueba.",
     imageUrl: "https://i.postimg.cc/vHKLmWxH/3.png"
@@ -21,6 +11,16 @@ const characters = [
     name: "Jacob", 
     description: "Lucha, identidad y destino.",
     imageUrl: "https://i.postimg.cc/fyLmzLwB/4.png"
+  },
+  { 
+    name: "Adán y Eva", 
+    description: "El origen, la caída, la revelación que marcó toda la humanidad.",
+    imageUrl: "https://i.postimg.cc/FFZThdxS/1.png"
+  },
+  { 
+    name: "Noé", 
+    description: "Fe irracional. Obediencia radical.",
+    imageUrl: "https://i.postimg.cc/fLsvNDtr/2.png"
   },
   { 
     name: "José", 
