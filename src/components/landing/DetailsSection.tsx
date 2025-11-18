@@ -5,13 +5,33 @@ const characters = [
   { 
     name: "Adán y Eva", 
     description: "El origen, la caída, la revelación que marcó toda la humanidad.",
-    imageUrl: "https://i.ibb.co/Ld5Ts0Wy/Gemini-Generated-Image-p3egrtp3egrtp3eg.png"
+    imageUrl: "https://i.postimg.cc/FFZThdxS/1.png"
   },
-  { name: "Noé", description: "Fe irracional. Obediencia radical." },
-  { name: "Abraham", description: "El pacto. La promesa. La prueba." },
-  { name: "Jacob", description: "Lucha, identidad y destino." },
-  { name: "José", description: "Propósito en medio del dolor." },
-  { name: "Moisés", description: "Liberación, ley y liderazgo." },
+  { 
+    name: "Noé", 
+    description: "Fe irracional. Obediencia radical.",
+    imageUrl: "https://i.postimg.cc/fLsvNDtr/2.png"
+  },
+  { 
+    name: "Abraham", 
+    description: "El pacto. La promesa. La prueba.",
+    imageUrl: "https://i.postimg.cc/vHKLmWxH/3.png"
+  },
+  { 
+    name: "Jacob", 
+    description: "Lucha, identidad y destino.",
+    imageUrl: "https://i.postimg.cc/fyLmzLwB/4.png"
+  },
+  { 
+    name: "José", 
+    description: "Propósito en medio del dolor.",
+    imageUrl: "https://i.postimg.cc/ZRYyHRvX/6.png"
+  },
+  { 
+    name: "Moisés", 
+    description: "Liberación, ley y liderazgo.",
+    imageUrl: "https://i.postimg.cc/c4PwW0Pd/5.png"
+  },
 ];
 
 export default function DetailsSection() {
