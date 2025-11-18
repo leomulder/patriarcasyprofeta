@@ -13,7 +13,8 @@ const characters = [
     imageUrl: "https://i.postimg.cc/fLsvNDtr/2.png"
   },
   { 
-    name: "Abraham",  racked: "El pacto. La promesa. La prueba.",
+    name: "Abraham",  
+    description: "El pacto. La promesa. La prueba.",
     imageUrl: "https://i.postimg.cc/vHKLmWxH/3.png"
   },
   { 
@@ -44,16 +45,18 @@ export default function DetailsSection() {
           {characters.map((character) => (
             <Card key={character.name} className="bg-background border-border/50 shadow-lg flex flex-col overflow-hidden">
               {character.imageUrl && (
-                <div className="relative aspect-square w-full">
-                  <Image
-                    src={character.imageUrl}
-                    alt={`Imagen de ${character.name}`}
-                    fill
-                    objectFit="cover"
-                  />
+                <div className="p-8">
+                  <div className="relative aspect-square w-full">
+                    <Image
+                      src={character.imageUrl}
+                      alt={`Imagen de ${character.name}`}
+                      fill
+                      className="object-cover rounded-lg"
+                    />
+                  </div>
                 </div>
               )}
-              <CardHeader>
+              <CardHeader className="pt-0">
                 <CardTitle className="font-headline text-2xl text-foreground">{character.name}</CardTitle>
               </CardHeader>
               <CardContent className="flex-grow">
