@@ -77,15 +77,15 @@ export default function DetailsSection() {
           <h3 className="font-headline text-3xl font-bold text-foreground mb-6 text-center">Patriarcas</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {patriarcas.map((character) => (
-              <Card key={character.name} className="bg-background border-border/50 shadow-lg flex flex-col overflow-hidden">
+              <Card key={character.name} className="bg-background border-border/50 shadow-lg flex flex-col overflow-hidden text-center">
                 {character.imageUrl && (
-                  <div className="p-8">
-                    <div className="relative aspect-square w-full">
+                  <div className="p-6 flex justify-center">
+                    <div className="relative aspect-square w-32">
                       <Image
                         src={character.imageUrl}
                         alt={`Imagen de ${character.name}`}
                         fill
-                        className="object-cover rounded-lg"
+                        className="object-contain"
                       />
                     </div>
                   </div>
@@ -105,15 +105,15 @@ export default function DetailsSection() {
           <h3 className="font-headline text-3xl font-bold text-foreground mb-6 text-center">Profetas</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {profetas.map((character) => (
-              <Card key={character.name} className="bg-background border-border/50 shadow-lg flex flex-col overflow-hidden">
+              <Card key={character.name} className="bg-background border-border/50 shadow-lg flex flex-col overflow-hidden text-center">
                 {character.imageUrl && (
-                  <div className="p-8">
-                    <div className="relative aspect-square w-full">
+                  <div className="p-6 flex justify-center">
+                    <div className="relative aspect-square w-32">
                       <Image
                         src={character.imageUrl}
                         alt={`Imagen de ${character.name}`}
                         fill
-                        className="object-cover rounded-lg"
+                        className="object-contain"
                       />
                     </div>
                   </div>
@@ -133,15 +133,15 @@ export default function DetailsSection() {
           <h3 className="font-headline text-3xl font-bold text-foreground mb-6 text-center">Otros Personajes</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {otros.map((character) => (
-              <Card key={character.name} className="bg-background border-border/50 shadow-lg flex flex-col overflow-hidden">
+              <Card key={character.name} className="bg-background border-border/50 shadow-lg flex flex-col overflow-hidden text-center">
                 {character.imageUrl && (
-                  <div className="p-8">
-                    <div className="relative aspect-square w-full">
+                  <div className="p-6 flex justify-center">
+                    <div className="relative aspect-square w-32">
                       <Image
                         src={character.imageUrl}
                         alt={`Imagen de ${character.name}`}
                         fill
-                        className="object-cover rounded-lg"
+                        className="object-contain"
                       />
                     </div>
                   </div>
