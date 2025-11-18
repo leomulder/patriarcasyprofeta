@@ -33,12 +33,12 @@ export default function BonusSection() {
           {bonuses.map((bonus, index) => (
             <Card key={index} className="bg-card border-border/50 text-center shadow-lg transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
               <CardHeader className="p-0">
-                <div className="relative aspect-[4/3] w-full">
+                <div className="relative aspect-square w-full">
                   <Image
                     src={bonus.imageUrl}
                     alt={bonus.title}
                     fill
-                    className="object-cover rounded-t-lg"
+                    className="object-contain rounded-t-lg p-4"
                   />
                 </div>
               </CardHeader>
