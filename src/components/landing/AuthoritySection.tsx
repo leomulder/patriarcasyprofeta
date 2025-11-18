@@ -10,13 +10,13 @@ export default function AuthoritySection() {
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="flex-shrink-0 w-full md:w-1/3 flex justify-center">
             {authorImage && (
-              <div className="p-2 border-2 border-border rounded-xl shadow-lg w-32 h-40 md:w-40 md:h-52">
+              <div className="p-2 border-2 border-border rounded-xl shadow-lg w-48 h-60 md:w-56 md:h-72">
                 <Image
                   src={authorImage.imageUrl}
                   alt={authorImage.description}
                   data-ai-hint={authorImage.imageHint}
-                  width={160}
-                  height={200}
+                  width={224}
+                  height={288}
                   className="rounded-lg object-cover w-full h-full"
                 />
               </div>
