@@ -15,8 +15,8 @@ export default function AuthoritySection() {
                   src={authorImage.imageUrl}
                   alt={authorImage.description}
                   data-ai-hint={authorImage.imageHint}
-                  width={400}
-                  height={500}
+                  width={800}
+                  height={1000}
                   className="rounded-lg object-cover w-full h-full"
                 />
               </div>
