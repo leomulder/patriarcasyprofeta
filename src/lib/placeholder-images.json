@@ -21,13 +21,13 @@
     {
       "id": "testimonial-3",
       "description": "A man in his 50s, looking professional and confident, standing in a library.",
-      "imageUrl": "https://images.unsplash.com/photo-1693246630706-5382f667ca80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYW4lMjBsaWJyYXJ5fGVufDB8fHx8MTc2MzQ5NzA3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1693246630706-5382f667ca80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYW4lMjBsaWJyYXJ5fGVufDB8fHx8MTc2MzQ5NzA3OXww&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "man library"
     },
     {
       "id": "testimonial-4",
       "description": "A young woman listening with headphones, with a serene smile on her face.",
-      "imageUrl": "https://images.unsplash.com/photo-1594917363089-1254eb99fd33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMGhlYWRwaG9uZXN8ZW58MHx8fHwxNzYzNDg1OTY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1594917363089-1254eb99fd33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMGhlYWRwaG9uZXN8ZW58MHx8fHwxNzYzNDg1OTY4fDA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "woman headphones"
     },
     {
@@ -45,7 +45,7 @@
     {
       "id": "author-image",
       "description": "Portrait of Juan Esteban, a theologian and author, smiling.",
-      "imageUrl": "https://i.ibb.co/yYyC6vV/image.png",
+      "imageUrl": "https://i.postimg.cc/jjkBR8Ys/Captura-de-tela-2025-11-18-184755.png",
       "imageHint": "man portrait"
     }
   ]
