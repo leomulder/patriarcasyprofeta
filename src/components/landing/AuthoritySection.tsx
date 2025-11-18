@@ -8,21 +8,21 @@ export default function AuthoritySection() {
     <section className="py-16 sm:py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
-          <div className="flex-shrink-0 w-full md:w-1/3 flex justify-center">
+          <div className="flex-shrink-0 w-full md:w-auto flex justify-center">
             {authorImage && (
-              <div className="p-2 border-2 border-border rounded-xl shadow-lg w-48 h-60 md:w-56 md:h-72">
+              <div className="p-2 border-2 border-border rounded-xl shadow-lg w-64 h-80">
                 <Image
                   src={authorImage.imageUrl}
                   alt={authorImage.description}
                   data-ai-hint={authorImage.imageHint}
-                  width={224}
-                  height={288}
+                  width={448}
+                  height={576}
                   className="rounded-lg object-cover w-full h-full"
                 />
               </div>
             )}
           </div>
-          <div className="md:w-2/3 text-center md:text-left">
+          <div className="md:flex-1 text-center md:text-left">
             <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary">
               Una guía de alguien que ya recorrió este camino
             </h2>
