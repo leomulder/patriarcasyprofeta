@@ -3,7 +3,7 @@ import { ShieldCheck } from 'lucide-react';
 const GuaranteeSeal = () => (
   <div className="relative inline-block">
     <ShieldCheck className="size-32 text-primary" />
-    <div className="absolute inset-0 flex flex-col items-center justify-center pt-1">
+    <div className="absolute inset-0 flex flex-col items-center justify-center">
       <div className="text-center font-bold text-primary-foreground">
         <div className="text-3xl">30</div>
         <div className="text-sm leading-tight">DÍAS</div>
