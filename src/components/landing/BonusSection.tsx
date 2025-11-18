@@ -1,21 +1,21 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookText, Map, Headphones, UsersRound } from "lucide-react";
+import Image from "next/image";
 
 const bonuses = [
   {
-    icon: <BookText className="size-8 text-primary" />,
+    imageUrl: "https://i.postimg.cc/rFCG1KmS/1.png",
     title: "Bono #1: Guía de Estudio Profundo",
   },
   {
-    icon: <Map className="size-8 text-primary" />,
+    imageUrl: "https://i.postimg.cc/brfbbhfC/2.png",
     title: "Bono #2: Mapa Mental de Patriarcas y Profetas",
   },
   {
-    icon: <Headphones className="size-8 text-primary" />,
+    imageUrl: "https://i.postimg.cc/wjjND2ZW/3.png",
     title: "Bono #3: Audio-sesiones exclusivas",
   },
   {
-    icon: <UsersRound className="size-8 text-primary" />,
+    imageUrl: "https://i.postimg.cc/hjTQK5Q3/4.png",
     title: "Bono #4: Comunidad privada de discusión espiritual",
   },
 ];
@@ -31,13 +31,18 @@ export default function BonusSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           {bonuses.map((bonus, index) => (
-            <Card key={index} className="bg-card border-border/50 text-center shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
-              <CardHeader>
-                <div className="mx-auto bg-secondary rounded-full p-4 w-fit">
-                  {bonus.icon}
+            <Card key={index} className="bg-card border-border/50 text-center shadow-lg transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+              <CardHeader className="p-0">
+                <div className="relative aspect-[4/3] w-full">
+                  <Image
+                    src={bonus.imageUrl}
+                    alt={bonus.title}
+                    fill
+                    className="object-cover rounded-t-lg"
+                  />
                 </div>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex-grow flex items-center justify-center p-6">
                 <CardTitle className="font-body text-lg font-bold text-foreground">{bonus.title}</CardTitle>
               </CardContent>
             </Card>
