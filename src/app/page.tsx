@@ -10,6 +10,7 @@ import GuaranteeSection from '@/components/landing/GuaranteeSection';
 import PricingSection from '@/components/landing/PricingSection';
 import TestimonialsSection from '@/components/landing/TestimonialsSection';
 import Footer from '@/components/landing/Footer';
+import SocialProof from '@/components/landing/SocialProof';
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <TestimonialsSection />
       </main>
       <Footer />
+      <SocialProof />
     </div>
   );
 }
