@@ -1,5 +1,6 @@
 import { Zap, BookOpen, RefreshCw, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from 'next/link';
 
 const features = [
   { icon: <Zap className="size-8 text-primary" />, text: "Acceso inmediato" },
@@ -29,9 +30,11 @@ export default function TransformSection() {
               </div>
             ))}
           </div>
-          <Button size="lg" className="mt-12 bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-lg py-7 px-10 rounded-xl shadow-lg shadow-primary/30 transition-transform transform hover:scale-105">
-            QUIERO TRANSFORMAR MI ESTUDIO
-          </Button>
+          <Link href="/#pricing">
+            <Button size="lg" className="mt-12 bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-lg py-7 px-10 rounded-xl shadow-lg shadow-primary/30 transition-transform transform hover:scale-105">
+              QUIERO TRANSFORMAR MI ESTUDIO
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
