@@ -4,16 +4,16 @@ const GuaranteeSeal = () => (
   <div className="relative inline-block size-32">
     <svg
       viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
+      fill="hsl(var(--primary))"
+      stroke="hsl(var(--primary))"
+      strokeWidth="1"
       strokeLinecap="round"
       strokeLinejoin="round"
       className="text-primary size-full"
     >
       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
     </svg>
-    <div className="absolute inset-0 flex flex-col items-center justify-center text-primary-foreground">
+    <div className="absolute inset-0 flex flex-col items-center justify-center text-background">
       <div className="text-center font-bold">
         <div className="text-3xl leading-none pt-1">30</div>
         <div className="text-sm leading-none">DÍAS</div>
