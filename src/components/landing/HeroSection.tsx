@@ -39,7 +39,7 @@ export default function HeroSection() {
         </h2>
         
         <p className="mt-6 text-lg md:text-xl text-foreground/90 max-w-2xl">
-          Transforma tu estudio bíblico en una experiencia profunda, sorprendente y espiritual. Accede al único aplicativo LATAM que te sumerge en las historias, secretos y revelaciones de los grandes patriarcas… de manera práctica, viva y guiada.
+          Transforma tu estudio bíblico en una experiencia profunda, sorprendente y espiritual. Accede al único aplicativo que te sumerge en las historias, secretos y revelaciones de los grandes patriarcas… de manera práctica, viva y guiada.
         </p>
 
         <p className="mt-4 text-md md:text-lg text-foreground/80">
