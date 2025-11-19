@@ -53,13 +53,13 @@ export default function PricingSection() {
           <div className="max-w-2xl mx-auto text-center mb-12">
             <div className="inline-block bg-card border border-primary/50 rounded-xl p-4 shadow-lg">
               <div className="flex items-center gap-3">
-                <Timer className="size-8 text-primary" />
+                <Timer className="size-8 text-destructive" />
                 <div>
                   <p className="font-bold text-foreground">¡Oferta de Lanzamiento Termina Pronto!</p>
                   <p className="text-2xl font-headline font-bold text-primary">{String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}</p>
                 </div>
               </div>
-              <Progress value={progress} className="w-full h-2 mt-3 bg-secondary" />
+              <Progress value={progress} className="w-full h-2 mt-3 bg-secondary" indicatorClassName="bg-destructive" />
             </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start max-w-5xl mx-auto">
