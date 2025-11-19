@@ -23,22 +23,22 @@ const profetas = [
   {
     name: "Isaías",
     description: "El profeta mesiánico y la visión de la redención.",
-    imageUrl: "https://i.postimg.cc/wMhXb7fR/8.png"
+    imageUrl: "https://i.postimg.cc/cC67MNDK/2.png"
   },
   {
     name: "Jeremías",
     description: "El profeta llorón y el nuevo pacto.",
-    imageUrl: "https://i.postimg.cc/Y9JjLd0V/9.png"
+    imageUrl: "https://i.postimg.cc/SNF7YH6Q/3.png"
   },
   {
     name: "Ezequiel",
     description: "La visión de la gloria de Dios y la restauración de Israel.",
-    imageUrl: "https://i.postimg.cc/SNf53RhR/10.png"
+    imageUrl: "https://i.postimg.cc/qv7tNG5Q/4.png"
   },
   {
     name: "Daniel",
     description: "Fidelidad en el exilio y las profecías del tiempo del fin.",
-    imageUrl: "https://i.postimg.cc/tJn4N1yW/11.png"
+    imageUrl: "https://i.postimg.cc/cCZC073N/5.png"
   },
 ]
 
