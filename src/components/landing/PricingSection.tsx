@@ -25,7 +25,7 @@ const featuresCompleto = [
 
 export default function PricingSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const initialTime = 59 * 60; // 59 minutes in seconds
+  const initialTime = 20 * 60; // 20 minutes in seconds
   const [timeLeft, setTimeLeft] = useState(initialTime);
 
   useEffect(() => {
@@ -122,7 +122,7 @@ export default function PricingSection() {
                 </ul>
               </CardContent>
               <CardFooter className="pt-8">
-                <Button size="lg" className="w-full text-lg py-6 bg-primary text-primary-foreground hover:bg-primary/90">
+                <Button size="lg" className="w-full text-lg py-6 bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => window.location.href = '#pricing'}>
                   QUIERO EL COMPLETO
                 </Button>
               </CardFooter>
