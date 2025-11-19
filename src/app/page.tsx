@@ -1,17 +1,19 @@
-import HeroSection from '@/components/landing/HeroSection';
-import ContentSection from '@/components/landing/ContentSection';
-import ForYouSection from '@/components/landing/ForYouSection';
-import HowItWorksSection from '@/components/landing/HowItWorksSection';
-import AuthoritySection from '@/components/landing/AuthoritySection';
-import TransformSection from '@/components/landing/TransformSection';
-import DetailsSection from '@/components/landing/DetailsSection';
-import BonusSection from '@/components/landing/BonusSection';
-import GuaranteeSection from '@/components/landing/GuaranteeSection';
-import PricingSection from '@/components/landing/PricingSection';
-import TestimonialsSection from '@/components/landing/TestimonialsSection';
-import FaqSection from '@/components/landing/FaqSection';
-import Footer from '@/components/landing/Footer';
-import SocialProof from '@/components/landing/SocialProof';
+import dynamic from 'next/dynamic';
+
+const HeroSection = dynamic(() => import('@/components/landing/HeroSection'));
+const ContentSection = dynamic(() => import('@/components/landing/ContentSection'));
+const ForYouSection = dynamic(() => import('@/components/landing/ForYouSection'));
+const HowItWorksSection = dynamic(() => import('@/components/landing/HowItWorksSection'));
+const AuthoritySection = dynamic(() => import('@/components/landing/AuthoritySection'));
+const TransformSection = dynamic(() => import('@/components/landing/TransformSection'));
+const DetailsSection = dynamic(() => import('@/components/landing/DetailsSection'));
+const BonusSection = dynamic(() => import('@/components/landing/BonusSection'));
+const GuaranteeSection = dynamic(() => import('@/components/landing/GuaranteeSection'));
+const PricingSection = dynamic(() => import('@/components/landing/PricingSection'));
+const TestimonialsSection = dynamic(() => import('@/components/landing/TestimonialsSection'));
+const FaqSection = dynamic(() => import('@/components/landing/FaqSection'));
+const Footer = dynamic(() => import('@/components/landing/Footer'));
+const SocialProof = dynamic(() => import('@/components/landing/SocialProof'));
 
 export default function Home() {
   return (
