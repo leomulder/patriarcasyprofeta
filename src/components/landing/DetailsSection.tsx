@@ -10,7 +10,7 @@ const patriarcas = [
   {
     name: "Isaac",
     description: "El hijo de la promesa, heredero de la fe.",
-    imageUrl: "https://i.postimg.cc/D0112YfR/7.png"
+    imageUrl: "https://i.postimg.cc/RCQxjxVy/1.png"
   },
   {
     name: "Jacob",
