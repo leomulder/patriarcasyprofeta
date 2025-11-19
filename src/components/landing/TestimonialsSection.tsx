@@ -56,7 +56,7 @@ export default function TestimonialsSection() {
             <StarRating />
             <p className="font-bold text-lg text-foreground">4.9 / 5.0</p>
           </div>
-          <p className="text-muted-foreground">— basado en +1.247 reviews</p>
+          <p className="text-muted-foreground">— basado en +12.247 reviews</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {testimonials.map((testimonial) => {
