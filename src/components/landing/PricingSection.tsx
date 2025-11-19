@@ -6,12 +6,19 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription }
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Check } from 'lucide-react';
 
+const featuresBasico = [
+  "Acceso a los estudios de los Patriarcas",
+  "Contexto histórico y cultural",
+  "Guía de Estudio Profundo (Bono #1)",
+  "Soporte por correo electrónico"
+];
+
 const featuresCompleto = [
-  "Acceso total a todos los estudios",
-  "Todos los bonos exclusivos",
-  "Acceso a la comunidad privada",
-  "Audiolibro completo",
-  "Actualizaciones constantes"
+  "Acceso TOTAL a todos los estudios (Patriarcas y Profetas)",
+  "TODOS los bonos exclusivos (valor $197)",
+  "Acceso a la comunidad PRIVADA",
+  "Audiolibro completo de todos los estudios",
+  "Actualizaciones de contenido constantes y futuras"
 ];
 
 export default function PricingSection() {
@@ -21,19 +28,30 @@ export default function PricingSection() {
     <>
       <section id="pricing" className="py-16 sm:py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start max-w-5xl mx-auto">
             
             {/* Básico Plan */}
-            <Card className="bg-card border-border/50 shadow-lg flex flex-col h-full">
-              <CardHeader className="text-center">
+            <Card className="bg-card border-border/50 shadow-lg flex flex-col h-full relative">
+               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary text-secondary-foreground px-4 py-1 rounded-full text-sm font-bold">
+                PRECIO LANZAMIENTO
+              </div>
+              <CardHeader className="text-center pt-10">
                 <CardTitle className="font-headline text-3xl text-foreground">Básico</CardTitle>
-                <CardDescription className="text-muted-foreground pt-2">Contenido limitado.</CardDescription>
+                <CardDescription className="text-muted-foreground pt-2">Para comenzar tu viaje.</CardDescription>
               </CardHeader>
-              <CardContent className="flex-grow text-center">
-                <div className="my-4">
+              <CardContent className="flex-grow">
+                <div className="text-center my-4">
                   <span className="text-5xl font-bold font-headline text-foreground">U$3,90</span>
                   <span className="text-muted-foreground">/mes</span>
                 </div>
+                 <ul className="space-y-3 mt-8">
+                  {featuresBasico.map((feature, index) => (
+                    <li key={index} className="flex items-start">
+                      <Check className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-foreground/90">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </CardContent>
               <CardFooter>
                 <Button variant="outline" size="lg" className="w-full text-lg py-6 border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => setIsModalOpen(true)}>
@@ -47,12 +65,16 @@ export default function PricingSection() {
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold">
                 MÁS POPULAR
               </div>
+               <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-secondary text-secondary-foreground px-4 py-1 rounded-full text-sm font-bold">
+                PRECIO LANZAMIENTO
+              </div>
               <CardHeader className="text-center pt-10">
                 <CardTitle className="font-headline text-3xl text-primary">Completo</CardTitle>
                 <CardDescription className="text-muted-foreground pt-2">La experiencia completa y transformadora.</CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">
                 <div className="text-center my-4">
+                  <p className="text-muted-foreground line-through">De U$12,90</p>
                   <span className="text-5xl font-bold font-headline text-foreground">U$7,90</span>
                   <span className="text-muted-foreground">/mes</span>
                 </div>
@@ -60,12 +82,12 @@ export default function PricingSection() {
                   {featuresCompleto.map((feature, index) => (
                     <li key={index} className="flex items-start">
                       <Check className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
-                      <span className="text-foreground/90">{feature}</span>
+                      <span className="text-foreground/90 font-semibold">{feature}</span>
                     </li>
                   ))}
                 </ul>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="pt-8">
                 <Button size="lg" className="w-full text-lg py-6 bg-primary text-primary-foreground hover:bg-primary/90">
                   QUIERO EL COMPLETO
                 </Button>
