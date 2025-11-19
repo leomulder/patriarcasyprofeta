@@ -88,7 +88,7 @@ export default function PricingSection() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" size="lg" className="w-full text-lg py-6 border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => window.location.href = 'https://pay.hotmart.com/K99537811Y?off=8h2ivhga&checkoutMode=10'}>
+                <Button variant="outline" size="lg" className="w-full text-lg py-6 border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => setIsModalOpen(true)}>
                   QUIERO EL BÁSICO
                 </Button>
               </CardFooter>
