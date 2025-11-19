@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
-import { Check } from 'lucide-react';
+import { Check, Timer } from 'lucide-react';
+import { Progress } from '@/components/ui/progress';
 
 const featuresBasico = [
   "Acceso a los estudios de los Patriarcas",
@@ -14,6 +15,7 @@ const featuresBasico = [
 ];
 
 const featuresCompleto = [
+  ...featuresBasico,
   "Acceso TOTAL a todos los estudios (Patriarcas y Profetas)",
   "TODOS los bonos exclusivos (valor $197)",
   "Acceso a la comunidad PRIVADA",
@@ -23,11 +25,43 @@ const featuresCompleto = [
 
 export default function PricingSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const initialTime = 59 * 60; // 59 minutes in seconds
+  const [timeLeft, setTimeLeft] = useState(initialTime);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prevTime) => {
+        if (prevTime <= 1) {
+          clearInterval(timer);
+          return 0;
+        }
+        return prevTime - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const minutes = Math.floor(timeLeft / 60);
+  const seconds = timeLeft % 60;
+  const progress = (timeLeft / initialTime) * 100;
 
   return (
     <>
       <section id="pricing" className="py-16 sm:py-24 bg-background">
         <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center mb-12">
+            <div className="inline-block bg-card border border-primary/50 rounded-xl p-4 shadow-lg">
+              <div className="flex items-center gap-3">
+                <Timer className="size-8 text-primary" />
+                <div>
+                  <p className="font-bold text-foreground">¡Oferta de Lanzamiento Termina Pronto!</p>
+                  <p className="text-2xl font-headline font-bold text-primary">{String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}</p>
+                </div>
+              </div>
+              <Progress value={progress} className="w-full h-2 mt-3 bg-secondary" />
+            </div>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start max-w-5xl mx-auto">
             
             {/* Básico Plan */}
