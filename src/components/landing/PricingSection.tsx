@@ -88,7 +88,7 @@ export default function PricingSection() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" size="lg" className="w-full text-lg py-6 border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => setIsModalOpen(true)}>
+                <Button variant="outline" size="lg" className="w-full text-lg py-6 border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => window.location.href = 'https://pay.hotmart.com/K99537811Y?off=8h2ivhga&checkoutMode=10'}>
                   QUIERO EL BÁSICO
                 </Button>
               </CardFooter>
@@ -128,7 +128,7 @@ export default function PricingSection() {
                 </ul>
               </CardContent>
               <CardFooter className="pt-8">
-                <Button size="lg" className="w-full text-lg py-6 bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => window.location.href = '#pricing'}>
+                <Button size="lg" className="w-full text-lg py-6 bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => window.location.href = 'https://pay.hotmart.com/K99537811Y?off=rtgmziqk&checkoutMode=10'}>
                   QUIERO EL COMPLETO
                 </Button>
               </CardFooter>
@@ -159,10 +159,10 @@ export default function PricingSection() {
             ))}
           </ul>
           <div className="flex flex-col gap-4">
-            <Button size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => window.location.href = '#pricing'}>
+            <Button size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => window.location.href = 'https://pay.hotmart.com/K99537811Y?off=5suiqzrp&checkoutMode=10'}>
               SÍ, QUIERO EL COMPLETO POR U$9,00
             </Button>
-            <Button variant="ghost" className="w-full" onClick={() => setIsModalOpen(false)}>
+            <Button variant="ghost" className="w-full" onClick={() => { setIsModalOpen(false); window.location.href = 'https://pay.hotmart.com/K99537811Y?off=8h2ivhga&checkoutMode=10'; }}>
               No, gracias. Quiero el Básico por U$6,90
             </Button>
           </div>
