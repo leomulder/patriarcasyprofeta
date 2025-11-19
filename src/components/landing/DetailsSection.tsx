@@ -5,7 +5,7 @@ const patriarcas = [
   {
     name: "Abraham",
     description: "El pacto. La promesa. La prueba.",
-    imageUrl: "https://i.postimg.cc/vHKLmWxH/3.png"
+    imageUrl: "https://i.postimg.cc/L50cN22y/Profetasypatriarcas.png"
   },
   {
     name: "Isaac",
@@ -15,7 +15,7 @@ const patriarcas = [
   {
     name: "Jacob",
     description: "Lucha, identidad y destino.",
-    imageUrl: "https://i.postimg.cc/fyLmzLwB/4.png"
+    imageUrl: "https://i.postimg.cc/yNc7xgs9/Profetasypatriarcas.png"
   },
 ];
 
