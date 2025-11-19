@@ -15,7 +15,6 @@ const featuresBasico = [
 ];
 
 const featuresCompleto = [
-  ...featuresBasico,
   "Acceso TOTAL a todos los estudios (Patriarcas y Profetas)",
   "TODOS los bonos exclusivos (valor $197)",
   "Acceso a la comunidad PRIVADA",
@@ -114,6 +113,12 @@ export default function PricingSection() {
                   <span className="text-muted-foreground">/mes</span>
                 </div>
                 <ul className="space-y-3 mt-8">
+                  {featuresBasico.map((feature, index) => (
+                    <li key={index} className="flex items-start">
+                      <Check className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-foreground/90">{feature}</span>
+                    </li>
+                  ))}
                   {featuresCompleto.map((feature, index) => (
                     <li key={index} className="flex items-start">
                       <Check className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
@@ -146,7 +151,7 @@ export default function PricingSection() {
             <p className="text-sm text-primary mt-1">Acceso Completo con Descuento</p>
           </div>
           <ul className="space-y-2 mb-6">
-            {featuresCompleto.slice(0,3).map((feature, index) => (
+            {[...featuresBasico, ...featuresCompleto].map((feature, index) => (
               <li key={index} className="flex items-center text-sm">
                 <Check className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
                 <span className="text-foreground/90">{feature}</span>
@@ -154,7 +159,7 @@ export default function PricingSection() {
             ))}
           </ul>
           <div className="flex flex-col gap-4">
-            <Button size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => window.location.href = '#pricing'}>
               SÍ, QUIERO EL COMPLETO POR U$6,90
             </Button>
             <Button variant="ghost" className="w-full" onClick={() => setIsModalOpen(false)}>
