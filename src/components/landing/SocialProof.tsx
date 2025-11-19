@@ -24,25 +24,34 @@ const benefits = [
   { text: "Actualizaciones de contenido constantes y futuras", type: 'benefit' },
 ];
 
-// Combine and shuffle notifications
-const allNotifications = [...purchases, ...benefits]
-  .map(value => ({ value, sort: Math.random() }))
-  .sort((a, b) => a.sort - b.sort)
-  .map(({ value }) => value);
+// Combine notifications
+const combinedNotifications = [...purchases, ...benefits];
 
 
 export default function SocialProof() {
   const [isVisible, setIsVisible] = useState(false);
   const [currentNotificationIndex, setCurrentNotificationIndex] = useState(0);
+  const [shuffledNotifications, setShuffledNotifications] = useState<typeof combinedNotifications>([]);
 
   useEffect(() => {
+    // Shuffle notifications only on the client-side to avoid hydration mismatch
+    const shuffled = [...combinedNotifications]
+      .map(value => ({ value, sort: Math.random() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ value }) => value);
+    setShuffledNotifications(shuffled);
+  }, []);
+
+  useEffect(() => {
+    if (shuffledNotifications.length === 0) return;
+
     const showInterval = setInterval(() => {
       setIsVisible(true);
       const hideTimeout = setTimeout(() => {
         setIsVisible(false);
         // Wait for fade-out to complete before showing the next one
         const nextTimeout = setTimeout(() => {
-           setCurrentNotificationIndex((prevIndex) => (prevIndex + 1) % allNotifications.length);
+           setCurrentNotificationIndex((prevIndex) => (prevIndex + 1) % shuffledNotifications.length);
         }, 500);
         return () => clearTimeout(nextTimeout);
       }, 5000); // Visible for 5 seconds
@@ -51,9 +60,13 @@ export default function SocialProof() {
     }, 8000); // Show a new notification every 8 seconds
 
     return () => clearInterval(showInterval);
-  }, [currentNotificationIndex]);
+  }, [currentNotificationIndex, shuffledNotifications.length]);
+  
+  if (shuffledNotifications.length === 0) {
+    return null; // Don't render anything on the server or initial client render
+  }
 
-  const currentNotification = allNotifications[currentNotificationIndex];
+  const currentNotification = shuffledNotifications[currentNotificationIndex];
 
   const renderContent = () => {
     if (currentNotification.type === 'purchase') {
