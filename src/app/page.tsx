@@ -9,6 +9,7 @@ import BonusSection from '@/components/landing/BonusSection';
 import GuaranteeSection from '@/components/landing/GuaranteeSection';
 import PricingSection from '@/components/landing/PricingSection';
 import TestimonialsSection from '@/components/landing/TestimonialsSection';
+import FaqSection from '@/components/landing/FaqSection';
 import Footer from '@/components/landing/Footer';
 import SocialProof from '@/components/landing/SocialProof';
 
@@ -27,6 +28,7 @@ export default function Home() {
         <GuaranteeSection />
         <PricingSection />
         <TestimonialsSection />
+        <FaqSection />
       </main>
       <Footer />
       <SocialProof />
