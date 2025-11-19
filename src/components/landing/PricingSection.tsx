@@ -75,7 +75,7 @@ export default function PricingSection() {
               <CardContent className="flex-grow">
                 <div className="text-center my-4">
                   <p className="text-muted-foreground line-through">De U$27,90</p>
-                  <span className="text-5xl font-bold font-headline text-foreground">U$3,90</span>
+                  <span className="text-5xl font-bold font-headline text-foreground">U$6,90</span>
                   <span className="text-muted-foreground">/mes</span>
                 </div>
                  <ul className="space-y-3 mt-8">
@@ -109,7 +109,7 @@ export default function PricingSection() {
               <CardContent className="flex-grow">
                 <div className="text-center my-4">
                   <p className="text-muted-foreground line-through">De U$57,90</p>
-                  <span className="text-5xl font-bold font-headline text-foreground">U$7,90</span>
+                  <span className="text-5xl font-bold font-headline text-foreground">U$11,90</span>
                   <span className="text-muted-foreground">/mes</span>
                 </div>
                 <ul className="space-y-3 mt-8">
@@ -146,8 +146,8 @@ export default function PricingSection() {
             </DialogDescription>
           </DialogHeader>
           <div className="my-6 text-center">
-            <p className="text-muted-foreground line-through">Precio normal: U$7,90/mes</p>
-            <p className="font-headline text-5xl font-bold text-foreground mt-2">U$6,90<span className="text-lg font-body text-muted-foreground">/mes</span></p>
+            <p className="text-muted-foreground line-through">Precio normal: U$11,90/mes</p>
+            <p className="font-headline text-5xl font-bold text-foreground mt-2">U$9,00<span className="text-lg font-body text-muted-foreground">/mes</span></p>
             <p className="text-sm text-primary mt-1">Acceso Completo con Descuento</p>
           </div>
           <ul className="space-y-2 mb-6">
@@ -160,10 +160,10 @@ export default function PricingSection() {
           </ul>
           <div className="flex flex-col gap-4">
             <Button size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => window.location.href = '#pricing'}>
-              SÍ, QUIERO EL COMPLETO POR U$6,90
+              SÍ, QUIERO EL COMPLETO POR U$9,00
             </Button>
             <Button variant="ghost" className="w-full" onClick={() => setIsModalOpen(false)}>
-              No, gracias. Quiero el Básico por U$3,90
+              No, gracias. Quiero el Básico por U$6,90
             </Button>
           </div>
         </DialogContent>
