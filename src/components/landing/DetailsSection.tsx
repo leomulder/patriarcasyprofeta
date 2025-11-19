@@ -46,22 +46,22 @@ const otros = [
   {
     name: "Adán y Eva",
     description: "El origen, la caída, la revelación que marcó toda la humanidad.",
-    imageUrl: "https://i.postimg.cc/FFZThdxS/1.png"
+    imageUrl: "https://i.postimg.cc/Dw1NbqJH/Profetasypatriarcas-(1).png"
   },
   {
     name: "Noé",
     description: "Fe irracional. Obediencia radical.",
-    imageUrl: "https://i.postimg.cc/fLsvNDtr/2.png"
+    imageUrl: "https://i.postimg.cc/hGr32c0y/Profetasypatriarcas-(2).png"
   },
   {
     name: "José",
     description: "Propósito en medio del dolor.",
-    imageUrl: "https://i.postimg.cc/ZRYyHRvX/6.png"
+    imageUrl: "https://i.postimg.cc/cHCTTYCB/Profetasypatriarcas.png"
   },
   {
     name: "Moisés",
     description: "Liberación, ley y liderazgo.",
-    imageUrl: "https://i.postimg.cc/c4PwW0Pd/5.png"
+    imageUrl: "https://i.postimg.cc/RCk56Cpg/Profetasypatriarcas.png"
   },
 ];
 
