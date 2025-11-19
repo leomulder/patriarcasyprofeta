@@ -3,6 +3,7 @@ import { Playfair_Display, PT_Sans } from 'next/font/google';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 import { cn } from '@/lib/utils';
+import Script from 'next/script';
 
 const ptSans = PT_Sans({
   subsets: ['latin'],
@@ -34,6 +35,16 @@ export default function RootLayout({
       <body className="font-body antialiased">
         {children}
         <Toaster />
+        <Script id="utmify-pixel-config" strategy="afterInteractive">
+          {`window.pixelId = "68bdb8b58e919d275589459c";`}
+        </Script>
+        <Script 
+          id="utmify-pixel"
+          src="https://cdn.utmify.com.br/scripts/pixel/pixel.js"
+          strategy="afterInteractive"
+          async
+          defer
+        />
       </body>
     </html>
   );
