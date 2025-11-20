@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
-import { Check, Timer } from 'lucide-react';
+import { Check, Timer, ShieldCheck, Zap } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 
 const featuresBasico = [
@@ -127,6 +127,16 @@ export default function PricingSection() {
                 </Button>
               </CardFooter>
             </Card>
+          </div>
+          <div className="mt-12 max-w-md mx-auto space-y-4">
+            <div className="flex items-center justify-center gap-3 text-foreground/90">
+              <ShieldCheck className="size-5 text-primary flex-shrink-0" />
+              <span>Compra 100% segura con Hotmart</span>
+            </div>
+            <div className="flex items-center justify-center gap-3 text-foreground/90">
+              <Zap className="size-5 text-primary flex-shrink-0" />
+              <span>Acceso inmediato después del pago</span>
+            </div>
           </div>
         </div>
       </section>
