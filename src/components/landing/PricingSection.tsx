@@ -113,12 +113,6 @@ export default function PricingSection() {
                   <span className="text-muted-foreground">/mes</span>
                 </div>
                 <ul className="space-y-3 mt-8">
-                  {featuresBasico.map((feature, index) => (
-                    <li key={index} className="flex items-start">
-                      <Check className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
-                      <span className="text-foreground/90">{feature}</span>
-                    </li>
-                  ))}
                   {featuresCompleto.map((feature, index) => (
                     <li key={index} className="flex items-start">
                       <Check className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
@@ -151,7 +145,7 @@ export default function PricingSection() {
             <p className="text-sm text-primary mt-1">Acceso Completo con Descuento</p>
           </div>
           <ul className="space-y-2 mb-6">
-            {[...featuresBasico, ...featuresCompleto].map((feature, index) => (
+            {featuresCompleto.map((feature, index) => (
               <li key={index} className="flex items-center text-sm">
                 <Check className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
                 <span className="text-foreground/90">{feature}</span>
