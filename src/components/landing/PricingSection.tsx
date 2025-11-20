@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
-import { Check, Timer, ShieldCheck, Zap } from 'lucide-react';
+import { Check, Timer, ShieldCheck, Zap, TrendingUp, Flame, AlertTriangle } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 
 const featuresBasico = [
@@ -22,44 +22,82 @@ const featuresCompleto = [
   "Actualizaciones de contenido constantes y futuras"
 ];
 
-export default function PricingSection() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const initialTime = 20 * 60; // 20 minutes in seconds
+const CountdownTimer = () => {
+  const initialTime = 11 * 3600 + 37 * 60 + 37;
   const [timeLeft, setTimeLeft] = useState(initialTime);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft((prevTime) => {
-        if (prevTime <= 1) {
-          clearInterval(timer);
-          return 0;
-        }
-        return prevTime - 1;
-      });
+      setTimeLeft((prevTime) => (prevTime > 0 ? prevTime - 1 : 0));
     }, 1000);
 
     return () => clearInterval(timer);
   }, []);
 
-  const minutes = Math.floor(timeLeft / 60);
+  const hours = Math.floor(timeLeft / 3600);
+  const minutes = Math.floor((timeLeft % 3600) / 60);
   const seconds = timeLeft % 60;
-  const progress = (timeLeft / initialTime) * 100;
+
+  return (
+    <div className="bg-destructive/90 text-destructive-foreground p-4 rounded-lg text-center max-w-md mx-auto">
+      <div className="flex items-center justify-center gap-2 mb-3">
+        <Timer className="size-5" />
+        <AlertTriangle className="size-5" />
+        <p className="font-bold uppercase">¡El precio aumenta a medianoche!</p>
+      </div>
+      <div className="flex justify-center items-center gap-2 sm:gap-4">
+        <div className="bg-destructive/50 p-3 rounded-lg min-w-[70px]">
+          <div className="text-4xl font-bold font-headline">{String(hours).padStart(2, '0')}</div>
+          <div className="text-xs">HORAS</div>
+        </div>
+        <div className="text-3xl font-bold">:</div>
+        <div className="bg-destructive/50 p-3 rounded-lg min-w-[70px]">
+          <div className="text-4xl font-bold font-headline">{String(minutes).padStart(2, '00')}</div>
+          <div className="text-xs">MIN</div>
+        </div>
+        <div className="text-3xl font-bold">:</div>
+        <div className="bg-destructive/50 p-3 rounded-lg min-w-[70px]">
+          <div className="text-4xl font-bold font-headline">{String(seconds).padStart(2, '00')}</div>
+          <div className="text-xs">SEG</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const DynamicPurchases = () => {
+  const [purchases, setPurchases] = useState(22);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPurchases(prev => prev + Math.floor(Math.random() * 3) + 1);
+    }, 4500); // Update every 4.5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="bg-primary text-primary-foreground p-3 rounded-full text-center max-w-md mx-auto font-semibold shadow-lg">
+      <div className="flex items-center justify-center gap-2">
+        <TrendingUp className="size-5" />
+        <Flame className="size-5" />
+        <p>{purchases} personas compraron en las últimas 3 horas</p>
+      </div>
+    </div>
+  );
+};
+
+
+export default function PricingSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
       <section id="pricing" className="py-16 sm:py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center mb-12">
-            <div className="inline-block bg-card border border-primary/50 rounded-xl p-4 shadow-lg">
-              <div className="flex items-center gap-3">
-                <Timer className="size-8 text-destructive" />
-                <div>
-                  <p className="font-bold text-foreground">¡Oferta de Lanzamiento Termina Pronto!</p>
-                  <p className="text-2xl font-headline font-bold text-primary">{String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}</p>
-                </div>
-              </div>
-              <Progress value={progress} className="w-full h-2 mt-3 bg-secondary" indicatorClassName="bg-destructive" />
-            </div>
+          <div className="max-w-2xl mx-auto text-center mb-8 space-y-4">
+            <DynamicPurchases />
+            <CountdownTimer />
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start max-w-5xl mx-auto">
             
