@@ -1,7 +1,11 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import { Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Progress } from '@/components/ui/progress';
 
 const points = [
   "Entiende a Daniel, José, Elías y Moisés… sin filtros ni confusión.",
@@ -12,6 +16,18 @@ const points = [
 ];
 
 export default function ImpactSection() {
+  const [progress, setProgress] = useState(13);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (progress < 90) {
+        setProgress(progress + 1);
+      }
+    }, 1000 * 60 * 5); // Aumenta 1% a cada 5 minutos
+    return () => clearTimeout(timer);
+  }, [progress]);
+
+
   return (
     <section id="impact" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto px-4">
@@ -45,13 +61,20 @@ export default function ImpactSection() {
           </Card>
           
           <div className="mt-12">
-            <p className="mt-4 text-lg text-foreground">Estás a un paso de acceder a un estudio que muy pocos están dispuestos a confrontar…</p>
             <div className="my-4 space-y-1 font-semibold text-muted-foreground">
               <p>Porque no suaviza.</p>
               <p>No adorna.</p>
               <p>No maquilla la verdad.</p>
             </div>
             <p className="font-bold text-lg text-foreground">Accede ahora por tiempo limitado.</p>
+             <div className="max-w-sm mx-auto mt-4 space-y-2">
+              <Progress value={progress} className="h-2 bg-primary/20" indicatorClassName="bg-primary" />
+              <div className="flex justify-between text-xs font-mono text-muted-foreground">
+                <span>0%</span>
+                <span>OFERTA TERMINA</span>
+                <span>100%</span>
+              </div>
+            </div>
           </div>
 
           <div className="mt-8">
