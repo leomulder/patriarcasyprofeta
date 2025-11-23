@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic';
 
 const HeroSection = dynamic(() => import('@/components/landing/HeroSection'));
+const ImpactSection = dynamic(() => import('@/components/landing/ImpactSection'));
 const ContentSection = dynamic(() => import('@/components/landing/ContentSection'));
 const ForYouSection = dynamic(() => import('@/components/landing/ForYouSection'));
 const HowItWorksSection = dynamic(() => import('@/components/landing/HowItWorksSection'));
@@ -20,6 +21,7 @@ export default function Home() {
     <div className="bg-background text-foreground overflow-x-hidden">
       <HeroSection />
       <main>
+        <ImpactSection />
         <ContentSection />
         <ForYouSection />
         <HowItWorksSection />
