@@ -86,6 +86,9 @@ export default function TestimonialsSection() {
             );
           })}
         </div>
+        <p className="mt-12 font-headline text-2xl sm:text-3xl text-foreground text-center">
+          ¿De qué lado quieres estar?
+        </p>
       </div>
     </section>
   );

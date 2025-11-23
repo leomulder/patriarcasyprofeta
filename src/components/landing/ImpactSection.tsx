@@ -41,9 +41,6 @@ export default function ImpactSection() {
                 <br />
                 Otros siguen leyendo la Biblia sin entenderla.
               </p>
-              <p className="mt-4 font-headline text-2xl sm:text-3xl text-foreground">
-                ¿De qué lado quieres estar?
-              </p>
             </CardContent>
           </Card>
           
