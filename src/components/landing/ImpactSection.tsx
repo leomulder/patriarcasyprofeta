@@ -1,5 +1,7 @@
 import { Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const points = [
   "Entiende a Daniel, José, Elías y Moisés… sin filtros ni confusión.",
