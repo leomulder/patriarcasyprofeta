@@ -38,7 +38,7 @@ export default function WhyItWorksSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary">
-            ⭐ Por Qué Este Método Funciona
+            Por Qué Este Método Funciona
           </h2>
           <p className="mt-4 text-lg sm:text-xl text-muted-foreground">
             Porque durante años, millones han leído la Biblia… pero sin
