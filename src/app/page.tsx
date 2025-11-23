@@ -15,6 +15,7 @@ const TestimonialsSection = dynamic(() => import('@/components/landing/Testimoni
 const FaqSection = dynamic(() => import('@/components/landing/FaqSection'));
 const Footer = dynamic(() => import('@/components/landing/Footer'));
 const SocialProof = dynamic(() => import('@/components/landing/SocialProof'));
+const WhyItWorksSection = dynamic(() => import('@/components/landing/WhyItWorksSection'));
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <ImpactSection />
         <ContentSection />
         <ForYouSection />
+        <WhyItWorksSection />
         <HowItWorksSection />
         <AuthoritySection />
         <TransformSection />
