@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const points = [
   "Entiende a Daniel, José, Elías y Moisés… sin filtros ni confusión.",
@@ -27,6 +28,20 @@ export default function ImpactSection() {
               </li>
             ))}
           </ul>
+
+          <Card className="mt-12 bg-card border-border/50 shadow-2xl p-6 sm:p-8 transform transition-transform duration-300 hover:scale-105 hover:shadow-primary/20">
+            <CardContent className="p-0">
+              <p className="text-xl sm:text-2xl font-bold text-foreground">
+                Más de <span className="text-primary">12.400 estudiantes</span> ya abrieron los ojos.
+                <br />
+                Otros siguen leyendo la Biblia sin entenderla.
+              </p>
+              <p className="mt-4 font-headline text-2xl sm:text-3xl text-foreground">
+                ¿De qué lado quieres estar?
+              </p>
+            </CardContent>
+          </Card>
+
         </div>
       </div>
     </section>
