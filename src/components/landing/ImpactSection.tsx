@@ -68,7 +68,7 @@ export default function ImpactSection() {
             </div>
             <p className="font-bold text-lg text-foreground">Accede ahora por tiempo limitado.</p>
              <div className="max-w-sm mx-auto mt-4 space-y-2">
-              <Progress value={progress} className="h-2 bg-primary/20" indicatorClassName="bg-primary" />
+              <Progress value={progress} className="h-2 bg-destructive/20" indicatorClassName="bg-destructive" />
               <div className="flex justify-between text-xs font-mono text-muted-foreground">
                 <span>0%</span>
                 <span>OFERTA TERMINA</span>
