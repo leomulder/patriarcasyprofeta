@@ -45,7 +45,6 @@ export default function ImpactSection() {
           </Card>
           
           <div className="mt-12">
-            <h3 className="font-headline text-2xl font-bold text-primary">🔥 OFERTA / URGENCIA</h3>
             <p className="mt-4 text-lg text-foreground">Estás a un paso de acceder a un estudio que muy pocos están dispuestos a confrontar…</p>
             <div className="my-4 space-y-1 font-semibold text-muted-foreground">
               <p>Porque no suaviza.</p>
