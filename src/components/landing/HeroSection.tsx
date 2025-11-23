@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
@@ -8,10 +10,11 @@ const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
 
 export default function HeroSection() {
   const bullets = [
-    "Estudio profundo",
-    "Audio-libro completo",
+    "Explicación verso por verso",
+    "Contexto histórico-cultural",
+    "Audiolibro completo",
     "Comunidad activa",
-    "Anotaciones, marcadores y revelaciones impactantes",
+    "Revelaciones profundas que fortalecen tu fe"
   ];
 
   return (
@@ -31,31 +34,36 @@ export default function HeroSection() {
       </div>
       
       <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
-        <h1 className="font-headline text-5xl md:text-7xl font-bold text-foreground">
-          Patriarcas y Profetas
+        <h1 className="font-headline text-4xl md:text-5xl font-bold text-foreground leading-tight">
+          ¿Lees la Biblia… pero sientes que te falta la <span className="text-primary">revelación</span> que realmente <span className="text-primary">transforma</span>?
         </h1>
-        <h2 className="font-headline text-3xl md:text-5xl text-primary mt-2">
-          Revelado Verso por Verso — Como Nunca Antes
+        <h2 className="font-body text-xl md:text-2xl text-foreground/90 mt-4 max-w-3xl">
+          <span className="font-bold">Patriarcas y Profetas</span> — Revelado Verso por Verso, con <span className="font-bold text-amber-300">claridad brutal</span> y <span className="font-bold text-amber-300">profundidad real.</span>
         </h2>
         
-        <p className="mt-6 text-lg md:text-xl text-foreground/90 max-w-2xl">
-          Transforma tu estudio bíblico en una experiencia profunda, sorprendente y espiritual. Accede al único aplicativo que te sumerge en las historias, secretos y revelaciones de los grandes patriarcas… de manera práctica, viva y guiada.
+        <p className="mt-8 text-lg md:text-xl text-foreground/90 max-w-2xl">
+          La Biblia no debería sentirse confusa. Si estás cansado de leer sin entender, perder detalles, o sentir que <span className="font-semibold">“te estás perdiendo algo importante”</span>… este es el estudio que cambia todo.
         </p>
 
-        <p className="mt-4 text-md md:text-lg text-foreground/80">
-          Descubre la sabiduría ancestral que cambió civilizaciones — ahora al alcance de tu mano.
+        <p className="mt-4 text-lg md:text-xl font-bold text-foreground/90">
+          Aquí no hay teoría vacía. <span className="underline decoration-primary">Aquí comprendes lo que otros solo leen.</span>
         </p>
 
-        <ul className="mt-8 space-y-3 text-left max-w-md mx-auto">
+        <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-left max-w-lg mx-auto">
           {bullets.map((bullet, index) => (
             <li key={index} className="flex items-center text-foreground/90">
-              <Check className="h-6 w-6 text-primary mr-3" />
+              <Check className="h-6 w-6 text-primary mr-3 flex-shrink-0" />
               <span>{bullet}</span>
             </li>
           ))}
         </ul>
+        
+        <p className="mt-8 text-lg md:text-xl font-semibold text-foreground/90">
+          Entender la Biblia nunca había sido tan claro.
+        </p>
+
         <Link href="/#pricing">
-          <Button size="lg" className="mt-10 bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-lg py-7 px-10 rounded-xl shadow-lg shadow-primary/30 transition-transform transform hover:scale-105">
+          <Button size="lg" className="mt-8 bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-lg py-7 px-10 rounded-xl shadow-lg shadow-primary/30 transition-transform transform hover:scale-105">
             QUIERO COMENZAR MI ESTUDIO AHORA
           </Button>
         </Link>
