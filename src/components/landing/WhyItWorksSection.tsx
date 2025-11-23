@@ -1,4 +1,5 @@
 import { Check } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const reasons = [
   {
@@ -47,17 +48,21 @@ export default function WhyItWorksSection() {
           </p>
         </div>
 
-        <div className="mt-12 max-w-2xl mx-auto space-y-10">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {reasons.map((reason, index) => (
-            <div key={index}>
-              <h3 className="flex items-center text-xl sm:text-2xl font-bold text-foreground">
-                <Check className="h-6 w-6 text-primary mr-3 flex-shrink-0" />
-                {reason.title}
-              </h3>
-              <p className="mt-2 text-lg text-muted-foreground whitespace-pre-line">
-                {reason.description}
-              </p>
-            </div>
+            <Card key={index} className="bg-card border-border/50 shadow-lg flex flex-col transform transition-transform duration-300 hover:-translate-y-2">
+              <CardHeader>
+                <CardTitle className="flex items-start text-xl font-bold text-foreground">
+                  <Check className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-1" />
+                  <span>{reason.title}</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <p className="text-muted-foreground whitespace-pre-line">
+                  {reason.description}
+                </p>
+              </CardContent>
+            </Card>
           ))}
         </div>
         
