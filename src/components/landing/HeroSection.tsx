@@ -18,7 +18,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center text-center text-white py-20 px-4">
+    <section className="relative flex items-center justify-center text-center text-white py-20 px-4">
       <div className="absolute inset-0 z-0">
         {heroImage && (
           <Image
