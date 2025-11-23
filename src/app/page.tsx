@@ -22,7 +22,6 @@ export default function Home() {
       <HeroSection />
       <main>
         <ImpactSection />
-        <TestimonialsSection />
         <ContentSection />
         <ForYouSection />
         <HowItWorksSection />
@@ -32,6 +31,7 @@ export default function Home() {
         <BonusSection />
         <GuaranteeSection />
         <PricingSection />
+        <TestimonialsSection />
         <FaqSection />
       </main>
       <Footer />
