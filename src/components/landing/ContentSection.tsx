@@ -1,81 +1,46 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 
 const patriarcas = [
   {
     name: "Abraham",
-    items: [
-      "Explicación verso a verso",
-      "Contexto histórico-cultural",
-      "Cómo se forma la fe en medio de pruebas imposibles",
-      "Entender el pacto, la promesa y el sacrificio",
-      "Revelaciones sobre liderazgo espiritual y obediencia radical",
-    ],
+    description: "El pacto. La promesa. La prueba.",
+    imageUrl: "https://i.postimg.cc/L50cN22y/Profetasypatriarcas.png"
   },
   {
     name: "Isaac",
-    items: [
-      "Explicación verso a verso",
-      "Contexto histórico-cultural",
-      "El significado real de “hijo de la promesa”",
-      "Cómo Dios trabaja en silencios y transiciones",
-      "Revelaciones sobre identidad, herencia y propósito",
-    ],
+    description: "El hijo de la promesa, heredero de la fe.",
+    imageUrl: "https://i.postimg.cc/RCQxjxVy/1.png"
   },
   {
     name: "Jacob",
-    items: [
-      "Explicación verso a verso",
-      "Contexto histórico-cultural",
-      "El misterio detrás de su lucha con el Ángel",
-      "Transformación de carácter: de engañador a príncipe",
-      "Revelaciones sobre propósito, restauração y destino",
-    ],
+    description: "Lucha, identidad y destino.",
+    imageUrl: "https://i.postimg.cc/yNc7xgs9/Profetasypatriarcas.png"
   },
 ];
 
 const profetas = [
   {
     name: "Isaías",
-    items: [
-      "Explicación verso a verso",
-      "Contexto histórico-cultural",
-      "Profecías mesiánicas explicadas con claridad",
-      "Entender el lenguaje poético y simbólico",
-      "Revelaciones sobre redención, juicio y esperança",
-    ],
+    description: "El profeta mesiánico y la visión de la redención.",
+    imageUrl: "https://i.postimg.cc/cC67MNDK/2.png"
   },
   {
     name: "Jeremías",
-    items: [
-      "Explicación verso a verso",
-      "Contexto histórico-cultural",
-      "Por qué es llamado “el profeta llorón”",
-      "Cómo Deus habla en tiempos de crisis nacional",
-      "Revelaciones sobre el nuevo pacto",
-    ],
+    description: "El profeta llorón y el nuevo pacto.",
+    imageUrl: "https://i.postimg.cc/SNF7YH6Q/3.png"
   },
   {
     name: "Ezequiel",
-    items: [
-      "Explicación verso a verso",
-      "Contexto histórico-cultural",
-      "Las visiones simbólicas y su significado real",
-      "El valle de huesos secos explicado sin misticismo",
-      "Revelaciones sobre gloria, restauración y futuro",
-    ],
+    description: "La visión de la gloria de Dios y la restauración de Israel.",
+    imageUrl: "https://i.postimg.cc/qv7tNG5Q/4.png"
   },
   {
     name: "Daniel",
-    items: [
-      "Explicación verso a verso",
-      "Contexto histórico-cultural",
-      "Por qué no fue atacado por los leones (explicación real)",
-      "Profecías del tiempo del fin sin confusión",
-      "Revelaciones sobre fidelidad en exilio y propósito eterno",
-    ],
+    description: "Fidelidad en el exilio y las profecías del tiempo del fin.",
+    imageUrl: "https://i.postimg.cc/cCZC073N/5.png"
   },
-];
+]
 
 export default function ContentSection() {
   return (
@@ -91,53 +56,62 @@ export default function ContentSection() {
           </p>
         </div>
 
-        <div className="mt-12 max-w-5xl mx-auto">
+        <div className="mt-12">
           <h3 className="font-headline text-3xl font-bold text-foreground mb-6 text-center">Patriarcas</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {patriarcas.map((patriarca, index) => (
-              <Card key={index} className="bg-background border-border/50 flex flex-col">
-                <CardHeader>
-                  <CardTitle className="font-headline text-xl text-foreground">
-                    {patriarca.name}
-                  </CardTitle>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {patriarcas.map((character) => (
+              <Card key={character.name} className="bg-background border-border/50 shadow-lg flex flex-col overflow-hidden text-center">
+                {character.imageUrl && (
+                  <div className="p-6 flex justify-center">
+                    <div className="relative aspect-square w-32">
+                      <Image
+                        src={character.imageUrl}
+                        alt={`Imagen de ${character.name}`}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                )}
+                <CardHeader className={character.imageUrl ? "pt-0" : ""}>
+                  <CardTitle className="font-headline text-2xl text-foreground">{character.name}</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-grow">
-                  <ul className="space-y-3">
-                    {patriarca.items.map((item, subIndex) => (
-                      <li key={subIndex} className="flex items-start text-sm">
-                        <CheckCircle2 className="h-4 w-4 text-primary mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-muted-foreground">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <h3 className="font-headline text-3xl font-bold text-foreground mt-12 mb-6 text-center">Profetas</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {profetas.map((profeta, index) => (
-              <Card key={index} className="bg-background border-border/50 flex flex-col">
-                <CardHeader>
-                  <CardTitle className="font-headline text-xl text-foreground">
-                    {profeta.name}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <ul className="space-y-3">
-                    {profeta.items.map((item, subIndex) => (
-                      <li key={subIndex} className="flex items-start text-sm">
-                        <CheckCircle2 className="h-4 w-4 text-primary mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-muted-foreground">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="text-muted-foreground text-lg">“{character.description}”</p>
                 </CardContent>
               </Card>
             ))}
           </div>
         </div>
+
+        <div className="mt-16">
+          <h3 className="font-headline text-3xl font-bold text-foreground mb-6 text-center">Profetas</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {profetas.map((character) => (
+              <Card key={character.name} className="bg-background border-border/50 shadow-lg flex flex-col overflow-hidden text-center">
+                {character.imageUrl && (
+                  <div className="p-6 flex justify-center">
+                    <div className="relative aspect-square w-32">
+                      <Image
+                        src={character.imageUrl}
+                        alt={`Imagen de ${character.name}`}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                )}
+                <CardHeader className={character.imageUrl ? "pt-0" : ""}>
+                  <CardTitle className="font-headline text-2xl text-foreground">{character.name}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-muted-foreground text-lg">“{character.description}”</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );
