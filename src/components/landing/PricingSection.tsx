@@ -67,14 +67,25 @@ const CountdownTimer = () => {
 
 const DynamicPurchases = () => {
   const [purchases, setPurchases] = useState(22);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+
     const interval = setInterval(() => {
       setPurchases(prev => prev + Math.floor(Math.random() * 3) + 1);
     }, 4500); // Update every 4.5 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isMounted]);
+  
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <div className="bg-primary text-primary-foreground p-3 rounded-full text-center max-w-md mx-auto font-semibold shadow-lg">
