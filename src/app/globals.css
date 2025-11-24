@@ -4,25 +4,25 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%; /* Soft greenish white */
-    --foreground: 165 80% 10%; /* Dark Emerald for text */
-    --card: 210 20% 96%;
-    --card-foreground: 165 80% 10%;
-    --popover: 210 20% 94%;
-    --popover-foreground: 165 80% 10%;
-    --primary: 40 82% 52%; /* Strong Gold #D4A017 */
-    --primary-foreground: 165 80% 5%;
-    --secondary: 165 76% 25%; /* Emerald #0E6B55 */
-    --secondary-foreground: 210 20% 98%; /* White */
-    --muted: 165 20% 85%;
-    --muted-foreground: 0 0% 40%; /* Graphite Gray #2D2D2D */
-    --accent: 165 20% 90%;
-    --accent-foreground: 165 80% 10%;
+    --background: 28 44% 94%; /* Pergaminho Real Suave #F4E9D8 */
+    --foreground: 168 70% 12%; /* Esmeralda Profundo Real #0B4A3E */
+    --card: 28 44% 92%; /* Um pouco mais escuro que o fundo */
+    --card-foreground: 168 70% 12%;
+    --popover: 28 44% 90%;
+    --popover-foreground: 168 70% 12%;
+    --primary: 44 65% 54%; /* Dourado Nobre #D4AF37 */
+    --primary-foreground: 168 70% 5%;
+    --secondary: 168 72% 20%; /* Verde Sagrado #0E5A4A */
+    --secondary-foreground: 0 0% 100%; /* Branco */
+    --muted: 30 20% 85%;
+    --muted-foreground: 0 0% 16%; /* Cinza grafite quente #2A2A2A */
+    --accent: 30 20% 90%;
+    --accent-foreground: 168 70% 12%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 40 82% 70%; /* Lighter Gold for borders */
-    --input: 40 82% 90%;
-    --ring: 40 82% 52%; /* Strong Gold ring */
+    --border: 41 53% 60%; /* Ouro Antigo Real #CFA663 */
+    --input: 30 20% 90%;
+    --ring: 44 65% 54%; /* Dourado Nobre */
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
@@ -32,38 +32,38 @@
   }
   
   .dark {
-    --background: 210 20% 98%; /* Soft greenish white */
-    --foreground: 165 80% 10%; /* Dark Emerald for text */
-    --card: 210 20% 96%;
-    --card-foreground: 165 80% 10%;
-    --popover: 210 20% 94%;
-    --popover-foreground: 165 80% 10%;
-    --primary: 40 82% 52%; /* Strong Gold #D4A017 */
-    --primary-foreground: 165 80% 5%;
-    --secondary: 165 76% 25%; /* Emerald #0E6B55 */
-    --secondary-foreground: 210 20% 98%; /* White */
-    --muted: 165 20% 85%;
-    --muted-foreground: 0 0% 40%; /* Graphite Gray #2D2D2D */
-    --accent: 165 20% 90%;
-    --accent-foreground: 165 80% 10%;
+    --background: 28 44% 94%; /* Pergaminho Real Suave #F4E9D8 */
+    --foreground: 168 70% 12%; /* Esmeralda Profundo Real #0B4A3E */
+    --card: 28 44% 92%;
+    --card-foreground: 168 70% 12%;
+    --popover: 28 44% 90%;
+    --popover-foreground: 168 70% 12%;
+    --primary: 44 65% 54%; /* Dourado Nobre #D4AF37 */
+    --primary-foreground: 168 70% 5%;
+    --secondary: 168 72% 20%; /* Verde Sagrado #0E5A4A */
+    --secondary-foreground: 0 0% 100%; /* Branco */
+    --muted: 30 20% 85%;
+    --muted-foreground: 0 0% 16%; /* Cinza grafite quente #2A2A2A */
+    --accent: 30 20% 90%;
+    --accent-foreground: 168 70% 12%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 40 82% 70%; /* Lighter Gold for borders */
-    --input: 40 82% 90%;
-    --ring: 40 82% 52%; /* Strong Gold ring */
+    --border: 41 53% 60%; /* Ouro Antigo Real #CFA663 */
+    --input: 30 20% 90%;
+    --ring: 44 65% 54%; /* Dourado Nobre */
   }
 }
 
 @layer base {
   :root, .dark {
-    --sidebar-background: 210 20% 94%;
-    --sidebar-foreground: 165 80% 10%;
-    --sidebar-primary: 40 82% 52%;
-    --sidebar-primary-foreground: 165 80% 5%;
-    --sidebar-accent: 165 20% 85%;
-    --sidebar-accent-foreground: 165 80% 10%;
-    --sidebar-border: 40 82% 80%;
-    --sidebar-ring: 40 82% 52%;
+    --sidebar-background: 28 44% 92%;
+    --sidebar-foreground: 168 70% 12%;
+    --sidebar-primary: 44 65% 54%;
+    --sidebar-primary-foreground: 168 70% 5%;
+    --sidebar-accent: 30 20% 85%;
+    --sidebar-accent-foreground: 168 70% 12%;
+    --sidebar-border: 41 53% 70%;
+    --sidebar-ring: 44 65% 54%;
   }
 }
 
@@ -72,15 +72,19 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-muted-foreground;
     background-image: url('https://www.transparenttextures.com/patterns/old-map.png');
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-foreground;
   }
 }
 
 @layer components {
   .cta-button {
-    @apply bg-secondary text-secondary-foreground font-bold text-lg py-7 px-10 rounded-xl shadow-lg transition-transform transform hover:scale-105;
-    border: 2px solid hsl(var(--primary));
+    @apply bg-secondary text-secondary-foreground font-bold text-lg py-7 px-10 rounded-lg shadow-lg transition-transform transform hover:scale-105;
+    background-image: linear-gradient(to bottom, #0D5245, #0A3E34);
+    border: 2px solid hsl(var(--border));
     box-shadow: 0 4px 14px 0 hsla(var(--primary), 0.3);
   }
   .cta-button:hover {
