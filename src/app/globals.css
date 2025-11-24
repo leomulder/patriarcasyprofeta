@@ -73,7 +73,7 @@
   }
   body {
     @apply bg-background text-muted-foreground;
-    background-image: url('https://www.transparenttextures.com/patterns/ancient-scroll.png');
+    background-image: url('https://www.transparenttextures.com/patterns/hebrew-lettering.png');
   }
   h1, h2, h3, h4, h5, h6 {
     @apply text-foreground;
@@ -82,7 +82,7 @@
 
 @layer components {
   .cta-button {
-    @apply bg-secondary text-white font-bold text-lg py-7 px-10 rounded-lg shadow-lg transition-transform transform hover:scale-105;
+    @apply bg-secondary text-secondary-foreground font-bold text-lg py-7 px-10 rounded-lg shadow-lg transition-transform transform hover:scale-105;
     background-image: linear-gradient(to bottom, #0D5245, #0A3E34);
     border: 2px solid hsl(var(--border));
     box-shadow: 0 4px 14px 0 hsla(var(--primary), 0.3);
