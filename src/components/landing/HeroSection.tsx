@@ -62,7 +62,7 @@ export default function HeroSection() {
           Entender la Biblia nunca había sido tan claro.
         </p>
 
-        <Link href="/#pricing">
+        <Link href="#pricing">
           <Button size="lg" className="mt-8 cta-button">
             QUIERO COMENZAR MI ESTUDIO AHORA
           </Button>

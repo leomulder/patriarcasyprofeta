@@ -30,7 +30,7 @@ export default function TransformSection() {
               </div>
             ))}
           </div>
-          <Link href="/#pricing">
+          <Link href="#pricing">
             <Button size="lg" className="mt-12 cta-button">
               QUIERO TRANSFORMAR MI ESTUDIO
             </Button>

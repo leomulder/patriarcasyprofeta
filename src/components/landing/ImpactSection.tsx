@@ -56,7 +56,7 @@ export default function ImpactSection() {
           </div>
 
           <div className="mt-8">
-             <Link href="/#pricing">
+             <Link href="#pricing">
               <Button size="lg" className="cta-button">
                 QUIERO COMENZAR MI ESTUDIO AHORA
               </Button>
