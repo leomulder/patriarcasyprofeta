@@ -103,9 +103,17 @@ export default function PricingSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const redirectTo = (baseUrl: string) => {
-    const params = window.location.search;
-    const separator = baseUrl.includes('?') ? '&' : '?';
-    window.location.href = `${baseUrl}${params.replace('?', separator)}`;
+    try {
+      const params = window.location.search;
+      const separator = baseUrl.includes('?') ? '&' : '?';
+      // If params starts with '?', remove it before concatenating
+      const urlParams = params.startsWith('?') ? params.substring(1) : params;
+      const finalUrl = urlParams ? `${baseUrl}${separator}${urlParams}` : baseUrl;
+      window.location.href = finalUrl;
+    } catch (e) {
+      // Fallback for SSR or environments where window is not defined
+      window.location.href = baseUrl;
+    }
   };
 
   return (
