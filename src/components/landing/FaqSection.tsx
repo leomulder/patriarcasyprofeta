@@ -5,7 +5,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 const faqs = [
   {
@@ -78,11 +77,11 @@ export default function FaqSection() {
 
         <div className="text-center mt-16">
           <p className="text-lg text-foreground mb-4">¿Listo para transformar tu estudio de la Biblia?</p>
-          <Link href="#pricing">
+          <a href="#pricing">
             <Button size="lg" className="cta-button">
               VER OPCIONES DE COMPRA
             </Button>
-          </Link>
+          </a>
         </div>
       </div>
     </section>

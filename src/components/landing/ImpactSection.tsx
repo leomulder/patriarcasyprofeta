@@ -3,7 +3,6 @@
 import { Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import TestimonialsSection from "./TestimonialsSection";
 
 const points = [
@@ -56,11 +55,11 @@ export default function ImpactSection() {
           </div>
 
           <div className="mt-8">
-             <Link href="#pricing">
+             <a href="#pricing">
               <Button size="lg" className="cta-button">
                 QUIERO COMENZAR MI ESTUDIO AHORA
               </Button>
-            </Link>
+            </a>
           </div>
 
         </div>

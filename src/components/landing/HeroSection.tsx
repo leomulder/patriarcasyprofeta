@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import Link from 'next/link';
 
 const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
 
@@ -62,11 +61,11 @@ export default function HeroSection() {
           Entender la Biblia nunca había sido tan claro.
         </p>
 
-        <Link href="#pricing">
+        <a href="#pricing">
           <Button size="lg" className="mt-8 cta-button">
             QUIERO COMENZAR MI ESTUDIO AHORA
           </Button>
-        </Link>
+        </a>
       </div>
     </section>
   );
