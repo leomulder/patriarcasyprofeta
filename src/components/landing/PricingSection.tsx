@@ -131,7 +131,7 @@ export default function PricingSection() {
                   {featuresBasico.map((feature, index) => (
                     <li key={index} className="flex items-start">
                       <Check className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
-                      <span className="text-foreground/90">{feature}</span>
+                      <span className="text-muted-foreground">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -165,24 +165,24 @@ export default function PricingSection() {
                   {featuresCompleto.map((feature, index) => (
                     <li key={index} className="flex items-start">
                       <Check className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
-                      <span className="text-foreground/90 font-semibold">{feature}</span>
+                      <span className="text-foreground font-semibold">{feature}</span>
                     </li>
                   ))}
                 </ul>
               </CardContent>
               <CardFooter className="pt-8">
-                <Button size="lg" className="w-full text-lg py-6 bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => window.location.href = 'https://pay.hotmart.com/K99537811Y?off=rtgmziqk&checkoutMode=10'}>
+                <Button size="lg" className="w-full cta-button" onClick={() => window.location.href = 'https://pay.hotmart.com/K99537811Y?off=rtgmziqk&checkoutMode=10'}>
                   QUIERO EL COMPLETO
                 </Button>
               </CardFooter>
             </Card>
           </div>
           <div className="mt-12 max-w-md mx-auto space-y-4">
-            <div className="flex items-center justify-center gap-3 text-foreground/90">
+            <div className="flex items-center justify-center gap-3 text-muted-foreground">
               <ShieldCheck className="size-5 text-primary flex-shrink-0" />
               <span>Compra 100% segura con Hotmart</span>
             </div>
-            <div className="flex items-center justify-center gap-3 text-foreground/90">
+            <div className="flex items-center justify-center gap-3 text-muted-foreground">
               <Zap className="size-5 text-primary flex-shrink-0" />
               <span>Acceso inmediato después del pago</span>
             </div>
@@ -207,12 +207,12 @@ export default function PricingSection() {
             {featuresCompleto.map((feature, index) => (
               <li key={index} className="flex items-center text-sm">
                 <Check className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
-                <span className="text-foreground/90">{feature}</span>
+                <span className="text-muted-foreground">{feature}</span>
               </li>
             ))}
           </ul>
           <div className="flex flex-col gap-4">
-            <Button size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => window.location.href = 'https://pay.hotmart.com/K99537811Y?off=5suiqzrp&checkoutMode=10'}>
+            <Button size="lg" className="w-full cta-button" onClick={() => window.location.href = 'https://pay.hotmart.com/K99537811Y?off=5suiqzrp&checkoutMode=10'}>
               SÍ, QUIERO EL COMPLETO POR U$9,00
             </Button>
             <Button variant="ghost" className="w-full" onClick={() => { setIsModalOpen(false); window.location.href = 'https://pay.hotmart.com/K99537811Y?off=8h2ivhga&checkoutMode=10'; }}>

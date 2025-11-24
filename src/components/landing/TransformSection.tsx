@@ -31,7 +31,7 @@ export default function TransformSection() {
             ))}
           </div>
           <Link href="/#pricing">
-            <Button size="lg" className="mt-12 bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-lg py-7 px-10 rounded-xl shadow-lg shadow-primary/30 transition-transform transform hover:scale-105">
+            <Button size="lg" className="mt-12 cta-button">
               QUIERO TRANSFORMAR MI ESTUDIO
             </Button>
           </Link>

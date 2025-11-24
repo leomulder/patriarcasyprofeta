@@ -27,7 +27,7 @@ export default function ImpactSection() {
           </p>
           <ul className="mt-8 space-y-4 text-left">
             {points.map((point, index) => (
-              <li key={index} className="flex items-start text-lg sm:text-xl">
+              <li key={index} className="flex items-start text-lg sm:text-xl text-muted-foreground">
                 <Check className="h-7 w-7 text-primary mr-4 mt-1 flex-shrink-0" />
                 <span>{point}</span>
               </li>
@@ -57,7 +57,7 @@ export default function ImpactSection() {
 
           <div className="mt-8">
              <Link href="/#pricing">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-lg py-7 px-10 rounded-xl shadow-lg shadow-primary/30 transition-transform transform hover:scale-105">
+              <Button size="lg" className="cta-button">
                 QUIERO COMENZAR MI ESTUDIO AHORA
               </Button>
             </Link>

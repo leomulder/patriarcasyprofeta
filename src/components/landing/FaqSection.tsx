@@ -79,7 +79,7 @@ export default function FaqSection() {
         <div className="text-center mt-16">
           <p className="text-lg text-foreground mb-4">¿Listo para transformar tu estudio de la Biblia?</p>
           <Link href="/#pricing">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-lg py-7 px-10 rounded-xl shadow-lg shadow-primary/30 transition-transform transform hover:scale-105">
+            <Button size="lg" className="cta-button">
               VER OPCIONES DE COMPRA
             </Button>
           </Link>
