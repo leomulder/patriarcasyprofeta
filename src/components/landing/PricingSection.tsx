@@ -103,6 +103,11 @@ export default function PricingSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const redirectTo = (baseUrl: string) => {
+    if (typeof window === 'undefined') {
+      // Prevents server-side execution
+      window.location.href = baseUrl;
+      return;
+    }
     try {
       const params = window.location.search;
       const separator = baseUrl.includes('?') ? '&' : '?';
