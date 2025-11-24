@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={cn(ptSans.variable, playfairDisplay.variable)}>
+    <html lang="es" className={cn(ptSans.variable, playfairDisplay.variable, "dark")}>
       <head />
       <body className="font-body antialiased">
         {children}
