@@ -14,6 +14,7 @@ const FaqSection = dynamic(() => import('@/components/landing/FaqSection'));
 const Footer = dynamic(() => import('@/components/landing/Footer'));
 const SocialProof = dynamic(() => import('@/components/landing/SocialProof'));
 const WhyItWorksSection = dynamic(() => import('@/components/landing/WhyItWorksSection'));
+const TestimonialsSection = dynamic(() => import('@/components/landing/TestimonialsSection'));
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <BonusSection />
         <GuaranteeSection />
         <PricingSection />
+        <TestimonialsSection />
         <FaqSection />
       </main>
       <Footer />
