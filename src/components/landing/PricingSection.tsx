@@ -21,23 +21,43 @@ const featuresBasico = [
   { icon: Smartphone, text: 'Acceso vía App' },
 ];
 
+const TimeBox = ({ value, label }: { value: string; label: string }) => (
+    <div className="flex flex-col items-center">
+        <div className="bg-black/20 rounded-lg p-2 min-w-[50px] flex justify-center items-center">
+            <span className="font-mono text-3xl font-bold text-white">{value}</span>
+        </div>
+        <span className="text-xs mt-1 font-semibold text-white/80">{label}</span>
+    </div>
+);
+
 const UrgencyInfo = () => {
     const [purchases, setPurchases] = useState(47);
     const [bonusesTimeLeft, setBonusesTimeLeft] = useState(80);
     const [isMounted, setIsMounted] = useState(false);
     
-    // Timer state
-    const [hours, setHours] = useState(5);
-    const [minutes, setMinutes] = useState(23);
-    const [seconds, setSeconds] = useState(11);
-    const [progress, setProgress] = useState(100);
+    // Timer state - 5 hours, 23 minutes, 11 seconds from now
+    const calculateTimeLeft = () => {
+      const now = new Date();
+      const midnight = new Date(now);
+      midnight.setHours(24, 0, 0, 0);
+      let difference = midnight.getTime() - now.getTime();
 
-    const initialTotalSeconds = 5 * 3600 + 23 * 60 + 11;
+      let hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+      let minutes = Math.floor((difference / 1000 / 60) % 60);
+      let seconds = Math.floor((difference / 1000) % 60);
+      
+      return { hours, minutes, seconds };
+    };
 
+    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
     useEffect(() => {
         setIsMounted(true);
-    }, []);
+        const timer = setTimeout(() => {
+          setTimeLeft(calculateTimeLeft());
+        }, 1000);
+        return () => clearTimeout(timer);
+    });
 
     useEffect(() => {
         if (!isMounted) return;
@@ -50,29 +70,12 @@ const UrgencyInfo = () => {
             setBonusesTimeLeft(prev => (prev > 10 ? prev - (Math.random() * 3) : 10));
         }, 3000);
         
-        const countdownInterval = setInterval(() => {
-            if (seconds > 0) {
-                setSeconds(seconds - 1);
-            } else if (minutes > 0) {
-                setMinutes(minutes - 1);
-                setSeconds(59);
-            } else if (hours > 0) {
-                setHours(hours - 1);
-                setMinutes(59);
-                setSeconds(59);
-            }
-            
-            const currentTotalSeconds = hours * 3600 + minutes * 60 + seconds;
-            setProgress((currentTotalSeconds / initialTotalSeconds) * 100);
-
-        }, 1000);
 
         return () => {
             clearInterval(purchaseInterval);
             clearInterval(bonusTimeInterval);
-            clearInterval(countdownInterval);
         };
-    }, [isMounted, hours, minutes, seconds]);
+    }, [isMounted]);
 
     if (!isMounted) {
       return (
@@ -88,18 +91,21 @@ const UrgencyInfo = () => {
 
     return (
         <div className="space-y-4 font-semibold">
-            <Card className="p-4 bg-accent/50 border-destructive/50 shadow-lg">
-                <div className='space-y-2 text-center'>
-                    <div className="flex items-center justify-center gap-2 text-sm text-destructive font-bold">
-                        <Clock className="size-4" />
-                        <span className="font-mono text-base">
-                           {formatTime(hours)}:{formatTime(minutes)}:{formatTime(seconds)}
-                        </span>
-                    </div>
-                    <Progress value={progress} className="h-2 bg-background/30" indicatorClassName="bg-destructive" />
+            <Card className="p-4 bg-destructive shadow-lg text-destructive-foreground rounded-lg">
+                <div className='flex items-center justify-center gap-2 font-bold mb-4'>
+                    <Clock className="size-5" />
+                    <AlertTriangle className="size-5" />
+                    <span className="text-sm">¡EL PRECIO AUMENTA A MEDIANOCHE!</span>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                    <TimeBox value={formatTime(timeLeft.hours)} label="HORAS" />
+                    <span className="font-mono text-3xl font-bold text-white/80">:</span>
+                    <TimeBox value={formatTime(timeLeft.minutes)} label="MIN" />
+                    <span className="font-mono text-3xl font-bold text-white/80">:</span>
+                    <TimeBox value={formatTime(timeLeft.seconds)} label="SEG" />
                 </div>
             </Card>
-            
+
             <Card className="p-4 bg-card/50 border-border/30 shadow-lg">
                 <div className="flex items-center justify-center gap-2 text-sm text-foreground">
                     <Users2 className="size-4 text-primary" />
