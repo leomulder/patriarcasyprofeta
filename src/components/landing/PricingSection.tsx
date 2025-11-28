@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Check, Book, BookOpen, Smartphone, Headphones, Users, Star, ChevronsRight, ShieldCheck, Clock, Users2 } from 'lucide-react';
+import { Book, BookOpen, Smartphone, Headphones, Users, Star, ChevronsRight, ShieldCheck, Clock, Users2, AlertTriangle } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 
 const featuresBasico = [
@@ -25,6 +25,7 @@ const featuresCompleto = [
 const UrgencyInfo = () => {
     const [purchases, setPurchases] = useState(47);
     const [timeLeft, setTimeLeft] = useState(100);
+    const [bonusesTimeLeft, setBonusesTimeLeft] = useState(80);
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
@@ -42,45 +43,55 @@ const UrgencyInfo = () => {
             setTimeLeft(prev => (prev > 5 ? prev - (Math.random() * 2) : 5));
         }, 2000);
 
+        const bonusTimeInterval = setInterval(() => {
+            setBonusesTimeLeft(prev => (prev > 10 ? prev - (Math.random() * 3) : 10));
+        }, 3000);
+
         return () => {
             clearInterval(purchaseInterval);
             clearInterval(timeInterval);
+            clearInterval(bonusTimeInterval);
         };
     }, [isMounted]);
 
     if (!isMounted) {
       return (
-        <div className="space-y-4 text-center">
-            <div className="h-4 bg-muted rounded-full w-3/4 mx-auto"></div>
-            <div className="h-4 bg-muted rounded-full w-1/2 mx-auto"></div>
-            <div className="h-4 bg-muted rounded-full w-3/4 mx-auto"></div>
+        <div className="space-y-4">
+            <Card className="p-4 bg-card/50 border-border/30"><div className="h-10 bg-muted rounded-md w-full"></div></Card>
+            <Card className="p-4 bg-card/50 border-border/30"><div className="h-6 bg-muted rounded-md w-full"></div></Card>
+            <Card className="p-4 bg-card/50 border-border/30"><div className="h-10 bg-muted rounded-md w-full"></div></Card>
         </div>
       );
     }
 
     return (
-        <div className="space-y-4 font-semibold text-muted-foreground p-4 bg-card/50 rounded-lg border border-border/30">
-            <div className='space-y-2 text-center'>
-              <div className="flex items-center justify-center gap-2 text-sm text-destructive font-bold">
-                  <Clock className="size-4" />
-                  <span>El precio sube a medianoche</span>
-              </div>
-              <Progress value={timeLeft} className="h-2" indicatorClassName="bg-destructive" />
-            </div>
+        <div className="space-y-4 font-semibold">
+            <Card className="p-4 bg-card/50 border-border/30 shadow-lg">
+                <div className='space-y-2 text-center'>
+                    <div className="flex items-center justify-center gap-2 text-sm text-destructive font-bold">
+                        <Clock className="size-4" />
+                        <span>El precio sube a medianoche</span>
+                    </div>
+                    <Progress value={timeLeft} className="h-2" indicatorClassName="bg-destructive" />
+                </div>
+            </Card>
             
-            <div className="border-t border-border/30"></div>
+            <Card className="p-4 bg-card/50 border-border/30 shadow-lg">
+                <div className="flex items-center justify-center gap-2 text-sm text-foreground">
+                    <Users2 className="size-4 text-primary" />
+                    <span>{purchases} personas compraron en las últimas 3 horas</span>
+                </div>
+            </Card>
 
-            <div className="space-y-4 text-center">
-              <div className="flex items-center justify-center gap-2 text-sm text-foreground">
-                  <Users2 className="size-4 text-primary" />
-                  <span>{purchases} personas compraron en las últimas 3 horas</span>
-              </div>
-
-              <div className='flex items-center justify-center gap-2 text-sm text-foreground'>
-                <Clock className="size-4 text-primary" />
-                <span>Los bonos pueden ser retirados sin aviso</span>
-              </div>
-            </div>
+            <Card className="p-4 bg-card/50 border-border/30 shadow-lg">
+                 <div className='space-y-2 text-center'>
+                    <div className="flex items-center justify-center gap-2 text-sm text-primary font-bold">
+                        <AlertTriangle className="size-4" />
+                        <span>Los bonos pueden ser retirados sin aviso</span>
+                    </div>
+                    <Progress value={bonusesTimeLeft} className="h-2" indicatorClassName="bg-primary" />
+                </div>
+            </Card>
         </div>
     )
 }
@@ -106,7 +117,7 @@ export default function PricingSection() {
     <>
       <section id="pricing" className="py-16 sm:py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="mb-12 max-w-lg mx-auto p-4 rounded-xl bg-card border border-border/50 shadow-lg">
+          <div className="mb-12 max-w-lg mx-auto">
             <UrgencyInfo />
           </div>
 
