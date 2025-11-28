@@ -51,7 +51,7 @@ const UrgencyInfo = () => {
     if (!isMounted) {
       // Render a placeholder or null on the server to avoid hydration mismatch
       return (
-        <div className="space-y-6 text-center">
+        <div className="space-y-4 text-center">
             <div className="h-4 bg-muted rounded-full w-3/4 mx-auto"></div>
             <div className="h-4 bg-muted rounded-full w-1/2 mx-auto"></div>
             <div className="h-4 bg-muted rounded-full w-3/4 mx-auto"></div>
@@ -60,26 +60,30 @@ const UrgencyInfo = () => {
     }
 
     return (
-        <div className="space-y-6 text-center font-semibold text-muted-foreground p-4 bg-card/50 rounded-lg border border-border/30">
-            <div className='space-y-2'>
+        <div className="space-y-4 font-semibold text-muted-foreground p-4 bg-card/50 rounded-lg border border-border/30">
+            <div className='space-y-2 text-center'>
               <div className="flex items-center justify-center gap-2 text-sm text-destructive font-bold">
                   <Clock className="size-4" />
                   <span>El precio sube a medianoche</span>
               </div>
               <Progress value={timeLeft} className="h-2" indicatorClassName="bg-destructive" />
             </div>
+            
+            <div className="border-t border-border/30 my-4"></div>
 
-            <div className="flex items-center justify-center gap-2 text-sm text-foreground">
-                <Users2 className="size-4 text-primary" />
-                <span>{purchases} personas compraron en las últimas 3 horas</span>
-            </div>
-
-            <div className='space-y-2'>
+            <div className="space-y-4 text-center">
               <div className="flex items-center justify-center gap-2 text-sm text-foreground">
-                  <Clock className="size-4 text-primary" />
-                  <span>Los bonos pueden ser retirados sin aviso</span>
+                  <Users2 className="size-4 text-primary" />
+                  <span>{purchases} personas compraron en las últimas 3 horas</span>
               </div>
-              <Progress value={timeLeft} className="h-2" />
+
+              <div className='space-y-2'>
+                <div className="flex items-center justify-center gap-2 text-sm text-foreground">
+                    <Clock className="size-4 text-primary" />
+                    <span>Los bonos pueden ser retirados sin aviso</span>
+                </div>
+                <Progress value={timeLeft} className="h-2" />
+              </div>
             </div>
         </div>
     )
