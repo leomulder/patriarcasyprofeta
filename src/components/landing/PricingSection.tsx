@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Book, BookOpen, Smartphone, Headphones, Users, Star, ChevronsRight, ShieldCheck, Clock, Users2, AlertTriangle } from 'lucide-react';
-import { Progress } from '@/components/ui/progress';
+import UpsellModal from './UpsellModal';
 
 const featuresCompleto = [
   { icon: BookOpen, text: 'Estudio de Patriarcas' },
@@ -32,10 +32,8 @@ const TimeBox = ({ value, label }: { value: string; label: string }) => (
 
 const UrgencyInfo = () => {
     const [purchases, setPurchases] = useState(47);
-    const [bonusesTimeLeft, setBonusesTimeLeft] = useState(80);
     const [isMounted, setIsMounted] = useState(false);
     
-    // Timer state - 5 hours, 23 minutes, 11 seconds from now
     const calculateTimeLeft = () => {
       const now = new Date();
       const midnight = new Date(now);
@@ -65,15 +63,9 @@ const UrgencyInfo = () => {
         const purchaseInterval = setInterval(() => {
             setPurchases(prev => prev + Math.floor(Math.random() * 3) + 1);
         }, 8000);
-
-        const bonusTimeInterval = setInterval(() => {
-            setBonusesTimeLeft(prev => (prev > 10 ? prev - (Math.random() * 3) : 10));
-        }, 3000);
         
-
         return () => {
             clearInterval(purchaseInterval);
-            clearInterval(bonusTimeInterval);
         };
     }, [isMounted]);
 
@@ -117,6 +109,7 @@ const UrgencyInfo = () => {
 
 
 export default function PricingSection() {
+  const [isUpsellModalOpen, setIsUpsellModalOpen] = useState(false);
   
   const redirectTo = (baseUrl: string) => {
     if (typeof window === 'undefined') {
@@ -132,6 +125,19 @@ export default function PricingSection() {
       window.location.href = baseUrl;
     }
   };
+
+  const handleBasicButtonClick = () => {
+    setIsUpsellModalOpen(true);
+  }
+
+  const handleCloseUpsell = () => {
+    setIsUpsellModalOpen(false);
+    redirectTo('https://pay.hotmart.com/K99537811Y?off=8h2ivhga&checkoutMode=10');
+  }
+  
+  const handleAcceptUpsell = () => {
+    redirectTo('https://pay.hotmart.com/K99537811Y?off=rtgmziqk&checkoutMode=10');
+  }
 
   return (
     <>
@@ -196,7 +202,7 @@ export default function PricingSection() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" size="lg" className="w-full text-lg py-6 border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => redirectTo('https://pay.hotmart.com/K99537811Y?off=8h2ivhga&checkoutMode=10')}>
+                <Button variant="outline" size="lg" className="w-full text-lg py-6 border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={handleBasicButtonClick}>
                   QUIERO EL BÁSICO
                 </Button>
               </CardFooter>
@@ -211,6 +217,11 @@ export default function PricingSection() {
           </div>
         </div>
       </section>
+      <UpsellModal 
+        isOpen={isUpsellModalOpen} 
+        onClose={handleCloseUpsell}
+        onAccept={handleAcceptUpsell}
+      />
     </>
   );
 }
