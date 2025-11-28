@@ -81,8 +81,7 @@ export default function PricingSection() {
               </CardHeader>
               <CardContent className="flex-grow">
                 <div className="text-center my-4">
-                  <p className="text-muted-foreground line-through">De U$197</p>
-                  <span className="text-5xl font-bold font-headline text-foreground">U$67</span>
+                  <span className="text-5xl font-bold font-headline text-foreground">U$11,90</span>
                   <p className="text-muted-foreground text-sm">Pago único</p>
                 </div>
                 <p className="text-left font-semibold text-foreground mt-8 mb-4">Incluye:</p>
@@ -110,8 +109,7 @@ export default function PricingSection() {
               </CardHeader>
               <CardContent className="flex-grow">
                 <div className="text-center my-4">
-                  <p className="text-muted-foreground line-through">De U$97</p>
-                  <span className="text-5xl font-bold font-headline text-foreground">U$37</span>
+                  <span className="text-5xl font-bold font-headline text-foreground">U$6,90</span>
                    <p className="text-muted-foreground text-sm">Pago único</p>
                 </div>
                  <p className="text-left font-semibold text-foreground mt-8 mb-4">Incluye:</p>
