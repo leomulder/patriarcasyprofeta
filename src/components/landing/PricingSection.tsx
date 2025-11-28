@@ -3,21 +3,21 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Check, Timer, ShieldCheck, Zap, TrendingUp, Flame, AlertTriangle } from 'lucide-react';
+import { Check, Book, BookOpen, Smartphone, Headphones, Users, Star, ChevronsRight, ShieldCheck } from 'lucide-react';
 
 const featuresBasico = [
-  "Patriarcas",
-  "Guía de estudio",
+  { text: "Patriarcas", icon: Book },
+  { text: "Guía de estudio", icon: BookOpen },
 ];
 
 const featuresCompleto = [
-  "Patriarcas",
-  "Profetas",
-  "App",
-  "Audiolibro",
-  "Comunidad privada",
-  "TODOS los bonos",
-  "Actualizaciones futuras",
+  { text: "Patriarcas", icon: Book },
+  { text: "Profetas", icon: BookOpen },
+  { text: "App", icon: Smartphone },
+  { text: "Audiolibro", icon: Headphones },
+  { text: "Comunidad privada", icon: Users },
+  { text: "TODOS los bonos", icon: Star },
+  { text: "Actualizaciones futuras", icon: ChevronsRight },
 ];
 
 const UrgencyInfo = () => {
@@ -81,16 +81,16 @@ export default function PricingSection() {
               </CardHeader>
               <CardContent className="flex-grow">
                 <div className="text-center my-4">
-                  <p className="text-muted-foreground line-through">De U$57,90</p>
-                  <span className="text-5xl font-bold font-headline text-foreground">U$11,90</span>
-                  <span className="text-muted-foreground">/mes</span>
+                  <p className="text-muted-foreground line-through">De U$197</p>
+                  <span className="text-5xl font-bold font-headline text-foreground">U$67</span>
+                  <p className="text-muted-foreground text-sm">Pago único</p>
                 </div>
-                <p className="text-left font-semibold text-foreground mt-8 mb-3">Incluye:</p>
-                <ul className="space-y-3">
+                <p className="text-left font-semibold text-foreground mt-8 mb-4">Incluye:</p>
+                <ul className="space-y-4">
                   {featuresCompleto.map((feature, index) => (
-                    <li key={index} className="flex items-start">
-                      <Check className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
-                      <span className="text-foreground font-semibold">{feature}</span>
+                    <li key={index} className="flex items-center">
+                      <feature.icon className="h-5 w-5 text-primary mr-3 flex-shrink-0" />
+                      <span className="text-foreground font-semibold">{feature.text}</span>
                     </li>
                   ))}
                 </ul>
@@ -110,16 +110,16 @@ export default function PricingSection() {
               </CardHeader>
               <CardContent className="flex-grow">
                 <div className="text-center my-4">
-                  <p className="text-muted-foreground line-through">De U$27,90</p>
-                  <span className="text-5xl font-bold font-headline text-foreground">U$6,90</span>
-                  <span className="text-muted-foreground">/mes</span>
+                  <p className="text-muted-foreground line-through">De U$97</p>
+                  <span className="text-5xl font-bold font-headline text-foreground">U$37</span>
+                   <p className="text-muted-foreground text-sm">Pago único</p>
                 </div>
-                 <p className="text-left font-semibold text-foreground mt-8 mb-3">Incluye:</p>
-                 <ul className="space-y-3">
+                 <p className="text-left font-semibold text-foreground mt-8 mb-4">Incluye:</p>
+                 <ul className="space-y-4">
                   {featuresBasico.map((feature, index) => (
-                    <li key={index} className="flex items-start">
-                      <Check className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
-                      <span className="text-muted-foreground">{feature}</span>
+                    <li key={index} className="flex items-center">
+                      <feature.icon className="h-5 w-5 text-primary mr-3 flex-shrink-0" />
+                      <span className="text-muted-foreground">{feature.text}</span>
                     </li>
                   ))}
                 </ul>
