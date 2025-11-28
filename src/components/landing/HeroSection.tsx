@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 export default function HeroSection() {
 
@@ -13,6 +14,17 @@ export default function HeroSection() {
         <h1 className="text-4xl md:text-6xl font-black font-headline text-foreground leading-tight">
           Patriarcas y Profetas — Explicados Verso por Verso
         </h1>
+
+        <div className="relative w-full max-w-2xl aspect-video my-8 rounded-lg shadow-2xl shadow-primary/20 overflow-hidden border-4 border-primary/30">
+          <Image
+            src="https://picsum.photos/seed/bible/1200/675"
+            alt="Estudio Bíblico de Patriarcas y Profetas"
+            fill
+            className="object-cover"
+            data-ai-hint="ancient scroll bible"
+          />
+        </div>
+        
         <p className="mt-6 text-xl md:text-2xl font-body text-primary font-bold">
           Transforma tu estudio de la Biblia en una experiencia clara, profunda y reveladora, con un recorrido detallado desde Abraham hasta Malaquías, que te mostrará cómo cada historia, cada profecía y cada personaje puede transformar tu fe hoy.
         </p>
