@@ -17,11 +17,10 @@ export default function HeroSection() {
 
         <div className="relative w-full max-w-2xl aspect-video my-8 rounded-lg shadow-2xl shadow-primary/20 overflow-hidden border-4 border-primary/30">
           <Image
-            src="https://picsum.photos/seed/bible/1200/675"
+            src="https://i.postimg.cc/9MmJ8Wfg/Happy-Mother-s-Day-(Presentation-(169)).png"
             alt="Estudio Bíblico de Patriarcas y Profetas"
             fill
             className="object-cover"
-            data-ai-hint="ancient scroll bible"
           />
         </div>
         
