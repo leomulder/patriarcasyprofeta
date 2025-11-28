@@ -61,12 +61,12 @@ export default function ContentSection() {
               <Card key={character.name} className="bg-card border-border/50 shadow-lg flex flex-col overflow-hidden text-center">
                 {character.imageUrl && (
                   <div className="p-6 flex justify-center">
-                    <div className="relative aspect-square w-32">
+                    <div className="relative aspect-square w-32 rounded-full overflow-hidden">
                       <Image
                         src={character.imageUrl}
                         alt={character.name}
                         fill
-                        className="object-contain"
+                        className="object-cover"
                       />
                     </div>
                   </div>
@@ -96,12 +96,12 @@ export default function ContentSection() {
               <Card key={character.name} className="bg-card border-border/50 shadow-lg flex flex-col overflow-hidden text-center">
                 {character.imageUrl && (
                   <div className="p-6 flex justify-center">
-                    <div className="relative aspect-square w-32">
+                    <div className="relative aspect-square w-32 rounded-full overflow-hidden">
                       <Image
                         src={character.imageUrl}
                         alt={character.name}
                         fill
-                        className="object-contain"
+                        className="object-cover"
                       />
                     </div>
                   </div>
