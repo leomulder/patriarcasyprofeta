@@ -1,4 +1,6 @@
-import { Check } from 'lucide-react';
+'use client';
+
+import { Check, XCircle } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const reasons = [
@@ -19,6 +21,14 @@ const reasons = [
   },
 ];
 
+const problems = [
+  { text: "Falta contexto", icon: XCircle },
+  { text: "Falta estructura", icon: XCircle },
+  { text: "Falta guía", icon: XCircle },
+  { text: "Falta claridad", icon: XCircle },
+];
+
+
 export default function WhyItWorksSection() {
   return (
     <section className="py-16 sm:py-24 bg-card">
@@ -30,11 +40,13 @@ export default function WhyItWorksSection() {
           <p className="mt-4 text-2xl sm:text-3xl text-foreground font-semibold">
             pero pocos la entienden.
           </p>
-          <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 text-left text-muted-foreground text-lg justify-center">
-              <p>❌ Falta contexto</p>
-              <p>❌ Falta estructura</p>
-              <p>❌ Falta guía</p>
-              <p>❌ Falta claridad</p>
+          <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8">
+            {problems.map((problem, index) => (
+              <div key={index} className="flex flex-col items-center text-center gap-2">
+                <problem.icon className="size-10 text-destructive/80" />
+                <p className="font-semibold text-muted-foreground text-lg">{problem.text}</p>
+              </div>
+            ))}
           </div>
         </div>
 
