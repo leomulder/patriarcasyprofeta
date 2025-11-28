@@ -7,11 +7,33 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription }
 import { Book, BookOpen, Smartphone, Headphones, Users, Star, ChevronsRight, ShieldCheck, Clock, Users2, AlertTriangle } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 
+const featuresCompleto = [
+  { icon: BookOpen, text: 'Estudio de Patriarcas' },
+  { icon: ChevronsRight, text: 'Estudio de Profetas' },
+  { icon: Smartphone, text: 'Acceso vía App' },
+  { icon: Headphones, text: 'Audio-sesiones' },
+  { icon: Users, text: 'Comunidad Privada' },
+  { icon: Star, text: 'Todos los Bonos' },
+];
+
+const featuresBasico = [
+  { icon: Book, text: 'Estudio de Patriarcas' },
+  { icon: Smartphone, text: 'Acceso vía App' },
+];
+
 const UrgencyInfo = () => {
     const [purchases, setPurchases] = useState(47);
-    const [timeLeft, setTimeLeft] = useState(100);
     const [bonusesTimeLeft, setBonusesTimeLeft] = useState(80);
     const [isMounted, setIsMounted] = useState(false);
+    
+    // Timer state
+    const [hours, setHours] = useState(5);
+    const [minutes, setMinutes] = useState(23);
+    const [seconds, setSeconds] = useState(11);
+    const [progress, setProgress] = useState(100);
+
+    const initialTotalSeconds = 5 * 3600 + 23 * 60 + 11;
+
 
     useEffect(() => {
         setIsMounted(true);
@@ -24,20 +46,33 @@ const UrgencyInfo = () => {
             setPurchases(prev => prev + Math.floor(Math.random() * 3) + 1);
         }, 8000);
 
-        const timeInterval = setInterval(() => {
-            setTimeLeft(prev => (prev > 5 ? prev - (Math.random() * 2) : 5));
-        }, 2000);
-
         const bonusTimeInterval = setInterval(() => {
             setBonusesTimeLeft(prev => (prev > 10 ? prev - (Math.random() * 3) : 10));
         }, 3000);
+        
+        const countdownInterval = setInterval(() => {
+            if (seconds > 0) {
+                setSeconds(seconds - 1);
+            } else if (minutes > 0) {
+                setMinutes(minutes - 1);
+                setSeconds(59);
+            } else if (hours > 0) {
+                setHours(hours - 1);
+                setMinutes(59);
+                setSeconds(59);
+            }
+            
+            const currentTotalSeconds = hours * 3600 + minutes * 60 + seconds;
+            setProgress((currentTotalSeconds / initialTotalSeconds) * 100);
+
+        }, 1000);
 
         return () => {
             clearInterval(purchaseInterval);
-            clearInterval(timeInterval);
             clearInterval(bonusTimeInterval);
+            clearInterval(countdownInterval);
         };
-    }, [isMounted]);
+    }, [isMounted, hours, minutes, seconds]);
 
     if (!isMounted) {
       return (
@@ -49,15 +84,19 @@ const UrgencyInfo = () => {
       );
     }
 
+    const formatTime = (time: number) => time.toString().padStart(2, '0');
+
     return (
         <div className="space-y-4 font-semibold">
-            <Card className="p-4 bg-accent/50 border-border/30 shadow-lg">
+            <Card className="p-4 bg-accent/50 border-destructive/50 shadow-lg">
                 <div className='space-y-2 text-center'>
                     <div className="flex items-center justify-center gap-2 text-sm text-destructive font-bold">
                         <Clock className="size-4" />
-                        <span>El precio sube a medianoche</span>
+                        <span className="font-mono text-base">
+                           {formatTime(hours)}:{formatTime(minutes)}:{formatTime(seconds)}
+                        </span>
                     </div>
-                    <Progress value={timeLeft} className="h-2 bg-background/30" indicatorClassName="bg-destructive" />
+                    <Progress value={progress} className="h-2 bg-background/30" indicatorClassName="bg-destructive" />
                 </div>
             </Card>
             
@@ -80,20 +119,6 @@ const UrgencyInfo = () => {
         </div>
     )
 }
-
-const featuresCompleto = [
-  { icon: BookOpen, text: 'Estudio de Patriarcas' },
-  { icon: ChevronsRight, text: 'Estudio de Profetas' },
-  { icon: Smartphone, text: 'Acceso vía App' },
-  { icon: Headphones, text: 'Audio-sesiones' },
-  { icon: Users, text: 'Comunidad Privada' },
-  { icon: Star, text: 'Todos los Bonos' },
-];
-
-const featuresBasico = [
-  { icon: Book, text: 'Estudio de Patriarcas' },
-  { icon: Smartphone, text: 'Acceso vía App' },
-];
 
 
 export default function PricingSection() {
