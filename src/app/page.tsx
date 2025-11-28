@@ -1,18 +1,16 @@
-import dynamic from 'next/dynamic';
-
-const HeroSection = dynamic(() => import('@/components/landing/HeroSection'));
-const ImpactSection = dynamic(() => import('@/components/landing/ImpactSection'));
-const ContentSection = dynamic(() => import('@/components/landing/ContentSection'));
-const ForYouSection = dynamic(() => import('@/components/landing/ForYouSection'));
-const HowItWorksSection = dynamic(() => import('@/components/landing/HowItWorksSection'));
-const TransformSection = dynamic(() => import('@/components/landing/TransformSection'));
-const BonusSection = dynamic(() => import('@/components/landing/BonusSection'));
-const GuaranteeSection = dynamic(() => import('@/components/landing/GuaranteeSection'));
-const PricingSection = dynamic(() => import('@/components/landing/PricingSection'));
-const FaqSection = dynamic(() => import('@/components/landing/FaqSection'));
-const Footer = dynamic(() => import('@/components/landing/Footer'));
-const WhyItWorksSection = dynamic(() => import('@/components/landing/WhyItWorksSection'));
-const TestimonialsSection = dynamic(() => import('@/components/landing/TestimonialsSection'));
+import BonusSection from '@/components/landing/BonusSection';
+import ContentSection from '@/components/landing/ContentSection';
+import FaqSection from '@/components/landing/FaqSection';
+import Footer from '@/components/landing/Footer';
+import ForYouSection from '@/components/landing/ForYouSection';
+import GuaranteeSection from '@/components/landing/GuaranteeSection';
+import HeroSection from '@/components/landing/HeroSection';
+import HowItWorksSection from '@/components/landing/HowItWorksSection';
+import ImpactSection from '@/components/landing/ImpactSection';
+import PricingSection from '@/components/landing/PricingSection';
+import TestimonialsSection from '@/components/landing/TestimonialsSection';
+import TransformSection from '@/components/landing/TransformSection';
+import WhyItWorksSection from '@/components/landing/WhyItWorksSection';
 
 export default function Home() {
   return (
