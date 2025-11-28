@@ -33,7 +33,7 @@ export default function ImpactSection() {
             ))}
           </div>
 
-          <Card className="mt-16 bg-card border-border/50 shadow-2xl p-6 sm:p-8">
+          <Card className="mt-16 bg-card border-border shadow-2xl p-6 sm:p-8">
             <CardContent className="p-0">
               <p className="text-xl sm:text-2xl font-bold text-foreground">
                 “Por fin entiendo lo que leo.”

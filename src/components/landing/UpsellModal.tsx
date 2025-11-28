@@ -39,8 +39,8 @@ export default function UpsellModal({ isOpen, onClose, onAccept }: UpsellModalPr
             </DialogDescription>
         </div>
         
-        <div className='bg-background/50 px-6 md:px-8 py-8'>
-            <h3 className="text-xl sm:text-2xl font-bold text-foreground text-center">Lleva el <span className="text-secondary">PAQUETE COMPLETO</span> con un <span className="text-destructive">20% DE DESCUENTO</span></h3>
+        <div className='bg-background px-6 md:px-8 py-8'>
+            <h3 className="text-xl sm:text-2xl font-bold text-foreground text-center">Lleva el <span className="text-primary">PAQUETE COMPLETO</span> con un <span className="text-red-600">20% DE DESCUENTO</span></h3>
             <p className="text-center text-muted-foreground mt-2">¡Todo el contenido, todos los bonos y futuras actualizaciones por un precio especial!</p>
             
             <div className="flex items-center justify-center gap-4 my-6">
@@ -61,11 +61,11 @@ export default function UpsellModal({ isOpen, onClose, onAccept }: UpsellModalPr
                     </ul>
                 </div>
                 <div>
-                    <h4 className="font-bold text-lg text-foreground mb-3">Y DOS BONOS MÁS <span className="text-destructive">(¡GRATIS HOY!)</span>:</h4>
+                    <h4 className="font-bold text-lg text-foreground mb-3">Y DOS BONOS MÁS <span className="text-red-600">(¡GRATIS HOY!)</span>:</h4>
                     <ul className="space-y-2">
                     {newBonuses.map((bonus, index) => (
                         <li key={index} className="flex items-center">
-                        <bonus.icon className="h-5 w-5 text-destructive mr-3 flex-shrink-0" />
+                        <bonus.icon className="h-5 w-5 text-red-500 mr-3 flex-shrink-0" />
                         <span className="text-foreground text-sm font-semibold">{bonus.text}</span>
                         </li>
                     ))}
@@ -83,7 +83,7 @@ export default function UpsellModal({ isOpen, onClose, onAccept }: UpsellModalPr
             </Button>
         </div>
 
-        <div className="p-4 bg-card/50 text-center">
+        <div className="p-4 bg-card/80 text-center">
             <p className="text-xs text-muted-foreground">Esta es una oferta única. Si cierras esta ventana, la perderás para siempre.</p>
         </div>
       </DialogContent>

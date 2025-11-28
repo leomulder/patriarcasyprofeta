@@ -32,23 +32,23 @@ export default function WhyItWorksSection() {
         </div>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start">
-          <div className="bg-background/50 rounded-xl p-6 border border-destructive/30">
+          <div className="bg-background rounded-xl p-6 border border-red-500/30">
             <div className="flex items-center gap-3">
-              <XCircle className="size-8 text-destructive" />
+              <XCircle className="size-8 text-red-500" />
               <h3 className="font-headline text-2xl font-bold text-foreground">El Problema</h3>
             </div>
             <p className="text-muted-foreground mt-2">La mayoría de los estudios te dejan con más dudas que respuestas porque les falta:</p>
             <div className="mt-6 space-y-3">
               {problems.map((problem, index) => (
-                <div key={index} className="flex items-center gap-3 bg-destructive/10 p-3 rounded-lg">
-                  <XCircle className="size-5 text-destructive/80 flex-shrink-0" />
+                <div key={index} className="flex items-center gap-3 bg-red-500/10 p-3 rounded-lg">
+                  <XCircle className="size-5 text-red-500/80 flex-shrink-0" />
                   <p className="font-semibold text-foreground/90">{problem.text}</p>
                 </div>
               ))}
             </div>
           </div>
           
-          <div className="bg-background/50 rounded-xl p-6 border border-primary/30">
+          <div className="bg-background rounded-xl p-6 border border-primary/30">
             <div className="flex items-center gap-3">
               <Check className="size-8 text-primary" />
               <h3 className="font-headline text-2xl font-bold text-foreground">La Solución</h3>

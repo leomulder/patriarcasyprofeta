@@ -44,7 +44,7 @@ const testimonials = [
 const StarRating = ({ rating = 5 }: { rating?: number }) => (
   <div className="flex items-center gap-1 text-primary">
     {[...Array(5)].map((_, i) => (
-      <Star key={i} className={`h-5 w-5 ${i < rating ? 'fill-current' : 'text-muted-foreground/50'}`} />
+      <Star key={i} className={`h-5 w-5 ${i < rating ? 'fill-current' : 'text-muted/50'}`} />
     ))}
   </div>
 );
@@ -65,7 +65,7 @@ export default function TestimonialsSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {testimonials.map((testimonial) => (
-              <Card key={testimonial.id} className="bg-background border-border/50 shadow-lg flex flex-col p-6">
+              <Card key={testimonial.id} className="bg-background border-border shadow-lg flex flex-col p-6">
                 <CardContent className="p-0 flex flex-col h-full">
                   <div className="flex-grow">
                     <StarRating />

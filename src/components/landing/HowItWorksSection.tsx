@@ -69,10 +69,10 @@ export default function HowItWorksSection() {
                  className={`rounded-xl border p-6 flex flex-col items-center justify-center gap-3 text-center shadow-lg transition-transform duration-300 hover:-translate-y-2 ${
                    outcome.isPrimary
                      ? 'bg-primary/10 border-primary/50 shadow-primary/10'
-                     : 'bg-card border-border/50'
+                     : 'bg-card border-border'
                  }`}
                >
-                 <outcome.icon className={`size-8 ${outcome.isPrimary ? 'text-primary' : 'text-accent-foreground'}`} />
+                 <outcome.icon className={`size-8 ${outcome.isPrimary ? 'text-primary' : 'text-foreground'}`} />
                  <p className={`text-xl font-bold ${outcome.isPrimary ? 'text-primary' : 'text-foreground'}`}>
                    {outcome.text}
                  </p>

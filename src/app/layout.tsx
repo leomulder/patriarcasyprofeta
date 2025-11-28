@@ -7,7 +7,7 @@ import Script from 'next/script';
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400', '700', '900'],
+  weight: ['400', '600', '700', '900'],
   variable: '--font-poppins',
   display: 'swap',
 });
@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={cn(poppins.variable, "dark")}>
+    <html lang="es" className={cn(poppins.variable, "light")}>
       <head>
         <script
           src="https://cdn.utmify.com.br/scripts/utms/latest.js"

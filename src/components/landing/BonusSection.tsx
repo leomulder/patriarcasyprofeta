@@ -39,7 +39,7 @@ export default function BonusSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
           {bonuses.map((bonus, index) => (
-            <Card key={index} className="bg-background border-border/50 shadow-lg flex items-center p-6 gap-6">
+            <Card key={index} className="bg-background border-border shadow-lg flex items-center p-6 gap-6">
               <div className="flex-shrink-0">
                  <div className="relative aspect-square w-24">
                   <Image

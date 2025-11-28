@@ -13,7 +13,7 @@ const GuaranteeSeal = () => (
     >
       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
     </svg>
-    <div className="absolute inset-0 flex flex-col items-center justify-center text-background">
+    <div className="absolute inset-0 flex flex-col items-center justify-center text-primary-foreground">
       <div className="text-center font-bold">
         <div className="text-3xl leading-none pt-1">30</div>
         <div className="text-sm leading-none">DÍAS</div>
@@ -26,7 +26,7 @@ export default function GuaranteeSection() {
   return (
     <section className="py-16 sm:py-24 bg-card">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto bg-background rounded-2xl p-8 sm:p-12 shadow-2xl border border-border/50">
+        <div className="max-w-4xl mx-auto bg-background rounded-2xl p-8 sm:p-12 shadow-2xl border border-border">
           <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-8">
             <div className="flex-shrink-0">
               <GuaranteeSeal />

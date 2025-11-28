@@ -82,7 +82,7 @@ const UrgencyInfo = () => {
 
     return (
         <div className="space-y-4 font-semibold">
-            <Card className="p-4 bg-destructive shadow-lg text-destructive-foreground rounded-lg">
+            <Card className="p-4 bg-red-600/90 shadow-lg text-white rounded-lg">
                 <div className='flex items-center justify-center gap-2 font-bold mb-4'>
                     <Clock className="size-5" />
                     <AlertTriangle className="size-5" />
@@ -97,7 +97,7 @@ const UrgencyInfo = () => {
                 </div>
             </Card>
 
-            <Card className="p-4 bg-card/50 border-border/30 shadow-lg">
+            <Card className="p-4 bg-card shadow-lg border border-border">
                 <div className="flex items-center justify-center gap-2 text-sm text-foreground">
                     <Users2 className="size-4 text-primary" />
                     <span>{purchases} personas compraron en las últimas 3 horas</span>
@@ -181,7 +181,7 @@ export default function PricingSection() {
             </Card>
             
             {/* Básico Plan */}
-            <Card className="bg-card border-border/50 shadow-lg flex flex-col h-full">
+            <Card className="bg-card border-border shadow-lg flex flex-col h-full">
               <CardHeader className="text-center pt-10">
                 <CardTitle className="font-headline text-3xl text-foreground">Básico</CardTitle>
                 <CardDescription className="text-muted-foreground pt-2">Para comenzar.</CardDescription>
@@ -202,7 +202,7 @@ export default function PricingSection() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" size="lg" className="w-full text-lg py-6 border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={handleBasicButtonClick}>
+                <Button variant="outline" size="lg" className="w-full text-lg py-6 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold" onClick={handleBasicButtonClick}>
                   QUIERO EL BÁSICO
                 </Button>
               </CardFooter>

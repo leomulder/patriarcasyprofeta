@@ -81,7 +81,7 @@ export default function ForYouSection() {
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="grid grid-cols-2 md:grid-cols-3 items-center gap-4 p-4 bg-background border-border/50 shadow-lg transition-all duration-300 hover:shadow-primary/20 hover:border-primary/50 hover:scale-[1.02]"
+                className="grid grid-cols-2 md:grid-cols-3 items-center gap-4 p-4 bg-background border-border shadow-lg transition-all duration-300 hover:shadow-primary/20 hover:border-primary/50 hover:scale-[1.02]"
                 style={{'--delay': `${index * 100}ms`} as React.CSSProperties}
               >
                 {/* Feature Title (visible on all screens) */}
@@ -98,7 +98,7 @@ export default function ForYouSection() {
                 <div className="text-center pr-4 md:pr-0">
                     <div className="md:hidden text-xs font-bold text-muted-foreground mb-2">Otros Estudios</div>
                     <div className="flex items-center justify-center gap-2 text-muted-foreground">
-                        <X className="size-5 text-destructive" />
+                        <X className="size-5 text-red-500" />
                         <span className="hidden sm:inline">{feature.others}</span>
                     </div>
                 </div>
