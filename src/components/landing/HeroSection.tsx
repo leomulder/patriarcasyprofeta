@@ -11,14 +11,14 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
         
         <h1 className="text-4xl md:text-6xl font-black font-headline text-foreground leading-tight">
-          Entiende la Biblia como si Dios te la estuviera explicando personalmente.
+          Patriarcas y Profetas — Explicados Verso por Verso
         </h1>
         <p className="mt-6 text-xl md:text-2xl font-body text-primary font-bold">
-          Patriarcas y Profetas — Revelados Verso por Verso.
+          Transforma tu estudio de la Biblia en una experiencia clara, profunda y reveladora, con un recorrido detallado desde Abraham hasta Malaquías, que te mostrará cómo cada historia, cada profecía y cada personaje puede transformar tu fe hoy.
         </p>
         
         <p className="mt-8 text-lg md:text-xl font-semibold text-foreground max-w-3xl">
-          Transformación espiritual real, sin confusión, sin interpretaciones humanas, sin adornos.
+          Explora, versículo por verso, más de 2.300 pasajes bíblicos explicados con una claridad que nunca antes habías experimentado. Comprende el sentido real de los Patriarcas, la voz de los Profetas y las verdades eternas que Dios reveló a su pueblo.
         </p>
 
         <a href="#pricing">
