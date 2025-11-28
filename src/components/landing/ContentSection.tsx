@@ -5,17 +5,17 @@ const patriarcas = [
   {
     name: "Abraham",
     description: "Fe. Sacrificio. Promesa. Descubre por qué él es la base de la historia espiritual del mundo.",
-    imageUrl: "https://i.ibb.co/C03pQjY/abraham.png",
+    imageUrl: "https://i.postimg.cc/vHKLmWxH/3.png",
   },
   {
     name: "Isaac",
     description: "La herencia espiritual que define destino.",
-    imageUrl: "https://i.ibb.co/6g2M34T/isaac.png",
+    imageUrl: "https://i.postimg.cc/D0112YfR/7.png",
   },
   {
     name: "Jacob",
     description: "Identidad, lucha, transformación… y el momento exacto donde Dios cambia su nombre y cambia TODO.",
-    imageUrl: "https://i.ibb.co/z4jXJ3B/jacob.png",
+    imageUrl: "https://i.postimg.cc/fyLmzLwB/4.png",
   },
 ];
 
@@ -23,22 +23,22 @@ const profetas = [
   {
     name: "Isaías",
     description: "El profeta mesiánico. La visión más completa del plan de redención.",
-    imageUrl: "https://i.ibb.co/d2Nf1tS/isaias.png",
+    imageUrl: "https://i.postimg.cc/wMhXb7fR/8.png",
   },
   {
     name: "Jeremías",
     description: "El corazón de Dios expuesto — raw, real y sin maquillaje.",
-    imageUrl: "https://i.ibb.co/56d0s9M/jeremias.png",
+    imageUrl: "https://i.postimg.cc/Y9JjLd0V/9.png",
   },
   {
     name: "Ezequiel",
     description: "La gloria de Dios en imágenes que pocos se atreven a explicar… aquí tú las entenderás.",
-    imageUrl: "https://i.ibb.co/SXVxWv7/ezequiel.png",
+    imageUrl: "https://i.postimg.cc/SNf53RhR/10.png",
   },
   {
     name: "Daniel",
     description: "Fidelidad. Profecías. Revelaciones del tiempo del fin. Lo que siempre quisiste entender — explicado con precisión cirúrgica.",
-    imageUrl: "https://i.ibb.co/V99H1yY/daniel.png",
+    imageUrl: "https://i.postimg.cc/tJn4N1yW/11.png",
   },
 ]
 
