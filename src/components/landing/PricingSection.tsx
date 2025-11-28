@@ -21,7 +21,7 @@ const featuresCompleto = [
 ];
 
 const UrgencyInfo = () => {
-    const [purchases, setPurchases] = useState(30);
+    const [purchases, setPurchases] = useState(37);
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
