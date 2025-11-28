@@ -62,9 +62,7 @@ export default function ContentSection() {
               <Card key={character.name} className="bg-card border-border/50 shadow-lg flex flex-col overflow-hidden text-center">
                 {character.imageUrl && (
                   <div className="p-6 flex justify-center">
-                    <div className={cn("relative aspect-square rounded-full overflow-hidden",
-                      character.name === 'Isaac' ? 'w-64' : 'w-32'
-                    )}>
+                    <div className={cn("relative aspect-square rounded-full overflow-hidden w-32")}>
                       <Image
                         src={character.imageUrl}
                         alt={character.name}
