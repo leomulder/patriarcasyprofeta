@@ -12,7 +12,6 @@ const GuaranteeSection = dynamic(() => import('@/components/landing/GuaranteeSec
 const PricingSection = dynamic(() => import('@/components/landing/PricingSection'));
 const FaqSection = dynamic(() => import('@/components/landing/FaqSection'));
 const Footer = dynamic(() => import('@/components/landing/Footer'));
-const SocialProof = dynamic(() => import('@/components/landing/SocialProof'));
 const WhyItWorksSection = dynamic(() => import('@/components/landing/WhyItWorksSection'));
 const TestimonialsSection = dynamic(() => import('@/components/landing/TestimonialsSection'));
 
@@ -35,7 +34,6 @@ export default function Home() {
         <FaqSection />
       </main>
       <Footer />
-      <SocialProof />
     </div>
   );
 }

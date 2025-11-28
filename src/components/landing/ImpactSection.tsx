@@ -3,7 +3,6 @@
 import { Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import TestimonialsSection from "./TestimonialsSection";
 
 const points = [
   "Entiende a Daniel, José, Elías y Moisés… sin filtros ni confusión.",
@@ -43,8 +42,6 @@ export default function ImpactSection() {
             </CardContent>
           </Card>
           
-          <TestimonialsSection />
-
           <div className="mt-12">
             <div className="my-4 space-y-1 font-semibold text-muted-foreground">
               <p>Porque no suaviza.</p>
