@@ -9,7 +9,7 @@ export default function HeroSection() {
     <section 
       className="relative flex items-center justify-center text-center py-20 md:py-28 px-4"
       style={{
-        background: 'linear-gradient(180deg, #4A2E6F 0%, #291634 100%)'
+        background: 'linear-gradient(180deg, #9A5C27 0%, #B68B35 100%)'
       }}
     >
       <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
@@ -36,7 +36,7 @@ export default function HeroSection() {
         </p>
 
         <a href="#pricing">
-          <Button size="lg" className="mt-10 cta-button font-bold text-primary-foreground animate-pulse">
+          <Button size="lg" className="mt-10 cta-button font-bold text-black animate-pulse">
             QUIERO COMENZAR AHORA
           </Button>
         </a>
