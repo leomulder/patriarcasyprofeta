@@ -10,7 +10,7 @@ const patriarcas = [
   {
     name: "Isaac",
     description: "La herencia espiritual que define destino.",
-    imageUrl: "https://i.postimg.cc/D0112YfR/7.png",
+    imageUrl: "https://i.postimg.cc/q70PrHRt/22.png",
   },
   {
     name: "Jacob",
@@ -23,22 +23,22 @@ const profetas = [
   {
     name: "Isaías",
     description: "El profeta mesiánico. La visión más completa del plan de redención.",
-    imageUrl: "https://i.postimg.cc/wMhXb7fR/8.png",
+    imageUrl: "https://i.postimg.cc/tTJmRqHp/111.png",
   },
   {
     name: "Jeremías",
     description: "El corazón de Dios expuesto — raw, real y sin maquillaje.",
-    imageUrl: "https://i.postimg.cc/Y9JjLd0V/9.png",
+    imageUrl: "https://i.postimg.cc/JhzWJWWS/23232.png",
   },
   {
     name: "Ezequiel",
     description: "La gloria de Dios en imágenes que pocos se atreven a explicar… aquí tú las entenderás.",
-    imageUrl: "https://i.postimg.cc/SNf53RhR/10.png",
+    imageUrl: "https://i.postimg.cc/NfvqDXcS/Profetasypatriarcas.png",
   },
   {
     name: "Daniel",
     description: "Fidelidad. Profecías. Revelaciones del tiempo del fin. Lo que siempre quisiste entender — explicado con precisión cirúrgica.",
-    imageUrl: "https://i.postimg.cc/tJn4N1yW/11.png",
+    imageUrl: "https://i.postimg.cc/KjnWw929/1.png",
   },
 ]
 
