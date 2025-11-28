@@ -68,8 +68,8 @@ export default function HowItWorksSection() {
                  key={outcome.text}
                  className={`rounded-xl border p-6 flex flex-col items-center justify-center gap-3 text-center shadow-lg transition-transform duration-300 hover:-translate-y-2 ${
                    outcome.isPrimary
-                     ? 'bg-primary/10 border-primary/50 shadow-primary/10'
-                     : 'bg-card border-border'
+                     ? 'bg-primary/10 border-green-400/50 shadow-primary/10'
+                     : 'bg-card border-green-400/50'
                  }`}
                >
                  <outcome.icon className={`size-8 ${outcome.isPrimary ? 'text-primary' : 'text-foreground'}`} />
