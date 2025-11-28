@@ -50,7 +50,7 @@ export default function ContentSection() {
         <div className="mt-12">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary">
-              ☀️ Patriarcas
+              Patriarcas
             </h2>
             <p className="mt-4 text-lg sm:text-xl text-muted-foreground">
               Vas a caminar con ellos. Vas a sentir lo que sintieron. Vas a ver lo que Dios estaba haciendo en su época — y lo que significa para tu vida hoy.
@@ -85,7 +85,7 @@ export default function ContentSection() {
         <div className="mt-24">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary">
-              🌙 Profetas
+              Profetas
             </h2>
             <p className="mt-4 text-lg sm:text-xl text-muted-foreground">
               Aquí las Escrituras se vuelven vivas.

@@ -65,7 +65,7 @@ export default function ForYouSection() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center">
             <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary">
-              <span className="text-5xl sm:text-6xl">🔥</span> Lo que NADIE te ofrece en LATAM…
+              Lo que NADIE te ofrece en LATAM…
             </h2>
             <p className="text-center text-lg sm:text-xl text-muted-foreground mt-4">
               pero tú tendrás desde el primer minuto:

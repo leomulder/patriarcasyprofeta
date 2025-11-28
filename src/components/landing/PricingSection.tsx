@@ -76,7 +76,7 @@ export default function PricingSection() {
                 MÁS POPULAR
               </div>
               <CardHeader className="text-center pt-10">
-                <CardTitle className="font-headline text-3xl text-primary">🔥 Completo</CardTitle>
+                <CardTitle className="font-headline text-3xl text-primary">Completo</CardTitle>
                 <CardDescription className="text-muted-foreground pt-2">La experiencia total.</CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">
@@ -105,7 +105,7 @@ export default function PricingSection() {
             {/* Básico Plan */}
             <Card className="bg-card border-border/50 shadow-lg flex flex-col h-full">
               <CardHeader className="text-center pt-10">
-                <CardTitle className="font-headline text-3xl text-foreground">⭐ Básico</CardTitle>
+                <CardTitle className="font-headline text-3xl text-foreground">Básico</CardTitle>
                 <CardDescription className="text-muted-foreground pt-2">Para comenzar.</CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">

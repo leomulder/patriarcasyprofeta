@@ -19,7 +19,7 @@ export default function ImpactSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary">
-            💡 Lo que este estudio hará dentro de ti
+            Lo que este estudio hará dentro de ti
           </h2>
           <ul className="mt-8 space-y-4 text-left">
             {points.map((point, index) => (
