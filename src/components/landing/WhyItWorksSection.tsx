@@ -30,7 +30,7 @@ export default function WhyItWorksSection() {
           <p className="mt-4 text-2xl sm:text-3xl text-foreground font-semibold">
             pero pocos la entienden.
           </p>
-          <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4 text-left text-muted-foreground text-lg">
+          <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 text-left text-muted-foreground text-lg justify-center">
               <p>❌ Falta contexto</p>
               <p>❌ Falta estructura</p>
               <p>❌ Falta guía</p>
@@ -38,7 +38,7 @@ export default function WhyItWorksSection() {
           </div>
         </div>
 
-        <div className="mt-12 max-w-4xl mx-auto">
+        <div className="mt-16 max-w-4xl mx-auto">
           <p className="text-center text-xl font-bold text-foreground">Este estudio soluciona eso con:</p>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {reasons.map((reason, index) => (
@@ -58,7 +58,7 @@ export default function WhyItWorksSection() {
             <p className="text-2xl sm:text-3xl font-headline font-bold text-foreground">
                 Te doy la Biblia en HD.
             </p>
-            <p className="text-xl sm:text-2xl font-body text-muted-foreground">
+            <p className="text-xl sm:text-2xl font-body text-muted-foreground mt-2">
                 Sin ruidos. Sin filtros.
             </p>
         </div>

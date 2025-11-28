@@ -1,21 +1,14 @@
 import type {Metadata} from 'next';
-import { Playfair_Display, PT_Sans } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 import { cn } from '@/lib/utils';
 import Script from 'next/script';
 
-const ptSans = PT_Sans({
+const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-pt-sans',
-  display: 'swap',
-});
-
-const playfairDisplay = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['700', '900'],
-  variable: '--font-playfair-display',
+  weight: ['400', '700', '900'],
+  variable: '--font-poppins',
   display: 'swap',
 });
 
@@ -30,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={cn(ptSans.variable, playfairDisplay.variable, "dark")}>
+    <html lang="es" className={cn(poppins.variable, "dark")}>
       <head>
         <script
           src="https://cdn.utmify.com.br/scripts/utms/latest.js"

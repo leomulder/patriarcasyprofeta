@@ -51,7 +51,7 @@ export default function BonusSection() {
                 </div>
               </div>
               <div>
-                <CardTitle className="font-body text-xl font-bold text-foreground">{bonus.title}</CardTitle>
+                <CardTitle className="font-headline text-xl font-bold text-foreground">{bonus.title}</CardTitle>
                 <p className="text-muted-foreground mt-1">{bonus.description}</p>
                 <p className="mt-2 font-bold text-primary">Valor real: {bonus.value}</p>
               </div>

@@ -40,7 +40,6 @@ export default function ImpactSection() {
               </p>
             </CardContent>
           </Card>
-
         </div>
       </div>
     </section>

@@ -29,16 +29,16 @@ export default function HowItWorksSection() {
     <section id="how-it-works" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto">
-           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mt-12">
+           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mt-12">
               {steps.map((step) => (
                 <div key={step.step} className="text-center">
-                  <p className="text-4xl">{step.step}</p>
-                  <p className="mt-2 font-semibold text-foreground">{step.title}</p>
+                  <p className="text-5xl">{step.step}</p>
+                  <p className="mt-4 text-lg font-semibold text-foreground">{step.title}</p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-12 space-y-2">
+            <div className="mt-16 space-y-2">
                 <p className="text-2xl font-bold text-foreground">Simples.</p>
                 <p className="text-2xl font-bold text-foreground">Rápido.</p>
                 <p className="text-2xl font-bold text-foreground">Profundo.</p>

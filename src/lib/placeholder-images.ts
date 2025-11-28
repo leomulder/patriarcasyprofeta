@@ -7,4 +7,5 @@ export type ImagePlaceholder = {
   imageHint: string;
 };
 
-export const PlaceHolderImages: ImagePlaceholder[] = data.placeholderImages;
+// The data is now an empty object, so we handle that case.
+export const PlaceHolderImages: ImagePlaceholder[] = (data as any).placeholderImages || [];
