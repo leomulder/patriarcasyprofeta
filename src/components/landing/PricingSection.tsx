@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Check, Book, BookOpen, Smartphone, Headphones, Users, Star, ChevronsRight, ShieldCheck } from 'lucide-react';
+import { Check, Book, BookOpen, Smartphone, Headphones, Users, Star, ChevronsRight, ShieldCheck, Clock, Users2 } from 'lucide-react';
+import { Progress } from '@/components/ui/progress';
 
 const featuresBasico = [
   { text: "Patriarcas", icon: Book },
@@ -21,7 +22,8 @@ const featuresCompleto = [
 ];
 
 const UrgencyInfo = () => {
-    const [purchases, setPurchases] = useState(37);
+    const [purchases, setPurchases] = useState(47);
+    const [timeLeft, setTimeLeft] = useState(100);
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
@@ -30,19 +32,54 @@ const UrgencyInfo = () => {
 
     useEffect(() => {
         if (!isMounted) return;
-        const interval = setInterval(() => {
-            setPurchases(prev => prev + Math.floor(Math.random() * 2) + 1);
-        }, 5000);
-        return () => clearInterval(interval);
+
+        const purchaseInterval = setInterval(() => {
+            setPurchases(prev => prev + Math.floor(Math.random() * 3) + 1);
+        }, 8000);
+
+        const timeInterval = setInterval(() => {
+            setTimeLeft(prev => (prev > 5 ? prev - (Math.random() * 2) : 5));
+        }, 2000);
+
+        return () => {
+            clearInterval(purchaseInterval);
+            clearInterval(timeInterval);
+        };
     }, [isMounted]);
 
-    if (!isMounted) return null;
+    if (!isMounted) {
+      // Render a placeholder or null on the server to avoid hydration mismatch
+      return (
+        <div className="space-y-6 text-center">
+            <div className="h-4 bg-muted rounded-full w-3/4 mx-auto"></div>
+            <div className="h-4 bg-muted rounded-full w-1/2 mx-auto"></div>
+            <div className="h-4 bg-muted rounded-full w-3/4 mx-auto"></div>
+        </div>
+      );
+    }
 
     return (
-        <div className="space-y-3 text-sm text-center font-semibold text-muted-foreground">
-            <p>⏳ {purchases} personas compraron en las últimas 3 horas</p>
-            <p>⏳ El precio sube a medianoche</p>
-            <p>⏳ Los bonos pueden ser retirados sin aviso</p>
+        <div className="space-y-6 text-center font-semibold text-muted-foreground p-4 bg-card/50 rounded-lg border border-border/30">
+            <div className='space-y-2'>
+              <div className="flex items-center justify-center gap-2 text-sm text-destructive font-bold">
+                  <Clock className="size-4" />
+                  <span>El precio sube a medianoche</span>
+              </div>
+              <Progress value={timeLeft} className="h-2" indicatorClassName="bg-destructive" />
+            </div>
+
+            <div className="flex items-center justify-center gap-2 text-sm text-foreground">
+                <Users2 className="size-4 text-primary" />
+                <span>{purchases} personas compraron en las últimas 3 horas</span>
+            </div>
+
+            <div className='space-y-2'>
+              <div className="flex items-center justify-center gap-2 text-sm text-foreground">
+                  <Clock className="size-4 text-primary" />
+                  <span>Los bonos pueden ser retirados sin aviso</span>
+              </div>
+              <Progress value={timeLeft} className="h-2" />
+            </div>
         </div>
     )
 }
