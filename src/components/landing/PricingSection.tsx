@@ -82,7 +82,6 @@ const UrgencyInfo = () => {
         <div className="space-y-4">
             <Card className="p-4 bg-card/50 border-border/30"><div className="h-10 bg-muted rounded-md w-full"></div></Card>
             <Card className="p-4 bg-card/50 border-border/30"><div className="h-6 bg-muted rounded-md w-full"></div></Card>
-            <Card className="p-4 bg-card/50 border-border/30"><div className="h-10 bg-muted rounded-md w-full"></div></Card>
         </div>
       );
     }
@@ -110,16 +109,6 @@ const UrgencyInfo = () => {
                 <div className="flex items-center justify-center gap-2 text-sm text-foreground">
                     <Users2 className="size-4 text-primary" />
                     <span>{purchases} personas compraron en las últimas 3 horas</span>
-                </div>
-            </Card>
-
-            <Card className="p-4 bg-card/50 border-border/30 shadow-lg">
-                 <div className='space-y-2 text-center'>
-                    <div className="flex items-center justify-center gap-2 text-sm text-primary font-bold">
-                        <AlertTriangle className="size-4" />
-                        <span>Los bonos pueden ser retirados sin aviso</span>
-                    </div>
-                    <Progress value={bonusesTimeLeft} className="h-2" indicatorClassName="bg-primary" />
                 </div>
             </Card>
         </div>
