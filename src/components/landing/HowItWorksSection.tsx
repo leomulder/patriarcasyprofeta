@@ -1,7 +1,6 @@
 'use client';
 
 import { Download, KeyRound, BookOpen, Users, TrendingUp } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const steps = [
   {
@@ -35,23 +34,26 @@ export default function HowItWorksSection() {
   return (
     <section id="how-it-works" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-4xl mx-auto">
+        <div className="text-center max-w-5xl mx-auto">
           <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary">
             Es tan simple como esto:
           </h2>
-           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mt-12">
+          <div className="relative mt-16">
+            <div className="absolute top-1/2 left-0 w-full h-0.5 bg-border -translate-y-1/2 hidden md:block"></div>
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-y-12 md:gap-x-8 relative">
               {steps.map((step, index) => (
-                <Card key={index} className="bg-card border-border/50 shadow-lg text-center flex flex-col items-center p-6 transition-all duration-300 hover:shadow-primary/20 hover:scale-105 hover:-translate-y-2">
-                    <div className="bg-primary/10 p-4 rounded-full border-4 border-primary/20">
-                        <step.icon className="h-8 w-8 text-primary" />
-                    </div>
-                    <p className="mt-4 text-lg font-bold text-foreground">{step.title}</p>
-                    <p className="mt-1 text-sm text-muted-foreground">{step.description}</p>
-                </Card>
+                <div key={index} className="flex flex-col items-center text-center z-10">
+                  <div className="bg-card border-4 border-border p-4 rounded-full">
+                      <step.icon className="h-8 w-8 text-primary" />
+                  </div>
+                  <p className="mt-4 text-lg font-bold text-foreground">{step.title}</p>
+                  <p className="mt-1 text-sm text-muted-foreground">{step.description}</p>
+                </div>
               ))}
             </div>
+          </div>
 
-            <div className="mt-16 space-y-2">
+            <div className="mt-20 space-y-2">
                 <p className="text-2xl font-bold text-foreground">Simples.</p>
                 <p className="text-2xl font-bold text-foreground">Rápido.</p>
                 <p className="text-2xl font-bold text-foreground">Profundo.</p>
