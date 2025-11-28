@@ -4,61 +4,61 @@
 
 @layer base {
   :root, .light {
-    --background: 45 75% 98%; /* #FFF9F0 */
-    --foreground: 33 29% 18%; /* #3A2E1F */
-    --card: 42 100% 95%; /* #FFF7E8 */
-    --card-foreground: 33 29% 18%; /* #3A2E1F */
-    --popover: 42 100% 95%; /* #FFF7E8 */
-    --popover-foreground: 33 29% 18%;
-    --primary: 41 88% 60%; /* #F2B63D */
-    --primary-foreground: 33 29% 18%; /* #3A2E1F */
-    --secondary: 41 88% 55%; /* #E3A62F - for hover */
-    --secondary-foreground: 33 29% 18%;
-    --muted: 40 20% 85%; /* Lighter shade for muted elements */
-    --muted-foreground: 35 19% 26%; /* #5C4A32 */
-    --accent: 42 100% 95%; /* card background */
-    --accent-foreground: 33 29% 18%;
+    --background: 39 67% 95%; /* #FBF5E8 - Creme Real */
+    --foreground: 275 45% 15%; /* #291634 - Ameixa Profunda */
+    --card: 39 50% 92%; /* Um pouco mais escuro que o fundo */
+    --card-foreground: 275 45% 15%;
+    --popover: 39 50% 92%;
+    --popover-foreground: 275 45% 15%;
+    --primary: 43 44% 59%; /* #C6A667 - Ouro Real */
+    --primary-foreground: 275 45% 15%;
+    --secondary: 43 42% 45%; /* #A38446 - Bronze Claro (hover) */
+    --secondary-foreground: 275 45% 15%;
+    --muted: 39 30% 85%;
+    --muted-foreground: 275 25% 30%;
+    --accent: 39 50% 92%;
+    --accent-foreground: 43 44% 59%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 41 78% 80%; /* #F3D7A5 */
-    --input: 41 78% 85%;
-    --ring: 41 88% 60%;
+    --border: 43 30% 70%;
+    --input: 43 30% 75%;
+    --ring: 43 44% 59%;
     --radius: 0.75rem; /* 12px */
   }
   
   .dark {
-    --background: 33 29% 12%;
-    --foreground: 45 75% 98%;
-    --card: 33 29% 15%;
-    --card-foreground: 45 75% 98%;
-    --popover: 33 29% 10%;
-    --popover-foreground: 45 75% 98%;
-    --primary: 41 88% 60%;
-    --primary-foreground: 33 29% 18%;
-    --secondary: 41 88% 55%;
-    --secondary-foreground: 33 29% 18%;
-    --muted: 33 29% 25%;
-    --muted-foreground: 45 75% 85%;
-    --accent: 33 29% 20%;
-    --accent-foreground: 41 88% 60%;
+    --background: 275 45% 15%; /* Ameixa Profunda */
+    --foreground: 39 67% 95%; /* Creme Real */
+    --card: 275 45% 20%;
+    --card-foreground: 39 67% 95%;
+    --popover: 275 45% 10%;
+    --popover-foreground: 39 67% 95%;
+    --primary: 43 44% 59%;
+    --primary-foreground: 275 45% 15%;
+    --secondary: 43 42% 45%;
+    --secondary-foreground: 275 45% 15%;
+    --muted: 275 45% 25%;
+    --muted-foreground: 39 67% 85%;
+    --accent: 275 45% 22%;
+    --accent-foreground: 43 44% 59%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 33 29% 30%;
-    --input: 33 29% 22%;
-    --ring: 41 88% 60%;
+    --border: 275 45% 30%;
+    --input: 275 45% 25%;
+    --ring: 43 44% 59%;
   }
 }
 
 @layer base {
   :root, .dark, .light {
-    --sidebar-background: 33 29% 15%;
-    --sidebar-foreground: 45 75% 98%;
-    --sidebar-primary: 41 88% 60%;
-    --sidebar-primary-foreground: 33 29% 18%;
-    --sidebar-accent: 33 29% 20%;
-    --sidebar-accent-foreground: 41 88% 60%;
-    --sidebar-border: 33 29% 30%;
-    --sidebar-ring: 41 88% 60%;
+    --sidebar-background: 275 45% 15%;
+    --sidebar-foreground: 39 67% 95%;
+    --sidebar-primary: 43 44% 59%;
+    --sidebar-primary-foreground: 275 45% 15%;
+    --sidebar-accent: 275 45% 22%;
+    --sidebar-accent-foreground: 43 44% 59%;
+    --sidebar-border: 275 45% 30%;
+    --sidebar-ring: 43 44% 59%;
   }
 }
 
