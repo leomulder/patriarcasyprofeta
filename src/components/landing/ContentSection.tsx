@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 const patriarcas = [
   {
@@ -61,7 +62,9 @@ export default function ContentSection() {
               <Card key={character.name} className="bg-card border-border/50 shadow-lg flex flex-col overflow-hidden text-center">
                 {character.imageUrl && (
                   <div className="p-6 flex justify-center">
-                    <div className="relative aspect-square w-32 rounded-full overflow-hidden">
+                    <div className={cn("relative aspect-square rounded-full overflow-hidden",
+                      character.name === 'Isaac' ? 'w-64' : 'w-32'
+                    )}>
                       <Image
                         src={character.imageUrl}
                         alt={character.name}
