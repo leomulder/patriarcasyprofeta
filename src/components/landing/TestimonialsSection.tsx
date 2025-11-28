@@ -54,7 +54,7 @@ export default function TestimonialsSection() {
     <section id="testimonials" className="py-16 sm:py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary">
+          <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">
             Lo Que Dicen Nuestros Estudiantes Reales
           </h2>
           <div className="mt-4 flex items-center justify-center gap-2">

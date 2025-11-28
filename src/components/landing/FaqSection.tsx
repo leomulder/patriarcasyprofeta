@@ -54,7 +54,7 @@ export default function FaqSection() {
     <section id="faq" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto px-4 max-w-3xl">
         <div className="text-center">
-          <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary">
+          <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">
             Preguntas Frecuentes
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">

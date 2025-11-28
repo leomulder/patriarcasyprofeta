@@ -50,7 +50,7 @@ export default function ContentSection() {
         
         <div className="mt-12">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary">
+            <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">
               Patriarcas
             </h2>
             <p className="mt-4 text-lg sm:text-xl text-muted-foreground">
@@ -62,7 +62,7 @@ export default function ContentSection() {
               <Card key={character.name} className="bg-card border-border/50 shadow-lg flex flex-col overflow-hidden text-center">
                 {character.imageUrl && (
                   <div className="p-6 flex justify-center">
-                    <div className={cn("relative aspect-square rounded-full overflow-hidden w-32")}>
+                    <div className="relative aspect-square w-32 rounded-full overflow-hidden">
                       <Image
                         src={character.imageUrl}
                         alt={character.name}
@@ -85,7 +85,7 @@ export default function ContentSection() {
 
         <div className="mt-24">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary">
+            <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">
               Profetas
             </h2>
             <p className="mt-4 text-lg sm:text-xl text-muted-foreground">

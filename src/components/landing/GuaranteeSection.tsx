@@ -32,7 +32,7 @@ export default function GuaranteeSection() {
               <GuaranteeSeal />
             </div>
             <div>
-              <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary">
+              <h2 className="font-headline text-3xl sm:text-4xl font-bold text-foreground">
                 💯 30 días — GARANTÍA TOTAL
               </h2>
               <p className="mt-4 text-lg sm:text-xl text-foreground max-w-2xl">

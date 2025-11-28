@@ -23,7 +23,7 @@ export default function WhyItWorksSection() {
     <section className="py-16 sm:py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary">
+          <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">
             Porque millones leen la Biblia…
           </h2>
           <p className="mt-4 text-2xl sm:text-3xl text-foreground font-semibold">

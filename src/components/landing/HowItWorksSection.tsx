@@ -42,7 +42,7 @@ export default function HowItWorksSection() {
     <section id="how-it-works" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-5xl mx-auto">
-          <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary">
+          <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">
             Es tan simple como esto:
           </h2>
           <div className="relative mt-16">

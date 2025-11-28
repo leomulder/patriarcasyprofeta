@@ -64,7 +64,7 @@ export default function ForYouSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center">
-            <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary">
+            <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">
               Lo que NADIE te ofrece en LATAM…
             </h2>
             <p className="text-center text-lg sm:text-xl text-muted-foreground mt-4">

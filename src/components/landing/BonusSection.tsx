@@ -33,8 +33,8 @@ export default function BonusSection() {
     <section className="py-16 sm:py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary">
-            Recibe <span className="text-foreground">$197</span> en Bonos GRATIS
+          <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">
+            Recibe <span className="text-primary">$197</span> en Bonos GRATIS
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">

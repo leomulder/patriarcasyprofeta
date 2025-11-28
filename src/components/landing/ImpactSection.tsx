@@ -17,7 +17,7 @@ export default function ImpactSection() {
     <section id="impact" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary">
+          <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">
             Lo que este estudio hará dentro de ti
           </h2>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
