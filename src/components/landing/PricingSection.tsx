@@ -136,7 +136,7 @@ export default function PricingSection() {
   }
   
   const handleAcceptUpsell = () => {
-    redirectTo('https://pay.hotmart.com/K99537811Y?off=rtgmziqk&checkoutMode=10');
+    redirectTo('https://pay.hotmart.com/K99537811Y?off=5suiqzrp&checkoutMode=10');
   }
 
   return (

@@ -45,7 +45,7 @@ export default function UpsellModal({ isOpen, onClose, onAccept }: UpsellModalPr
             
             <div className="flex items-center justify-center gap-4 my-6">
                 <span className="text-2xl text-muted-foreground line-through">U$11,90</span>
-                <span className="font-headline text-5xl font-bold text-primary animate-pulse">U$9,52</span>
+                <span className="font-headline text-5xl font-bold text-primary animate-pulse">U$9,00</span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 my-8 text-left">
