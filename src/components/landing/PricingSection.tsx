@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -105,6 +106,10 @@ export default function PricingSection() {
     <>
       <section id="pricing" className="py-16 sm:py-24 bg-background">
         <div className="container mx-auto px-4">
+        <div className="mb-12 max-w-lg mx-auto p-4 rounded-xl bg-card border-2 border-primary/30 shadow-lg">
+            <UrgencyInfo />
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start max-w-5xl mx-auto">
 
             {/* Completo Plan */}
@@ -168,7 +173,6 @@ export default function PricingSection() {
 
           </div>
           <div className="mt-12 max-w-md mx-auto space-y-4">
-            <UrgencyInfo />
             <div className="flex items-center justify-center gap-3 text-muted-foreground pt-4">
               <ShieldCheck className="size-5 text-primary flex-shrink-0" />
               <span>Compra 100% segura con Hotmart</span>
