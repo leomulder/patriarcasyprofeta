@@ -7,21 +7,6 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription }
 import { Book, BookOpen, Smartphone, Headphones, Users, Star, ChevronsRight, ShieldCheck, Clock, Users2, AlertTriangle } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 
-const featuresBasico = [
-  { text: "Patriarcas", icon: Book },
-  { text: "Guía de estudio", icon: BookOpen },
-];
-
-const featuresCompleto = [
-  { text: "Patriarcas", icon: Book },
-  { text: "Profetas", icon: BookOpen },
-  { text: "App", icon: Smartphone },
-  { text: "Audiolibro", icon: Headphones },
-  { text: "Comunidad privada", icon: Users },
-  { text: "TODOS los bonos", icon: Star },
-  { text: "Actualizaciones futuras", icon: ChevronsRight },
-];
-
 const UrgencyInfo = () => {
     const [purchases, setPurchases] = useState(47);
     const [timeLeft, setTimeLeft] = useState(100);
@@ -66,13 +51,13 @@ const UrgencyInfo = () => {
 
     return (
         <div className="space-y-4 font-semibold">
-            <Card className="p-4 bg-card/50 border-border/30 shadow-lg">
+            <Card className="p-4 bg-accent/50 border-border/30 shadow-lg">
                 <div className='space-y-2 text-center'>
                     <div className="flex items-center justify-center gap-2 text-sm text-destructive font-bold">
                         <Clock className="size-4" />
                         <span>El precio sube a medianoche</span>
                     </div>
-                    <Progress value={timeLeft} className="h-2" indicatorClassName="bg-destructive" />
+                    <Progress value={timeLeft} className="h-2 bg-background/30" indicatorClassName="bg-destructive" />
                 </div>
             </Card>
             
@@ -95,6 +80,21 @@ const UrgencyInfo = () => {
         </div>
     )
 }
+
+const featuresCompleto = [
+  { icon: BookOpen, text: 'Estudio de Patriarcas' },
+  { icon: ChevronsRight, text: 'Estudio de Profetas' },
+  { icon: Smartphone, text: 'Acceso vía App' },
+  { icon: Headphones, text: 'Audio-sesiones' },
+  { icon: Users, text: 'Comunidad Privada' },
+  { icon: Star, text: 'Todos los Bonos' },
+];
+
+const featuresBasico = [
+  { icon: Book, text: 'Estudio de Patriarcas' },
+  { icon: Smartphone, text: 'Acceso vía App' },
+];
+
 
 export default function PricingSection() {
   
