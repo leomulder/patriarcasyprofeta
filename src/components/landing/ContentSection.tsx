@@ -10,7 +10,7 @@ const patriarcas = [
   {
     name: "Isaac",
     description: "La herencia espiritual que define destino.",
-    imageUrl: "https://i.postimg.cc/q70PrHRt/22.png",
+    imageUrl: "https://i.postimg.cc/D0112YfR/7.png",
   },
   {
     name: "Jacob",
