@@ -49,7 +49,6 @@ const UrgencyInfo = () => {
     }, [isMounted]);
 
     if (!isMounted) {
-      // Render a placeholder or null on the server to avoid hydration mismatch
       return (
         <div className="space-y-4 text-center">
             <div className="h-4 bg-muted rounded-full w-3/4 mx-auto"></div>
@@ -69,7 +68,7 @@ const UrgencyInfo = () => {
               <Progress value={timeLeft} className="h-2" indicatorClassName="bg-destructive" />
             </div>
             
-            <div className="border-t border-border/30 my-4"></div>
+            <div className="border-t border-border/30"></div>
 
             <div className="space-y-4 text-center">
               <div className="flex items-center justify-center gap-2 text-sm text-foreground">
@@ -77,12 +76,9 @@ const UrgencyInfo = () => {
                   <span>{purchases} personas compraron en las últimas 3 horas</span>
               </div>
 
-              <div className='space-y-2'>
-                <div className="flex items-center justify-center gap-2 text-sm text-foreground">
-                    <Clock className="size-4 text-primary" />
-                    <span>Los bonos pueden ser retirados sin aviso</span>
-                </div>
-                <Progress value={timeLeft} className="h-2" />
+              <div className='flex items-center justify-center gap-2 text-sm text-foreground'>
+                <Clock className="size-4 text-primary" />
+                <span>Los bonos pueden ser retirados sin aviso</span>
               </div>
             </div>
         </div>
@@ -110,7 +106,7 @@ export default function PricingSection() {
     <>
       <section id="pricing" className="py-16 sm:py-24 bg-background">
         <div className="container mx-auto px-4">
-        <div className="mb-12 max-w-lg mx-auto p-4 rounded-xl bg-card border-2 border-primary/30 shadow-lg">
+          <div className="mb-12 max-w-lg mx-auto p-4 rounded-xl bg-card border border-border/50 shadow-lg">
             <UrgencyInfo />
           </div>
 
