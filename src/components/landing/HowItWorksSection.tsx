@@ -39,26 +39,28 @@ export default function HowItWorksSection() {
             Es tan simple como esto:
           </h2>
           <div className="relative mt-16">
-            <div className="absolute top-1/2 left-0 w-full h-0.5 bg-border -translate-y-1/2 hidden md:block"></div>
+            {/* The connecting line for desktop */}
+            <div className="absolute top-8 left-0 w-full h-0.5 bg-border -translate-y-1/2 hidden md:block" aria-hidden="true"></div>
+            
             <div className="grid grid-cols-1 md:grid-cols-5 gap-y-12 md:gap-x-8 relative">
               {steps.map((step, index) => (
                 <div key={index} className="flex flex-col items-center text-center z-10">
-                  <div className="bg-card border-4 border-border p-4 rounded-full">
+                  <div className="bg-card border-4 border-border p-4 rounded-full mb-4">
                       <step.icon className="h-8 w-8 text-primary" />
                   </div>
-                  <p className="mt-4 text-lg font-bold text-foreground">{step.title}</p>
+                  <h3 className="text-lg font-bold text-foreground">{step.title}</h3>
                   <p className="mt-1 text-sm text-muted-foreground">{step.description}</p>
                 </div>
               ))}
             </div>
           </div>
 
-            <div className="mt-20 space-y-2">
-                <p className="text-2xl font-bold text-foreground">Simples.</p>
-                <p className="text-2xl font-bold text-foreground">Rápido.</p>
-                <p className="text-2xl font-bold text-foreground">Profundo.</p>
-                <p className="text-2xl font-bold text-primary">Transformador.</p>
-            </div>
+          <div className="mt-20 space-y-2">
+            <p className="text-2xl font-bold text-foreground">Simples.</p>
+            <p className="text-2xl font-bold text-foreground">Rápido.</p>
+            <p className="text-2xl font-bold text-foreground">Profundo.</p>
+            <p className="text-2xl font-bold text-primary">Transformador.</p>
+          </div>
         </div>
       </div>
     </section>
