@@ -36,7 +36,7 @@ export default function HeroSection() {
         </p>
 
         <a href="#pricing">
-          <Button size="lg" className="mt-10 cta-button">
+          <Button size="lg" className="mt-10 cta-button font-bold text-black animate-pulse">
             QUIERO COMENZAR AHORA
           </Button>
         </a>
