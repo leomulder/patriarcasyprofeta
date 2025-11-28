@@ -5,11 +5,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const points = [
-  "Entiende a Daniel, José, Elías y Moisés… sin filtros ni confusión.",
-  "Deja de depender de sermones que tergiversan la Escritura.",
-  "Accede a interpretaciones limpias, directas y punto-a-punto.",
-  "Descubre por qué Daniel no fue atacado por los leones — la parte que nadie cuenta.",
-  "1.952 versículos explicados en orden, con claridad total y sin opiniones humanas.",
+  "Vas a sentir que la Biblia se abre ante tus ojos.",
+  "Vas a entender por qué Dios actuó así en cada historia.",
+  "Vas a ver conexiones que nunca habías visto.",
+  "Vas a descubrir detalles que transforman tu fe.",
+  "Vas a dejar de depender de sermones que tergiversan el texto.",
+  "Vas a tener claridad REAL — sin misticismo, sin adornos, sin teología complicada."
 ];
 
 export default function ImpactSection() {
@@ -18,11 +19,8 @@ export default function ImpactSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary">
-            Lo Que Hará Este Estudio Por Ti
+            💡 Lo que este estudio hará dentro de ti
           </h2>
-          <p className="mt-4 text-lg sm:text-xl text-muted-foreground">
-            Descubre por qué miles están entendiendo la Biblia como nunca antes.
-          </p>
           <ul className="mt-8 space-y-4 text-left">
             {points.map((point, index) => (
               <li key={index} className="flex items-start text-lg sm:text-xl text-muted-foreground">
@@ -32,32 +30,16 @@ export default function ImpactSection() {
             ))}
           </ul>
 
-          <Card className="mt-12 bg-card border-border/50 shadow-2xl p-6 sm:p-8 transform transition-transform duration-300 hover:scale-105 hover:shadow-primary/20">
+          <Card className="mt-12 bg-card border-border/50 shadow-2xl p-6 sm:p-8">
             <CardContent className="p-0">
               <p className="text-xl sm:text-2xl font-bold text-foreground">
-                Más de <span className="text-primary">12.247 estudiantes</span> ya abrieron los ojos.
-                <br />
-                Otros siguen leyendo la Biblia sin entenderla.
+                “Por fin entiendo lo que leo.”
+              </p>
+              <p className="mt-2 text-lg text-muted-foreground">
+                Eso es lo que más escuchamos… porque es lo que verdaderamente pasa.
               </p>
             </CardContent>
           </Card>
-          
-          <div className="mt-12">
-            <div className="my-4 space-y-1 font-semibold text-muted-foreground">
-              <p>Porque no suaviza.</p>
-              <p>No adorna.</p>
-              <p>No maquilla la verdad.</p>
-            </div>
-            <p className="font-bold text-lg text-foreground">Accede ahora por tiempo limitado.</p>
-          </div>
-
-          <div className="mt-8">
-             <a href="#pricing">
-              <Button size="lg" className="cta-button">
-                QUIERO COMENZAR MI ESTUDIO AHORA
-              </Button>
-            </a>
-          </div>
 
         </div>
       </div>

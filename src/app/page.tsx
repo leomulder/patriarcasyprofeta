@@ -5,7 +5,6 @@ const ImpactSection = dynamic(() => import('@/components/landing/ImpactSection')
 const ContentSection = dynamic(() => import('@/components/landing/ContentSection'));
 const ForYouSection = dynamic(() => import('@/components/landing/ForYouSection'));
 const HowItWorksSection = dynamic(() => import('@/components/landing/HowItWorksSection'));
-const AuthoritySection = dynamic(() => import('@/components/landing/AuthoritySection'));
 const TransformSection = dynamic(() => import('@/components/landing/TransformSection'));
 const BonusSection = dynamic(() => import('@/components/landing/BonusSection'));
 const GuaranteeSection = dynamic(() => import('@/components/landing/GuaranteeSection'));
@@ -21,17 +20,16 @@ export default function Home() {
       <HeroSection />
       <main>
         <ImpactSection />
-        <ContentSection />
         <ForYouSection />
+        <ContentSection />
         <WhyItWorksSection />
         <HowItWorksSection />
-        <AuthoritySection />
-        <TransformSection />
         <BonusSection />
-        <GuaranteeSection />
         <PricingSection />
+        <GuaranteeSection />
         <TestimonialsSection />
         <FaqSection />
+        <TransformSection />
       </main>
       <Footer />
     </div>

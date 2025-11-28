@@ -24,19 +24,22 @@ const GuaranteeSeal = () => (
 
 export default function GuaranteeSection() {
   return (
-    <section className="py-16 sm:py-24 bg-background">
+    <section className="py-16 sm:py-24 bg-card">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto bg-card rounded-2xl p-8 sm:p-12 shadow-2xl border border-border/50">
+        <div className="max-w-4xl mx-auto bg-background rounded-2xl p-8 sm:p-12 shadow-2xl border border-border/50">
           <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-8">
             <div className="flex-shrink-0">
               <GuaranteeSeal />
             </div>
             <div>
               <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary">
-                Garantía 100% SIN RIESGO
+                💯 30 días — GARANTÍA TOTAL
               </h2>
-              <p className="mt-4 text-lg sm:text-xl text-foreground max-w-md">
-                30 días. Sin preguntas. Si no te transforma: devolvemos.
+              <p className="mt-4 text-lg sm:text-xl text-foreground max-w-2xl">
+                Si este estudio no transforma tu comprensión de la Biblia… te devuelvo tu dinero. Sin preguntas. Sin presión. Sin explicación.
+              </p>
+              <p className="mt-4 text-2xl font-bold text-foreground">
+                Tú ganas o tú ganas.
               </p>
             </div>
           </div>

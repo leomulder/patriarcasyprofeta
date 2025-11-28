@@ -1,69 +1,38 @@
 'use client';
 
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Check } from 'lucide-react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-
-const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
 
 export default function HeroSection() {
-  const bullets = [
-    "Explicación verso por verso",
-    "Contexto histórico-cultural",
-    "Audiolibro completo",
-    "Comunidad activa",
-    "Revelaciones profundas que fortalecen tu fe"
-  ];
 
   return (
     <section className="relative flex items-center justify-center text-center text-white py-20 px-4">
-      <div className="absolute inset-0 z-0">
-        {heroImage && (
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            data-ai-hint={heroImage.imageHint}
-            fill
-            className="object-cover"
-            priority
-          />
-        )}
-        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
-      </div>
+      <div className="absolute inset-0 z-0 bg-background/80 backdrop-blur-sm"></div>
       
       <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
         <h1 className="font-headline text-4xl md:text-5xl font-bold text-foreground leading-tight">
-          ¿Lees la Biblia… pero sientes que te falta la <span className="text-primary">revelación</span> que realmente <span className="text-primary">transforma</span>?
+          ¿Lees la Biblia… pero sientes que te falta la <span className="text-primary">revelación</span> que realmente <span className="text-primary">cambia tu vida</span>?
         </h1>
-        <h2 className="font-body text-xl md:text-2xl text-muted-foreground mt-4 max-w-3xl">
-          <span className="font-bold text-foreground">Patriarcas y Profetas</span> — Revelado Verso por Verso, con <span className="font-bold text-primary">claridad brutal</span> y <span className="font-bold text-primary">profundidad real.</span>
+        <h2 className="font-body text-xl md:text-2xl text-muted-foreground mt-6 max-w-3xl">
+          No es tu culpa. No faltan ganas. No falta fe.
         </h2>
-        
-        <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-          La Biblia no debería sentirse confusa. Si estás cansado de leer sin entender, perder detalles, o sentir que <span className="font-semibold text-foreground">“te estás perdiendo algo importante”</span>… este es el estudio que cambia todo.
+        <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+          Lo que falta es una guía clara, profunda y <span className="font-bold text-foreground">HONESTA</span> — que te muestre lo que está detrás del texto, lo que el autor quiso decir, lo que estaba pasando en ese momento… y lo que Dios quiere decirte <span className="text-primary font-bold">HOY</span>.
         </p>
 
-        <p className="mt-4 text-lg md:text-xl font-bold text-foreground">
-          Aquí no hay teoría vacía. <span className="underline decoration-primary">Aquí comprendes lo que otros solo leen.</span>
+        <p className="mt-6 text-lg md:text-xl font-bold text-foreground max-w-3xl">
+          Este estudio hace exactamente eso. Te revela lo que siempre estuvo ahí — pero nadie te había explicado.
         </p>
-
-        <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-left max-w-lg mx-auto">
-          {bullets.map((bullet, index) => (
-            <li key={index} className="flex items-center text-muted-foreground">
-              <Check className="h-6 w-6 text-primary mr-3 flex-shrink-0" />
-              <span>{bullet}</span>
-            </li>
-          ))}
-        </ul>
         
-        <p className="mt-8 text-lg md:text-xl font-semibold text-foreground">
-          Entender la Biblia nunca había sido tan claro.
+        <p className="mt-8 text-2xl md:text-3xl font-bold font-headline text-foreground">
+          Entiende la Biblia como si Dios te la estuviera explicando personalmente.
+        </p>
+        <p className="mt-2 text-xl md:text-2xl font-body text-primary">
+          Patriarcas y Profetas — Revelados Verso por Verso.
         </p>
 
         <a href="#pricing">
           <Button size="lg" className="mt-8 cta-button">
-            QUIERO COMENZAR MI ESTUDIO AHORA
+            QUIERO COMENZAR AHORA
           </Button>
         </a>
       </div>

@@ -1,114 +1,128 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Image from "next/image";
 
 const patriarcas = [
   {
     name: "Abraham",
-    description: "El pacto. La promesa. La prueba.",
-    imageUrl: "https://i.postimg.cc/L50cN22y/Profetasypatriarcas.png"
+    description: "Fe. Sacrificio. Promesa. Descubre por qué él es la base de la historia espiritual del mundo.",
+    imageId: "abraham-image"
   },
   {
     name: "Isaac",
-    description: "El hijo de la promesa, heredero de la fe.",
-    imageUrl: "https://i.postimg.cc/RCQxjxVy/1.png"
+    description: "La herencia espiritual que define destino.",
+    imageId: "isaac-image"
   },
   {
     name: "Jacob",
-    description: "Lucha, identidad y destino.",
-    imageUrl: "https://i.postimg.cc/yNc7xgs9/Profetasypatriarcas.png"
+    description: "Identidad, lucha, transformación… y el momento exacto donde Dios cambia su nombre y cambia TODO.",
+    imageId: "jacob-image"
   },
 ];
 
 const profetas = [
   {
     name: "Isaías",
-    description: "El profeta mesiánico y la visión de la redención.",
-    imageUrl: "https://i.postimg.cc/cC67MNDK/2.png"
+    description: "El profeta mesiánico. La visión más completa del plan de redención.",
+    imageId: "isaias-image"
   },
   {
     name: "Jeremías",
-    description: "El profeta llorón y el nuevo pacto.",
-    imageUrl: "https://i.postimg.cc/SNF7YH6Q/3.png"
+    description: "El corazón de Dios expuesto — raw, real y sin maquillaje.",
+    imageId: "jeremias-image"
   },
   {
     name: "Ezequiel",
-    description: "La visión de la gloria de Dios y la restauración de Israel.",
-    imageUrl: "https://i.postimg.cc/qv7tNG5Q/4.png"
+    description: "La gloria de Dios en imágenes que pocos se atreven a explicar… aquí tú las entenderás.",
+    imageId: "ezequiel-image"
   },
   {
     name: "Daniel",
-    description: "Fidelidad en el exilio y las profecías del tiempo del fin.",
-    imageUrl: "https://i.postimg.cc/cCZC073N/5.png"
+    description: "Fidelidad. Profecías. Revelaciones del tiempo del fin. Lo que siempre quisiste entender — explicado con precisión cirúrgica.",
+    imageId: "daniel-image"
   },
 ]
 
 export default function ContentSection() {
   return (
-    <section id="content" className="py-16 sm:py-24 bg-card">
+    <section id="content" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto">
-          <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary">
-            Dentro del Contenido
-          </h2>
-          <p className="mt-4 text-lg sm:text-xl text-muted-foreground">
-            Explora cada capítulo, cada personaje, cada revelación… como si
-            estuvieras dentro de la historia.
-          </p>
-        </div>
-
+        
         <div className="mt-12">
-          <h3 className="font-headline text-3xl font-bold text-foreground mb-6 text-center">Patriarcas</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {patriarcas.map((character) => (
-              <Card key={character.name} className="bg-background border-border/50 shadow-lg flex flex-col overflow-hidden text-center">
-                {character.imageUrl && (
-                  <div className="p-6 flex justify-center">
-                    <div className="relative aspect-square w-32">
-                      <Image
-                        src={character.imageUrl}
-                        alt={`Imagen de ${character.name}`}
-                        fill
-                        className="object-contain"
-                      />
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary">
+              ☀️ Patriarcas
+            </h2>
+            <p className="mt-4 text-lg sm:text-xl text-muted-foreground">
+              Vas a caminar con ellos. Vas a sentir lo que sintieron. Vas a ver lo que Dios estaba haciendo en su época — y lo que significa para tu vida hoy.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            {patriarcas.map((character) => {
+              const image = PlaceHolderImages.find(p => p.id === character.imageId);
+              return (
+                <Card key={character.name} className="bg-card border-border/50 shadow-lg flex flex-col overflow-hidden text-center">
+                  {image && (
+                    <div className="p-6 flex justify-center">
+                      <div className="relative aspect-square w-32">
+                        <Image
+                          src={image.imageUrl}
+                          alt={image.description}
+                          data-ai-hint={image.imageHint}
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
                     </div>
-                  </div>
-                )}
-                <CardHeader className={character.imageUrl ? "pt-0" : ""}>
-                  <CardTitle className="font-headline text-2xl text-foreground">{character.name}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-muted-foreground text-lg">“{character.description}”</p>
-                </CardContent>
-              </Card>
-            ))}
+                  )}
+                  <CardHeader className={image ? "pt-0" : ""}>
+                    <CardTitle className="font-headline text-2xl text-foreground">{character.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <p className="text-muted-foreground text-lg">“{character.description}”</p>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
 
         <div className="mt-16">
-          <h3 className="font-headline text-3xl font-bold text-foreground mb-6 text-center">Profetas</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {profetas.map((character) => (
-              <Card key={character.name} className="bg-background border-border/50 shadow-lg flex flex-col overflow-hidden text-center">
-                {character.imageUrl && (
-                  <div className="p-6 flex justify-center">
-                    <div className="relative aspect-square w-32">
-                      <Image
-                        src={character.imageUrl}
-                        alt={`Imagen de ${character.name}`}
-                        fill
-                        className="object-contain"
-                      />
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary">
+              🌙 Profetas
+            </h2>
+            <p className="mt-4 text-lg sm:text-xl text-muted-foreground">
+              Aquí las Escrituras se vuelven vivas.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+            {profetas.map((character) => {
+              const image = PlaceHolderImages.find(p => p.id === character.imageId);
+              return (
+                <Card key={character.name} className="bg-card border-border/50 shadow-lg flex flex-col overflow-hidden text-center">
+                  {image && (
+                    <div className="p-6 flex justify-center">
+                      <div className="relative aspect-square w-32">
+                        <Image
+                          src={image.imageUrl}
+                          alt={image.description}
+                          data-ai-hint={image.imageHint}
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
                     </div>
-                  </div>
-                )}
-                <CardHeader className={character.imageUrl ? "pt-0" : ""}>
-                  <CardTitle className="font-headline text-2xl text-foreground">{character.name}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-muted-foreground text-lg">“{character.description}”</p>
-                </CardContent>
-              </Card>
-            ))}
+                  )}
+                  <CardHeader className={image ? "pt-0" : ""}>
+                    <CardTitle className="font-headline text-2xl text-foreground">{character.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <p className="text-muted-foreground text-lg">“{character.description}”</p>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
 
