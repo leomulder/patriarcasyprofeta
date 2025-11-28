@@ -1,75 +1,125 @@
-import { Check, X } from "lucide-react";
+'use client';
+
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+  BookOpenCheck,
+  Smartphone,
+  Headphones,
+  Users,
+  ScrollText,
+  Lightbulb,
+  TrendingUp,
+  Check,
+  X,
+} from 'lucide-react';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+
+const features = [
+  {
+    icon: BookOpenCheck,
+    title: 'Verso por verso real',
+    others: 'Superficial',
+    yours: 'Completo',
+  },
+  {
+    icon: Smartphone,
+    title: 'App moderna',
+    others: 'Inexistente',
+    yours: 'Dedicada',
+  },
+  {
+    icon: Headphones,
+    title: 'Audiolibro completo',
+    others: 'No disponible',
+    yours: 'Integrado',
+  },
+  {
+    icon: Users,
+    title: 'Comunidad',
+    others: 'Inactiva',
+    yours: 'Activa y de apoyo',
+  },
+  {
+    icon: ScrollText,
+    title: 'Profetas y Patriarcas',
+    others: 'Incompleto',
+    yours: 'Estudio Amplio',
+  },
+  {
+    icon: Lightbulb,
+    title: 'Explicación clara',
+    others: 'Técnica/Confusa',
+    yours: 'Profundo y Simple',
+  },
+  {
+    icon: TrendingUp,
+    title: 'Actualizaciones',
+    others: 'Nunca',
+    yours: 'Constantes',
+  },
+];
 
 export default function ForYouSection() {
   return (
     <section id="for-you" className="py-16 sm:py-24 bg-card">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary text-center">
-            🔥 Lo que NADIE te ofrece en LATAM…
-          </h2>
-          <p className="text-center text-lg text-muted-foreground mt-4">pero tú tendrás desde el primer minuto:</p>
-          
-          <div className="mt-8 rounded-lg border border-border/50 overflow-hidden">
-            <Table className="text-base sm:text-lg bg-background">
-              <TableHeader>
-                <TableRow className="border-b-border/50">
-                  <TableHead className="font-bold text-foreground">Característica</TableHead>
-                  <TableHead className="text-center font-bold text-muted-foreground">Otros Estudios</TableHead>
-                  <TableHead className="text-center font-bold text-primary">Este Estudio</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow>
-                  <TableCell className="font-medium">Verso por verso real</TableCell>
-                  <TableCell className="text-center text-muted-foreground">Medio</TableCell>
-                  <TableCell className="text-center text-primary font-bold">Completo</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">App</TableCell>
-                  <TableCell className="text-center"><X className="mx-auto text-destructive" /></TableCell>
-                  <TableCell className="text-center"><Check className="mx-auto text-primary" /></TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">Audiolibro</TableCell>
-                  <TableCell className="text-center"><X className="mx-auto text-destructive" /></TableCell>
-                  <TableCell className="text-center"><Check className="mx-auto text-primary" /></TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">Comunidad</TableCell>
-                  <TableCell className="text-center"><X className="mx-auto text-destructive" /></TableCell>
-                  <TableCell className="text-center text-primary font-bold">✔ Activa</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">Profetas y Patriarcas</TableCell>
-                  <TableCell className="text-center"><X className="mx-auto text-destructive" /></TableCell>
-                  <TableCell className="text-center text-primary font-bold">✔ Amplio</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">Explicación profunda y simple</TableCell>
-                  <TableCell className="text-center"><X className="mx-auto text-destructive" /></TableCell>
-                  <TableCell className="text-center text-primary font-bold">✔ Perfecto Balance</TableCell>
-                </TableRow>
-                <TableRow className="border-b-0">
-                  <TableCell className="font-medium">Actualizaciones constantes</TableCell>
-                  <TableCell className="text-center"><X className="mx-auto text-destructive" /></TableCell>
-                  <TableCell className="text-center text-primary font-bold">✔ Siempre Crece</TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center">
+            <h2 className="font-headline text-4xl sm:text-5xl font-bold text-primary">
+              <span className="text-5xl sm:text-6xl">🔥</span> Lo que NADIE te ofrece en LATAM…
+            </h2>
+            <p className="text-center text-lg sm:text-xl text-muted-foreground mt-4">
+              pero tú tendrás desde el primer minuto:
+            </p>
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="mt-12 space-y-4">
+            <div className="hidden md:grid grid-cols-3 gap-4 text-center font-bold text-lg px-6">
+                <h3 className="text-foreground">Característica</h3>
+                <h3 className="text-muted-foreground">Otros Estudios</h3>
+                <h3 className="text-primary">Este Estudio</h3>
+            </div>
+            {features.map((feature, index) => (
+              <Card
+                key={index}
+                className="grid grid-cols-2 md:grid-cols-3 items-center gap-4 p-4 bg-background border-border/50 shadow-lg transition-all duration-300 hover:shadow-primary/20 hover:border-primary/50 hover:scale-[1.02]"
+                style={{'--delay': `${index * 100}ms`} as React.CSSProperties}
+              >
+                {/* Feature Title (visible on all screens) */}
+                <div className="col-span-2 md:col-span-1">
+                    <div className="flex items-center gap-3">
+                        <feature.icon className="size-6 text-primary flex-shrink-0" />
+                        <h4 className="font-semibold text-foreground text-base sm:text-lg">
+                        {feature.title}
+                        </h4>
+                    </div>
+                </div>
+
+                {/* Others (visible on all screens) */}
+                <div className="text-center pr-4 md:pr-0">
+                    <div className="md:hidden text-xs font-bold text-muted-foreground mb-2">Otros Estudios</div>
+                    <div className="flex items-center justify-center gap-2 text-muted-foreground">
+                        <X className="size-5 text-destructive" />
+                        <span className="hidden sm:inline">{feature.others}</span>
+                    </div>
+                </div>
+                
+                {/* Yours (visible on all screens) */}
+                <div className="text-center">
+                    <div className="md:hidden text-xs font-bold text-primary mb-2">Este Estudio</div>
+                    <div className="flex items-center justify-center gap-2 font-bold text-primary">
+                        <Check className="size-5" />
+                        <span>{feature.yours}</span>
+                    </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+
+          <div className="mt-16 text-center">
             <p className="text-xl text-muted-foreground">No es un PDF. No es un curso.</p>
-            <p className="mt-2 text-2xl font-bold text-foreground">Es una EXPERIENCIA de estudio bíblico.</p>
+            <p className="mt-2 text-2xl sm:text-3xl font-bold text-foreground">
+              Es una EXPERIENCIA de estudio bíblico.
+            </p>
           </div>
         </div>
       </div>
