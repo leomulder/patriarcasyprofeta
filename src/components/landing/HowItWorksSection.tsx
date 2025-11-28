@@ -52,7 +52,7 @@ export default function HowItWorksSection() {
             <div className="grid grid-cols-1 md:grid-cols-5 gap-y-12 md:gap-x-8 relative">
               {steps.map((step, index) => (
                 <div key={index} className="flex flex-col items-center text-center z-10">
-                  <div className="bg-card border-4 border-border p-4 rounded-full mb-4">
+                  <div className="bg-card border-4 border-green-400/50 p-4 rounded-full mb-4">
                       <step.icon className="h-8 w-8 text-primary" />
                   </div>
                   <h3 className="text-lg font-bold text-foreground">{step.title}</h3>
