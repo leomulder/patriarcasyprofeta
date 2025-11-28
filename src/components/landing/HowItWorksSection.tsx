@@ -72,8 +72,8 @@ export default function HowItWorksSection() {
                      : 'bg-card border-green-400/50'
                  }`}
                >
-                 <outcome.icon className={`size-8 ${outcome.isPrimary ? 'text-primary' : 'text-foreground'}`} />
-                 <p className={`text-xl font-bold ${outcome.isPrimary ? 'text-primary' : 'text-foreground'}`}>
+                 <outcome.icon className={`size-8 ${outcome.isPrimary ? 'text-green-800' : 'text-foreground'}`} />
+                 <p className={`text-xl font-bold ${outcome.isPrimary ? 'text-green-800' : 'text-foreground'}`}>
                    {outcome.text}
                  </p>
                </div>
