@@ -11,7 +11,7 @@
     --popover: 47 40% 88%;
     --popover-foreground: 32 50% 20%;
     --primary: 43 56% 46%; /* #B68B35 - Ocre Profético */
-    --primary-foreground: 32 50% 20%; /* #4B361A - Sepia Profunda */
+    --primary-foreground: 47 57% 92%; /* #F7F1DF - Papiro Antiguo */
     --secondary: 42 54% 42%; /* #A47A32 - Ouro Opaco (hover) */
     --secondary-foreground: 32 50% 20%;
     --muted: 47 30% 85%;
@@ -24,6 +24,7 @@
     --input: 43 30% 75%;
     --ring: 43 56% 46%;
     --radius: 0.75rem; /* 12px */
+    --cta-background: 140 65% 25%; /* Verde Escuro */
   }
   
   .dark {
@@ -46,6 +47,7 @@
     --border: 32 50% 30%;
     --input: 32 50% 25%;
     --ring: 43 56% 46%;
+    --cta-background: 140 65% 25%; /* Verde Escuro */
   }
 }
 
@@ -76,10 +78,12 @@
 
 @layer components {
   .cta-button {
-    @apply bg-primary text-primary-foreground font-semibold text-lg py-4 px-8 rounded-xl shadow-lg transition-transform transform hover:scale-105 hover:bg-secondary;
-    box-shadow: 0 4px 14px 0 hsla(var(--primary), 0.3);
+    @apply bg-[hsl(var(--cta-background))] text-primary-foreground font-semibold text-lg py-4 px-8 rounded-xl shadow-lg transition-transform transform hover:scale-105;
+    background-color: hsl(var(--cta-background));
+    box-shadow: 0 4px 14px 0 hsla(var(--cta-background), 0.3);
   }
   .cta-button:hover {
-    box-shadow: 0 6px 20px 0 hsla(var(--primary), 0.4);
+    filter: brightness(1.1);
+    box-shadow: 0 6px 20px 0 hsla(var(--cta-background), 0.4);
   }
 }
