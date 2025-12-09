@@ -24,7 +24,7 @@
     --input: 43 30% 75%;
     --ring: 43 56% 46%;
     --radius: 0.75rem; /* 12px */
-    --cta-background: 140 65% 25%; /* Verde Escuro */
+    --cta-background: 140 60% 40%; /* Verde Forte */
   }
   
   .dark {
@@ -47,7 +47,7 @@
     --border: 32 50% 30%;
     --input: 32 50% 25%;
     --ring: 43 56% 46%;
-    --cta-background: 140 65% 25%; /* Verde Escuro */
+    --cta-background: 140 60% 40%; /* Verde Forte */
   }
 }
 
@@ -78,7 +78,7 @@
 
 @layer components {
   .cta-button {
-    @apply bg-[hsl(var(--cta-background))] text-primary-foreground font-semibold text-lg py-4 px-8 rounded-xl shadow-lg transition-transform transform hover:scale-105;
+    @apply bg-[hsl(var(--cta-background))] text-foreground font-bold text-lg py-4 px-8 rounded-xl shadow-lg transition-transform transform hover:scale-105;
     background-color: hsl(var(--cta-background));
     box-shadow: 0 4px 14px 0 hsla(var(--cta-background), 0.3);
   }
