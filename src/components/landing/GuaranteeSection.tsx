@@ -33,7 +33,7 @@ export default function GuaranteeSection() {
             </div>
             <div>
               <h2 className="font-headline text-3xl sm:text-4xl font-bold text-foreground">
-                30 días — GARANTÍA TOTAL
+                GARANTÍA TOTAL
               </h2>
               <p className="mt-4 text-lg sm:text-xl text-foreground max-w-2xl">
                 Si este estudio no transforma tu comprensión de la Biblia… te devuelvo tu dinero. Sin preguntas. Sin presión. Sin explicación.
