@@ -1,21 +1,27 @@
-import BonusSection from '@/components/landing/BonusSection';
-import ContentSection from '@/components/landing/ContentSection';
-import FaqSection from '@/components/landing/FaqSection';
-import Footer from '@/components/landing/Footer';
-import ForYouSection from '@/components/landing/ForYouSection';
-import GuaranteeSection from '@/components/landing/GuaranteeSection';
+import dynamic from 'next/dynamic';
 import HeroSection from '@/components/landing/HeroSection';
-import HowItWorksSection from '@/components/landing/HowItWorksSection';
-import ImpactSection from '@/components/landing/ImpactSection';
-import PricingSection from '@/components/landing/PricingSection';
-import TestimonialsSection from '@/components/landing/TestimonialsSection';
-import TransformSection from '@/components/landing/TransformSection';
-import WhyItWorksSection from '@/components/landing/WhyItWorksSection';
+import SocialProof from '@/components/landing/SocialProof';
+import { Skeleton } from '@/components/ui/skeleton';
+
+const ImpactSection = dynamic(() => import('@/components/landing/ImpactSection'));
+const ForYouSection = dynamic(() => import('@/components/landing/ForYouSection'));
+const ContentSection = dynamic(() => import('@/components/landing/ContentSection'));
+const WhyItWorksSection = dynamic(() => import('@/components/landing/WhyItWorksSection'));
+const HowItWorksSection = dynamic(() => import('@/components/landing/HowItWorksSection'));
+const BonusSection = dynamic(() => import('@/components/landing/BonusSection'));
+const PricingSection = dynamic(() => import('@/components/landing/PricingSection'));
+const GuaranteeSection = dynamic(() => import('@/components/landing/GuaranteeSection'));
+const TestimonialsSection = dynamic(() => import('@/components/landing/TestimonialsSection'));
+const FaqSection = dynamic(() => import('@/components/landing/FaqSection'));
+const TransformSection = dynamic(() => import('@/components/landing/TransformSection'));
+const Footer = dynamic(() => import('@/components/landing/Footer'));
+
 
 export default function Home() {
   return (
     <div className="bg-background text-foreground overflow-x-hidden">
       <HeroSection />
+      <SocialProof />
       <main>
         <ImpactSection />
         <ForYouSection />
