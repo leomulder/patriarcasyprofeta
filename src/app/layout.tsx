@@ -25,18 +25,14 @@ export default function RootLayout({
   return (
     <html lang="es" className={cn(poppins.variable, "light")}>
       <head>
-        <script
+        <Script
           src="https://cdn.utmify.com.br/scripts/utms/latest.js"
           data-utmify-prevent-subids
           async
           defer
-        ></script>
-      </head>
-      <body className="font-body antialiased">
-        {children}
-        <Toaster />
+        />
         <Script id="utmify-pixel-config" strategy="afterInteractive">
-          {`window.pixelId = "68bdb8b58e919d275589459c";`}
+          {`window.pixelId = "6968210716f60bda1549eed9";`}
         </Script>
         <Script 
           id="utmify-pixel"
@@ -45,6 +41,10 @@ export default function RootLayout({
           async
           defer
         />
+      </head>
+      <body className="font-body antialiased">
+        {children}
+        <Toaster />
       </body>
     </html>
   );
