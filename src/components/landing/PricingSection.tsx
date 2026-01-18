@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -174,7 +173,7 @@ export default function PricingSection() {
                 </ul>
               </CardContent>
               <CardFooter className="pt-8">
-                <Button size="lg" className="w-full cta-button animate-pulse border-4 border-green-500 ring-4 ring-green-500/30" onClick={() => redirectTo('https://pay.hotmart.com/K99537811Y?off=rtgmziqk&checkoutMode=10')}>
+                <Button size="lg" className="w-full cta-button animate-pulse" onClick={() => redirectTo('https://pay.hotmart.com/K99537811Y?off=rtgmziqk&checkoutMode=10')}>
                   QUIERO EL COMPLETO
                 </Button>
               </CardFooter>
